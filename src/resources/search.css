@@ -41,10 +41,6 @@ div.quicksearch {
 
 table.quicksearch {
     width: 100%;
-    border: 1px solid #cca !important;
-    border-radius: 2px;
-    background: #fffff4 !important;
-    padding: 0.5em
 }
 
 table.quicksearch th {

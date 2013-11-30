@@ -40,7 +40,7 @@ def renderSearch(req, db, user):
     document.addInternalScript("var users = %s;" % textutils.json_encode(users))
 
     def renderQuickSearch(target):
-        table = target.div("quicksearch").table("quicksearch")
+        table = target.div("quicksearch").table("quicksearch callout")
         table.tr().th().text("Quick Search")
         table.tr().td("text").text("""\
 Review search is also available from every Critic page via a keyboard
