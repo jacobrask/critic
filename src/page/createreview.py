@@ -325,7 +325,7 @@ var review = { commit_ids: %r,
 
     row = table.tr("line")
     row.td("heading").text("Branch Name:")
-    row.td("value").text("r/").input("value", id="branch_name", size=80, value=default_branch_name)
+    row.td("value").text("r/").input("value", id="branch_name", value=default_branch_name)
     row.td("status")
 
     row = table.tr()
@@ -359,7 +359,7 @@ automatically.""")
 
     row = table.tr("line")
     row.td("heading").text("Summary:")
-    row.td("value").input("value", id="summary", size=80, value=summary)
+    row.td("value").input("value", id="summary", value=summary)
     row.td("status")
 
     row = table.tr()
@@ -370,7 +370,7 @@ appear in the subject of all emails sent about the review.
 
     row = table.tr("line")
     row.td("heading").text("Description:")
-    textarea = row.td("value").textarea(id="description", cols=80, rows=12)
+    textarea = row.td("value").textarea(id="description", rows=12)
     textarea.preformatted()
     if description: textarea.text(description)
     row.td("status")
