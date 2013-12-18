@@ -24,7 +24,7 @@ div.main table.reviews td.h2 a {
 }
 
 div.main table.reviews tr.review:hover {
-    background: #eec
+    background: hsl(60, 50%, 87%)
 }
 
 div.main table.reviews tr.review td {
@@ -42,7 +42,7 @@ div.main table.reviews tr.review td.comments {
 }
 
 a.repository, a.branch {
-    color: #222;
+    color: hsl(0, 0%, 13%);
     text-decoration: none
 }
 

@@ -64,7 +64,7 @@ div.main table.basic span.user.retired > span.name {
     text-decoration: line-through
 }
 div.main table.basic span.user > span.status {
-    color: red
+    color: hsl(0, 100%, 50%)
 }
 
 div.main table.basic table.reviewfilters {
@@ -85,7 +85,7 @@ div.main table.basic table.reviewfilters tr.h1 th.h1 {
     font-family: serif;
     font-weight: bold;
     text-align: left;
-    border-bottom: 1px solid #222
+    border-bottom: 1px solid hsl(0, 0%, 13%)
 }
 
 div.main table.basic table.reviewfilters td {
@@ -120,7 +120,7 @@ div.main table.basic table.reviewfilters tr.filter td.remove a {
 
 div.main table.basic table.reviewfilters tr.filter:hover td.remove a {
     visibility: visible;
-    color: red;
+    color: hsl(0, 100%, 50%);
     text-decoration: none
 }
 div.main table.basic table.reviewfilters tr.filter:hover td.remove a:hover {
@@ -143,7 +143,7 @@ div.main table.basic td.right {
 div.main table.basic td.help {
     font-style: italic;
     text-align: right;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 div.main table.basic td.value span.mode {
@@ -177,7 +177,7 @@ div.main table.progress td.stuck {
 
 div.main table.progress td.stuck a {
     font-weight: bold;
-    color: red;
+    color: hsl(0, 100%, 50%);
     text-decoration: none
 }
 
@@ -193,7 +193,7 @@ div.main table.progress td.straggler {
 
 div.main table.progress td.straggler.absent:after {
     content: " (absent)";
-    color: red
+    color: hsl(0, 100%, 50%)
 }
 
 div.main table.progress td.pinging {
@@ -202,12 +202,12 @@ div.main table.progress td.pinging {
 }
 
 div.main table.progress td.pinging span {
-    border-top: 1px solid #cca
+    border-top: 1px solid hsl(60, 25%, 73%)
 }
 
 div.main table.shared tr.h1 td.buttons {
     text-align: right;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 div.main table.shared tr.reviewers td
@@ -252,7 +252,7 @@ div.main table.log td.total {
 
 div.main table.log td.approval.user span,
 div.main table.log td.total.user span {
-    outline: 3px dotted #f66;
+    outline: 3px dotted hsl(0, 100%, 70%);
     padding-left: 3px;
     padding-right: 3px
 }
@@ -268,11 +268,11 @@ div.main table.log td.total.user span {
 }
 
 div.main table.log td.approval.approved span {
-    background-color: #dfd
+    background-color: hsl(120, 100%, 93%)
 }
 
 div.main table.log td.approval.pending span {
-    background-color: #fdd
+    background-color: hsl(0, 100%, 93%)
 }
 
 div.main table.comments td,
@@ -283,7 +283,7 @@ div.main table.batches td {
 div.main table.comments td.h1,
 div.main table.batches td.h1 {
     text-align: left;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 div.main table.comments td.h1 h1,
@@ -302,7 +302,7 @@ div.main table.comments td.h2 {
     padding-top: 1em;
     padding-left: 2em;
     text-align: left;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 div.main table.comments td.h2 h2 {
@@ -324,7 +324,7 @@ div.main table.batches tr.batch td {
 
 div.main table.comments tr.comment:hover,
 div.main table.batches tr.batch:hover {
-    background: #eec
+    background: hsl(60, 50%, 87%)
 }
 
 div.main table.comments td.author,
@@ -352,7 +352,7 @@ div.main table.batches td.when {
 }
 
 div.main table.comments td.buttons {
-    border-top: 1px solid #cca;
+    border-top: 1px solid hsl(60, 25%, 73%);
     padding-top: 15px;
     text-align: right
 }
@@ -366,7 +366,7 @@ div.summary-tooltip > div.reviewer {
     font-family: monospace
 }
 div.summary-tooltip > div.reviewer > span.absent {
-    color: red
+    color: hsl(0, 100%, 50%)
 }
 
 div.text input {
@@ -386,7 +386,7 @@ dd {
 
 dd .notsupported {
     font-weight: bold;
-    color: red;
+    color: hsl(0, 100%, 50%);
     margin-bottom: 0.5em
 }
 
@@ -416,7 +416,7 @@ div.main > div.error {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    border: 10px solid red;
+    border: 10px solid hsl(0, 100%, 50%);
     border-radius: 20px;
     padding: 0.5em 2em 2em 2em;
     font-weight: bold
@@ -427,18 +427,18 @@ div.main > div.error > h1 {
 }
 
 code.branch, code.repository {
-    border: 1px solid #cca;
-    background-color: #fffff4;
+    border: 1px solid hsl(60, 25%, 73%);
+    background-color: hsl(60, 100%, 98%);
     padding: 2px 6px
 }
 
 code.branch > a, code.repository > a {
-    color: #222;
+    color: hsl(0, 0%, 13%);
     text-decoration: none
 }
 
 code.branch > a:hover, code.repository > a:hover {
-    color: blue;
+    color: hsl(240, 100%, 50%);
     text-decoration: underline
 }
 
@@ -448,7 +448,7 @@ p.tracking {
 }
 p.tracking.disabled {
     text-decoration: line-through;
-    color: red
+    color: hsl(0, 100%, 50%)
 }
 
 span.lastupdate {

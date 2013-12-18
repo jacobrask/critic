@@ -19,7 +19,7 @@
 div.main {
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #998;
+    border-bottom: 2px solid hsl(60, 8%, 57%);
 }
 
 table.commit-files {
@@ -59,20 +59,20 @@ table.commit-files > tbody > tr > th.parent {
 }
 
 table.commit-files > tbody > tr > td > a {
-    color: #222;
+    color: hsl(0, 0%, 13%);
     text-decoration: none
 }
 
 table.commit-files > tbody > tr > td.path:hover {
-    background-color: #ccc
+    background-color: hsl(0, 0%, 80%)
 }
 
 table.commit-files > tbody > tr > td.parent.hover {
-    background-color: #ccc
+    background-color: hsl(0, 0%, 80%)
 }
 
 table.file {
-    border: 1px solid #cca;
+    border: 1px solid hsl(60, 25%, 73%);
     border-radius: 2px;
     margin-bottom: 1em;
     table-layout: fixed
@@ -114,7 +114,7 @@ table.file > thead > tr > td,
 table.file > tfoot > tr > td {
     padding: 3px 2em;
     width: 50%;
-    background-color: #ffffe6
+    background-color: hsl(60, 100%, 95%)
 }
 
 table.file > thead > tr > td.left,
@@ -131,13 +131,13 @@ table.file > tfoot > tr > td.right {
 
 table.file > thead + tbody > tr:first-child > td,
 table.file > tbody + tfoot > tr:first-child > td {
-    border-top: 1px solid #cca
+    border-top: 1px solid hsl(60, 25%, 73%)
 }
 
 table.file thead td.left a.showtree,
 table.file tfoot td.left a.showtree {
     text-decoration: none;
-    color: #222
+    color: hsl(0, 0%, 13%)
 }
 table.file thead td.left a.showtree.root,
 table.file tfoot td.left a.showtree.root {
@@ -146,11 +146,11 @@ table.file tfoot td.left a.showtree.root {
 table.file thead td.left a.showtree:hover,
 table.file tfoot td.left a.showtree:hover {
     text-decoration: underline;
-    color: #222
+    color: hsl(0, 0%, 13%)
 }
 
 table.file > tbody.spacer > tr > td {
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
     text-align: center
 }
 
@@ -169,21 +169,21 @@ table.file > tbody.spacer > tr.context > td {
 }
 
 table.file > tbody.spacer > tr.expand > td > select {
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
     border: 0
 }
 
 table.file > tbody.lines > tr > td.edge,
 table.file > tbody.lines > tr > td.middle,
 table.file > tbody.lines > tr > td.linenr {
-    background-color: #eee
+    background-color: hsl(0, 0%, 93%)
 }
 
 table.file > tbody.lines > tr > td.middle {
     cursor: col-resize;
-    background-image: -webkit-radial-gradient(circle, #eee 4px, transparent 4px), -webkit-radial-gradient(circle, rgba(0, 0, 0, 0.3) 4px, transparent 4px);
-    background-image: -moz-radial-gradient(circle, #eee 4px, transparent 4px), -moz-radial-gradient(circle, rgba(0, 0, 0, 0.3) 4px, transparent 4px);
-    background-image: radial-gradient(circle, #eee 4px, transparent 4px), radial-gradient(circle, rgba(0, 0, 0, 0.3) 4px, transparent 4px);
+    background-image: -webkit-radial-gradient(circle, hsl(0, 0%, 93%) 4px, transparent 4px), -webkit-radial-gradient(circle, hsla(0, 0%, 0%, 0.3) 4px, transparent 4px);
+    background-image: -moz-radial-gradient(circle, hsl(0, 0%, 93%) 4px, transparent 4px), -moz-radial-gradient(circle, hsla(0, 0%, 0%, 0.3) 4px, transparent 4px);
+    background-image: radial-gradient(circle, hsl(0, 0%, 93%) 4px, transparent 4px), radial-gradient(circle, hsla(0, 0%, 0%, 0.3) 4px, transparent 4px);
     background-position: 0 0, -1px -1px
 }
 
@@ -198,8 +198,8 @@ table.file > tbody.lines > tr > td.linenr.new {
 }
 
 table.file > tbody.lines > tr > td.line {
-    border-left: 1px solid #888;
-    border-right: 1px solid #888;
+    border-left: 1px solid hsl(0, 0%, 53%);
+    border-right: 1px solid hsl(0, 0%, 53%);
     white-space: pre-wrap;
     overflow: hidden;
     word-wrap: break-word
@@ -213,26 +213,26 @@ table.file.resized.new-narrower > tbody.lines > tr > td.line.new {
 
 table.file > tbody.lines > tr > td.comment {
     white-space: pre-wrap;
-    border-left: 1px solid #888;
-    border-right: 1px solid #888
+    border-left: 1px solid hsl(0, 0%, 53%);
+    border-right: 1px solid hsl(0, 0%, 53%)
 }
 
 table.file > tbody.lines > tr:first-child > td.line {
-    border-top: 1px solid #888;
+    border-top: 1px solid hsl(0, 0%, 53%);
     padding-top: 3px
 }
 
 table.file > tbody.lines > tr:last-child > td.line {
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid hsl(0, 0%, 53%);
     padding-bottom: 3px
 }
 
 table.file > tbody.content > tr > td {
-    background-color: #eee
+    background-color: hsl(0, 0%, 93%)
 }
 
 table.file > tbody.deleted > tr > td {
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
     text-align: center
 }
 
@@ -241,7 +241,7 @@ table.file > tbody.deleted > tr > td > h2 {
 }
 
 table.file > tbody.binary > tr > td {
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
     text-align: center;
     vertical-align: middle
 }
@@ -277,21 +277,21 @@ table.commit-info span.tag {
 pre.commit-msg { padding: 0.5em 1em  }
 
 tr.modified b.t {
-    color: #cca
+    color: hsl(60, 25%, 73%)
 }
 
 tr.replaced > td.old b.t,
 tr.deleted > td.old b.t {
-    color: #caa
+    color: hsl(0, 25%, 73%)
 }
 
 tr.replaced > td.new b.t,
 tr.inserted > td.new b.t {
-    color: #aca
+    color: hsl(120, 25%, 73%)
 }
 
 input.approve {
-    background-color: #eec;
+    background-color: hsl(60, 50%, 87%);
     font-weight: bold
 }
 
@@ -322,7 +322,7 @@ table.commit-info tr.commit-msg > td {
 }
 
 table.commit-msg tr.line:hover {
-    background-color: #eee
+    background-color: hsl(0, 0%, 93%)
 }
 
 table.commit-msg tr.line td.edge {
@@ -347,6 +347,6 @@ table.commit-msg tr.line.highlight td.line {
 .blame-tooltip pre {
     margin: 5px;
     padding: 5px;
-    background-color: white;
-    border: 1px solid #888
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 53%)
 }

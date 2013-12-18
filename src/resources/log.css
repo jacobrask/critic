@@ -16,11 +16,11 @@
 
 */
 
-table.log { background: #ffffe6; table-layout: fixed }
+table.log { background: hsl(60, 100%, 95%); table-layout: fixed }
 
 div.main > table.log,
 tbody.content table.log {
-    padding: 1em; margin-top: 1em; border: 1px solid #cca; border-radius: 4px
+    padding: 1em; margin-top: 1em; border: 1px solid hsl(60, 25%, 73%); border-radius: 4px
 }
 
 tbody.content table.log {
@@ -35,7 +35,7 @@ tbody.content table.log > thead > tr.headings > td {
 table.log table.log { width: 98% }
 
 table.log tr.title td { padding-left: 1em }
-table.log tr.title td { text-align: left; border-bottom: 1px solid #cca }
+table.log tr.title td { text-align: left; border-bottom: 1px solid hsl(60, 25%, 73%) }
 table.log tr.title td h1 { text-align: left; margin-top: 0; margin-bottom: 0.5em }
 table.log tr.title td h1 span.right { font-size: 50%; float: right }
 
@@ -45,7 +45,7 @@ table.log tr.headings td.type { text-align: left; text-decoration: none }
 table.log tr.headings td.summary { text-align: left }
 table.log tr.headings td.author { text-align: right }
 
-table.log tr.commit:hover { background: #eec }
+table.log tr.commit:hover { background: hsl(60, 50%, 87%) }
 table.log tr.commit td { padding-left: 1em; padding-top: 3px; padding-bottom: 3px }
 table.log tr.commit td.when { text-align: right; font-weight: bold; padding-right: 1em }
 table.log tr.commit td.type { text-align: left; font-weight: bold }
@@ -53,20 +53,20 @@ table.log tr.commit td.summary {
     text-align: left;
     font-family: monospace;
     font-size: 10pt;
-    background-color: #fffff4;
-    border-left: 1px dotted #cca;
-    border-bottom: 1px dotted #cca;
-    border-right: 1px dotted #cca;
+    background-color: hsl(60, 100%, 98%);
+    border-left: 1px dotted hsl(60, 25%, 73%);
+    border-bottom: 1px dotted hsl(60, 25%, 73%);
+    border-right: 1px dotted hsl(60, 25%, 73%);
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer
 }
-table.log tr.commit:hover td.summary { background-color: #eed }
-table.log tr.commit.highlight td.summary { background-color: #dfd }
-table.log tr.commit td.summary.selected { background-color: #eed }
-table.log tr.commit:first-child td.summary { border-top: 1px dotted #cca }
+table.log tr.commit:hover td.summary { background-color: hsl(60, 33%, 90%) }
+table.log tr.commit.highlight td.summary { background-color: hsl(120, 100%, 93%) }
+table.log tr.commit td.summary.selected { background-color: hsl(60, 33%, 90%) }
+table.log tr.commit:first-child td.summary { border-top: 1px dotted hsl(60, 25%, 73%) }
 table.log tr.commit td.author { text-align: right; font-weight: bold }
-table.log tr.commit.selected { background: #ddb }
+table.log tr.commit.selected { background: hsl(60, 33%, 80%) }
 table.log tr.commit td.summary .nocomment,
 table.log tr.commit td.summary .rebase
 {
@@ -80,7 +80,7 @@ table.log > thead > tr.upstream > td { padding-top: 0.5em; font-weight: bold }
 table.log > thead > tr.error > td { padding-top: 0.5em; padding-bottom: 0.5em; font-weight: bold }
 
 table.log > tfoot > tr > td {
-    text-align: right; border-top: 1px solid #cca; padding-top: 0.5em
+    text-align: right; border-top: 1px solid hsl(60, 25%, 73%); padding-top: 0.5em
 }
 
 table.log.collapsable.collapsed > thead.title { display: table-row-group }
@@ -90,18 +90,18 @@ table.log.collapsable.collapsed > tbody { display: none }
 
 tr.sublog > td { padding-bottom: 0.5em }
 tr.sublog > td > table.log { padding-top: 0.5em; padding-bottom: 0.5em }
-tr.sublog > td > table.log tr > td.when { border-left: 3px solid #cca; }
+tr.sublog > td > table.log tr > td.when { border-left: 3px solid hsl(60, 25%, 73%); }
 
-div.main div.submit { margin-left: 30%; margin-right: 30%; background-color: #8f8; border: 3px solid #6b6; text-align: center; margin-top: 1em; margin-bottom: 1em; border-radius: 10px; color: #141 }
-div.main div.submit:hover { background-color: #7e7; border-color: #5a5; cursor: hand }
-div.main div.submit:active { background-color: #6d6; border-color: #494; cursor: hand }
+div.main div.submit { margin-left: 30%; margin-right: 30%; background-color: hsl(120, 100%, 77%); border: 3px solid hsl(120, 38%, 57%); text-align: center; margin-top: 1em; margin-bottom: 1em; border-radius: 10px; color: hsl(120, 60%, 17%) }
+div.main div.submit:hover { background-color: hsl(120, 78%, 70%); border-color: hsl(120, 33%, 50%); cursor: hand }
+div.main div.submit:active { background-color: hsl(120, 64%, 63%); border-color: hsl(120, 38%, 43%); cursor: hand }
 
 div.marker {
     position: absolute;
     border: 2px solid;
     width: 7px;
-    background-color: #88f;
-    border-color: #66b
+    background-color: hsl(240, 100%, 77%);
+    border-color: hsl(240, 38%, 57%)
 }
 
 div.marker.right {

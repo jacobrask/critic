@@ -17,12 +17,12 @@
 */
 
 tr.item > td.value > span.name {
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%);
 }
 
 tr.item > td.value > span.installed {
     font-weight: bold;
-    color: #0e0
+    color: hsl(120, 100%, 47%);
 }
 
 tr.item > td.value > span.details {
@@ -37,7 +37,7 @@ tr.item > td.value > div.description {
 
 tr.item > td.value > div.description.broken > a {
     font-weight: bold;
-    color: red;
+    color: hsl(0, 100%, 50%);
     text-decoration: none
 }
 
@@ -47,7 +47,7 @@ table.roles {
 
 table.roles > tbody > tr > th {
     padding-top: 0.5em;
-    border-bottom: 1px solid #cca;
+    border-bottom: 1px solid hsl(60, 25%, 73%);
     text-align: left
 }
 
@@ -67,5 +67,5 @@ table.roles > tbody > tr > td > ul {
 
 table.roles span.inactive {
     font-weight: bold;
-    color: red
+    color: hsl(0, 100%, 50%);
 }

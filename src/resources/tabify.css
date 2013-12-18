@@ -18,5 +18,5 @@
 
 div.playground { white-space: pre }
 b.t:before { content: "\2192" }
-b.t { color: #ccc }
-b.t.ill { color: red; font-weight: bold }
+b.t { color: hsl(0, 0%, 80%) }
+b.t.ill { color: hsl(0, 100%, 50%); font-weight: bold }

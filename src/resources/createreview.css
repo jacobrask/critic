@@ -18,7 +18,7 @@
 
 body { font-size: 12px; font-family: sans-serif }
 
-input.submit { font-size: 20px; background-color: lime }
+input.submit { font-size: 20px; background-color: hsl(120, 100%, 50%) }
 
 div.main { text-align: center }
 
@@ -40,7 +40,7 @@ div.main table.basic td.value textarea {
 div.main table.basic td.value span.mode { font-style: italic }
 div.main table.basic td.value div.buttons { float: right }
 div.main table.basic td.status { text-align: right; width: 20%; font-weight: bold }
-div.main table.basic td.help { font-style: italic; border-bottom: 1px solid #cca; padding-left: 30% }
+div.main table.basic td.help { font-style: italic; border-bottom: 1px solid hsl(60, 25%, 73%); padding-left: 30% }
 div.main table.basic td.help div { text-align: left }
 
 div.main table.filters tr.applyfilters td.value { padding-top: 0.5em; text-align: right }
@@ -50,21 +50,21 @@ div.main table.filters tr.reviewers td { padding-top: 0.5em }
 div.main table.filters tr.reviewers td.reviewers { font-weight: bold; text-align: right; width: 30% }
 div.main table.filters tr.reviewers td.files { font-family: monospace; text-align: left; width: 70% }
 div.main table.filters tr.reviewers td.files span.file { white-space: pre }
-div.main table.filters tr.reviewers td.no-one { text-align: right; color: red; font-weight: bold }
+div.main table.filters tr.reviewers td.no-one { text-align: right; color: hsl(0, 100%, 50%); font-weight: bold }
 
-div.main table.filters tr.watchers td.spacer { padding-top: 0; border-bottom: 1px solid #cca }
+div.main table.filters tr.watchers td.spacer { padding-top: 0; border-bottom: 1px solid hsl(60, 25%, 73%) }
 div.main table.filters tr.watchers td.heading { padding-top: 0.5em; text-align: right; font-weight: bold }
 div.main table.filters tr.watchers td.watchers { padding-top: 0.5em; text-align: left }
 
-div.main table.filters tr.buttons td.spacer { padding-top: 0; border-bottom: 1px solid #cca }
+div.main table.filters tr.buttons td.spacer { padding-top: 0; border-bottom: 1px solid hsl(60, 25%, 73%) }
 div.main table.filters tr.buttons td.buttons { padding-top: 0.5em; text-align: right }
 
 
 div.comment > div.text {
     font-family: monospace;
     font-size: 11px;
-    background-color: #fff;
-    border: 1px solid #bbb;
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 73%);
     margin-top: 3px;
     padding: 5px;
     white-space: pre-wrap
@@ -73,7 +73,7 @@ div.comment > div.text {
 div.comment > div.text > textarea {
     font-family: monospace;
     font-size: 11px;
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     border: none;
     width: 100%;
     resize: none
@@ -110,13 +110,13 @@ select.repository {
 }
 
 code.branch, code.remote {
-    border: 1px solid #cca;
-    background-color: #fffff4;
+    border: 1px solid hsl(60, 25%, 73%);
+    background-color: hsl(60, 100%, 98%);
     padding: 2px 4px
 }
 
 code.branch > a, code.remote > a {
-    color: #222
+    color: hsl(0, 0%, 13%)
 }
 
 input.remote, input.workbranch, input.upstreamcommit {

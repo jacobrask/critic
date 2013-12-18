@@ -17,30 +17,30 @@
 */
 
 tr.line td > i.tailws, tr.line.inserted td i.tailws {
-    background: red !important
+    background: hsl(0, 100%, 50%) !important;
 }
 
 tr.line td i.cr {
-    color: #888
+    color: hsl(0, 0%, 53%);
 }
 tr.line td i.cr:before {
     content: "^M"
 }
 tr.line td > i.tailws i.cr {
-    color: white
+    color: hsl(0, 0%, 100%);
 }
 
 tr.line td > i.tailws > b.t {
-    color: white
+    color: hsl(0, 0%, 100%);
 }
 
 tr.line i.i i.tailws {
-    outline: 2px solid red
+    outline: 2px solid hsl(0, 100%, 50%);
 }
 
 tr.line.inserted > td.line.new b.t.ill,
 tr.line.replaced > td.line.new b.t.ill,
 tr.line.modified > td.line b.t.ill {
-    background-color: red;
-    color: white
+    background-color: hsl(0, 100%, 50%);
+    color: hsl(0, 0%, 100%);
 }

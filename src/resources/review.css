@@ -23,7 +23,7 @@ div#draftStatus {
 }
 
 div#draftStatus span.draft {
-    color: red
+    color: hsl(0, 100%, 50%);
 }
 
 div#draftStatus span.buttons {

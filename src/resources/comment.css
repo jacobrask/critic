@@ -19,17 +19,17 @@
 div.comment.draft > div.header > span.time:after {
     content: " (draft)";
     font-weight: bold;
-    color: #f00
+    color: hsl(0, 100%, 50%)
 }
 
 span.draft {
     font-weight: bold;
-    color: #f00
+    color: hsl(0, 100%, 50%)
 }
 
 div.comment > div.warning {
     font-weight: bold;
-    color: #f00
+    color: hsl(0, 100%, 50%)
 }
 
 div.comment > div.header {
@@ -43,8 +43,8 @@ div.comment > div.header > span.author {
 div.comment > div.text {
     font-family: monospace;
     font-size: 11px;
-    background-color: #fff;
-    border: 1px solid #bbb;
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 73%);
     margin-top: 3px;
     padding: 5px;
     white-space: pre-wrap
@@ -53,7 +53,7 @@ div.comment > div.text {
 div.comment > div.text > textarea {
     font-family: monospace;
     font-size: 11px;
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     border: none;
     width: 100%;
     resize: none
@@ -77,8 +77,8 @@ div.comments > div.resolution {
 
 .comment-tooltip div.tooltip > div.text {
     padding: 5px;
-    background-color: white;
-    border: 1px solid #bbb;
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 73%);
     margin-top: 3px;
     white-space: pre-wrap
 }
@@ -90,25 +90,25 @@ div.marker {
 }
 
 div.marker.issue {
-    background-color: #f88;
-    border-color: #b66;
+    background-color: hsl(0, 100%, 77%);
+    border-color: hsl(0, 38%, 57%);
     z-index: 2
 }
 
 div.marker.issue.addressed, div.marker.issue.closed {
-    background-color: #8f8;
-    border-color: #6b6;
+    background-color: hsl(120, 100%, 77%);
+    border-color: hsl(120, 38%, 57%);
 }
 
 div.marker.note {
-    background-color: #ff8;
-    border-color: #bb6;
+    background-color: hsl(60, 100%, 77%);
+    border-color: hsl(60, 38%, 57%);
     z-index: 1
 }
 
 div.marker.new {
-    background-color: #88f;
-    border-color: #66b;
+    background-color: hsl(240, 100%, 77%);
+    border-color: hsl(240, 38%, 57%);
     z-index: 3
 }
 
@@ -155,10 +155,10 @@ div.comment-chain > table.file span.comment-chain-title {
 }
 
 div.comment-chain tr.content table.commit-info {
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid #bbb
+    border: 1px solid hsl(0, 0%, 73%)
 }
 
 button.hidden {

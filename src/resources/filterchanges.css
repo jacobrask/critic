@@ -33,7 +33,7 @@ div.main table.filter tr.footer td.spacer {
 }
 
 div.main table.filter tr.footer td.button {
-    border-top: 1px solid #cca
+    border-top: 1px solid hsl(60, 25%, 73%)
 }
 
 div.main table.filter tr.footer td {
@@ -70,5 +70,5 @@ div.main table.filter tr td.right {
 div.main table.filter tr td.help {
     font-style: italic;
     text-align: right;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }

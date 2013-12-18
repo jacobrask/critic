@@ -21,7 +21,7 @@ table.login {
 }
 
 table.login tr.separator1 td {
-    border-bottom: 1px solid #cca;
+    border-bottom: 1px solid hsl(60, 25%, 73%);
     padding-top: 1em
 }
 
@@ -30,7 +30,7 @@ table.login tr.separator2 td {
 }
 
 table.login tr.status td {
-    color: red;
+    color: hsl(0, 100%, 50%);
     font-weight: bold;
     text-align: center;
     padding-bottom: 1em
@@ -67,5 +67,5 @@ table.login tr.continue td {
 }
 
 table.login tr.continue a, table.login tr.continue a:visited {
-    color: #222
+    color: hsl(0, 0%, 13%);
 }

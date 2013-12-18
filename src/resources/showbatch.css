@@ -23,8 +23,8 @@ table.basic tr.line td.heading {
 table.files {
     margin-top: 0;
     margin-bottom: 15px;
-    background-color: #fffff4;
-    border: 1px solid #222;
+    background-color: hsl(60, 100%, 98%);
+    border: 1px solid hsl(0, 0%, 13%);
     padding: 5px 10px
 }
 

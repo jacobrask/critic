@@ -49,60 +49,60 @@
 tr.line.context    > td.line,
 tr.line.inserted   > td.line.old,
 tr.line.deleted    > td.line.new {
-    background-color: #fff
+    background-color: hsl(0, 0%, 100%)
 }
 tr.line.context:hover    > td.line {
-    background-color: #eee
+    background-color: hsl(0, 0%, 93%)
 }
 
 /* Red background color on the left side of deleted or replaced lines; and
    slightly darker red when hovered. */
 tr.line.deleted  > td.line.old,
 tr.line.replaced > td.line.old {
-    background-color: #fdd
+    background-color: hsl(0, 100%, 93%)
 }
 tr.line.deleted:hover  > td.line.old,
 tr.line.replaced:hover > td.line.old {
-    background-color: #ecc
+    background-color: hsl(0, 50%, 87%)
 }
 
 /* Green background color on the left side of inserted or replaced lines; and
    slightly darker green when hovered. */
 tr.line.inserted > td.line.new,
 tr.line.replaced > td.line.new {
-    background-color: #dfd
+    background-color: hsl(120, 100%, 93%)
 }
 tr.line.inserted:hover > td.line.new,
 tr.line.replaced:hover > td.line.new {
-    background-color: #cec
+    background-color: hsl(120, 50%, 87%)
 }
 
 /* Yellowish background color on both sides of modified lines; and slightly
    darker yellowish when hovered. */
 tr.line.modified > td.line {
-    background-color: #ffffe6
+    background-color: hsl(60, 100%, 95%)
 }
 tr.line.modified:hover > td.line {
-    background-color: #eec
+    background-color: hsl(60, 50%, 87%)
 }
 
 /* White background color for white-space change lines and slightly darker white
    when hovered.  This overrides the 'modified' style which otherwise also
    applies to white-space lines. */
 tr.line.whitespace > td.line {
-    background-color: #fff
+    background-color: hsl(0, 0%, 100%)
 }
 tr.line.whitespace:hover > td.line {
-    background-color: #eee
+    background-color: hsl(0, 0%, 93%)
 }
 
 /* Blue background color on left side of conflict markers; and slightly darker
    blue when hovered. */
 tr.line.conflict > td.line.old {
-    background-color: #8af !important
+    background-color: hsl(223, 100%, 77%) !important
 }
 tr.line.conflict:hover > td.line.old {
-    background-color: #79e !important
+    background-color: hsl(223, 78%, 70%) !important
 }
 
 
@@ -127,37 +127,37 @@ tr.line i {
    darker still when hovered): */
 tr.line          td.old i.r,
 tr.line.modified        i.d {
-    background-color: #fdd
+    background-color: hsl(0, 100%, 93%)
 }
 tr.line:hover          td.old i.r,
 tr.line.modified:hover        i.d {
-    background-color: #ecc
+    background-color: hsl(0, 50%, 87%)
 }
 tr.line          td.new i.r,
 tr.line.modified        i.i {
-    background-color: #dfd
+    background-color: hsl(120, 100%, 93%)
 }
 tr.line:hover          td.new i.r,
 tr.line.modified:hover        i.i {
-    background-color: #cec
+    background-color: hsl(120, 50%, 87%)
 }
 
 /* On line with white-space changes, render deleted white-space in red (the line
    will otherwise be rendered as a context line.) */
 tr.line.whitespace i.d {
-    background-color: #fdd
+    background-color: hsl(0, 100%, 93%)
 }
 tr.line.whitespace:hover i.d {
-    background-color: #ecc
+    background-color: hsl(0, 50%, 87%)
 }
 
 /* On line with white-space changes, render inserted white-space in green (the
    line will otherwise be rendered as a context line.) */
 tr.line.whitespace i.i {
-    background-color: #dfd
+    background-color: hsl(120, 100%, 93%)
 }
 tr.line.whitespace:hover i.i {
-    background-color: #cec
+    background-color: hsl(120, 50%, 87%)
 }
 
 /* This element will contain the text "[missing linebreak]" and be added last on

@@ -20,7 +20,7 @@ body { font-size: 12px; font-family: sans-serif }
 
 div.main { text-align: center }
 
-div.main table td.repositories { text-align: right; border-bottom: 1px solid #cca }
+div.main table td.repositories { text-align: right; border-bottom: 1px solid hsl(60, 25%, 73%) }
 
 div.main table.basic tr.line td { padding-top: 0.5em; vertical-align: baseline }
 div.main table.basic td.heading { font-family: serif; font-weight: bold; text-align: right; width: 20% }
@@ -28,7 +28,7 @@ div.main table.basic td.value { font-family: monospace; text-align: left }
 div.main table.basic td.value input.value { font-family: monospace; width: 32em }
 div.main table.basic td.value button { float: right }
 div.main table.basic td.value span.status { padding-left: 1em; font-weight: bold }
-div.main table.basic td.help { font-style: italic; text-align: right; border-bottom: 1px solid #cca }
+div.main table.basic td.help { font-style: italic; text-align: right; border-bottom: 1px solid hsl(60, 25%, 73%) }
 
 table.filters {
     width: 90%;
@@ -36,7 +36,7 @@ table.filters {
 }
 
 table.filters th {
-    border-bottom: 1px solid #cca;
+    border-bottom: 1px solid hsl(60, 25%, 73%);
     text-align: left;
 }
 
@@ -69,7 +69,7 @@ table.filters td.links a {
 }
 
 table.filters a {
-    color: #222;
+    color: hsl(0, 0%, 13%);
     text-decoration: none
 }
 
@@ -77,7 +77,7 @@ table.filters a:hover {
     text-decoration: underline
 }
 
-div.main table.filters td.help { font-style: italic; text-align: left; padding-top: 1em; border-bottom: 1px solid #cca }
+div.main table.filters td.help { font-style: italic; text-align: left; padding-top: 1em; border-bottom: 1px solid hsl(60, 25%, 73%) }
 div.main table.filters td.help p { margin-left: 10%; margin-top: 0; width: 60em }
 div.main table.filters td.help p strong { font-weight: bold; font-style: normal }
 div.main table.filters td.help p code { font-style: normal }
@@ -90,7 +90,7 @@ div.main table.filters td.filter.delegate input { font-family: monospace; width:
 div.main table.filters td.filter.buttons { text-align: right; width: 20%; white-space: pre }
 div.main table.filters tr.buttons td.buttons { text-align: right; padding-top: 0.5em }
 
-div.main table.filters tr.filter:hover { background: #eec }
+div.main table.filters tr.filter:hover { background: hsl(60, 50%, 87%) }
 
 div.main table.filters td.heading.type { text-align: right; width: 10%; font-weight: bold; text-decoration: underline }
 div.main table.filters td.heading.path { text-align: left; width: 50%; font-weight: bold; text-decoration: underline }
@@ -133,15 +133,15 @@ div.reapplyresult td.id {
 div.reapplyresult td.summary {
     text-align: left;
     font-family: monospace;
-    background-color: #fffff4;
+    background-color: hsl(60, 100%, 98%);
     padding: 3px 1em 3px 1em;
-    border-left: 1px dotted #cca;
-    border-bottom: 1px dotted #cca;
-    border-right: 1px dotted #cca
+    border-left: 1px dotted hsl(60, 25%, 73%);
+    border-bottom: 1px dotted hsl(60, 25%, 73%);
+    border-right: 1px dotted hsl(60, 25%, 73%)
 }
 
 div.reapplyresult tr.first td.summary {
-    border-top: 1px dotted #cca
+    border-top: 1px dotted hsl(60, 25%, 73%)
 }
 
 div.matchedfiles select {

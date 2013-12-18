@@ -33,7 +33,7 @@ div.main table td.h1 p {
 
 div.main table td.h1 p span.command {
     font-family: monospace;
-    background: #eec;
+    background: hsl(60, 50%, 87%);
     padding: 3px 6px
 }
 
@@ -65,20 +65,20 @@ div.main table.branchstatus tbody tr.commit td.sha1 div {
 }
 
 div.main table.branchstatus tbody.reviewed tr.commit td.sha1 div {
-    background-color: lime
+    background-color: hsl(120, 100%, 50%)
 }
 div.main table.branchstatus tbody.pending tr.commit td.sha1 div {
-    background-color: red
+    background-color: hsl(0, 100%, 50%)
 }
 div.main table.branchstatus tbody.note tr.commit td.sha1 div {
-    background-color: yellow
+    background-color: hsl(60, 100%, 50%)
 }
 div.main table.branchstatus tbody.unknown tr.commit td.sha1 div {
-    background-color: red
+    background-color: hsl(0, 100%, 50%)
 }
 
 div.main table.branchstatus tbody.unknown tr.commit.own td.summary a {
-    color: red;
+    color: hsl(0, 100%, 50%);
     font-weight: bold
 }
 
@@ -130,25 +130,25 @@ div.main table.branchstatus tbody tr.note td.note span.user {
 
 div.main table.branchstatus tbody:hover tr.commit,
 div.main table.branchstatus tbody:hover tr.note {
-    background-color: #eec
+    background-color: hsl(60, 50%, 87%)
 }
 
 div.main table.branchstatus tbody tr.commit:hover {
-    background-color: #998;
+    background-color: hsl(60, 8%, 57%);
 }
 
 div.main table.branchstatus tbody tr td.edit a.edit {
-    color: #eec;
+    color: hsl(60, 50%, 87%);
     text-decoration: none
 }
 div.main table.branchstatus tbody:hover tr td.edit a.edit {
-    color: #cca
+    color: hsl(60, 25%, 73%)
 }
 div.main table.branchstatus tbody tr:hover td.edit a.edit {
-    color: #222
+    color: hsl(0, 0%, 13%)
 }
 div.main table.branchstatus tbody.unknown tr.commit.own td.edit a.edit {
-    color: red;
+    color: hsl(0, 100%, 50%);
     font-weight: bold
 }
 div.main table.branchstatus tbody tr td.edit a.edit:hover {
@@ -186,7 +186,7 @@ div.comment > p > a {
 
 div.comment > div.warning {
     font-weight: bold;
-    color: #f00
+    color: hsl(0, 100%, 50%);
 }
 
 div.comment > div.header {
@@ -200,8 +200,8 @@ div.comment > div.header > span.author {
 div.comment > div.text {
     font-family: monospace;
     font-size: 11px;
-    background-color: #fff;
-    border: 1px solid #bbb;
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 73%);
     margin-top: 3px;
     padding: 5px;
     white-space: pre-wrap
@@ -210,7 +210,7 @@ div.comment > div.text {
 div.comment > div.text > textarea {
     font-family: monospace;
     font-size: 11px;
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     border: none;
     width: 100%;
     resize: none
@@ -226,7 +226,7 @@ div.comments > div.resolution {
 
 div.legend {
     margin-top: 10px;
-    border-top: 2px solid #998;
+    border-top: 2px solid hsl(60, 8%, 57%);
     text-align: right;
     padding-top: 10px;
     padding-right: 1em;
@@ -239,11 +239,11 @@ div.legend span {
 }
 
 div.legend span.red {
-    background-color: red
+    background-color: hsl(0, 100%, 50%);
 }
 div.legend span.yellow {
-    background-color: yellow
+    background-color: hsl(60, 100%, 50%);
 }
 div.legend span.green {
-    background-color: lime
+    background-color: hsl(120, 100%, 50%);
 }

@@ -22,7 +22,7 @@ div.main table.preferences {
 
 div.main table.preferences tr.line.highlight,
 div.main table.preferences tr.help.highlight {
-    background: #eec
+    background: hsl(60, 50%, 87%);
 }
 
 div.main table.preferences tr.line td {
@@ -71,19 +71,19 @@ div.main table.preferences td.value span.also-configurable-per {
     padding-left: 1em;
     font-family: sans-serif;
     font-style: italic;
-    color: #444
+    color: hsl(0, 0%, 27%);
 }
 
 div.main table.preferences td.help {
     font-style: italic;
     text-align: right;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%);
 }
 
 div.main table.preferences td.extension {
     text-align: left;
     padding-top: 1.5em;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%);
 }
 
 div.main table.preferences td.extension h2 span.name {
@@ -98,11 +98,11 @@ div.main table.preferences td.extension h2 span.author {
 
 div.installed_sha1 {
     text-align: center;
-    color: gray
+    color: hsl(0, 0%, 50%);
 }
 div.installed_sha1 a {
     text-decoration: none;
-    color: gray
+    color: hsl(0, 0%, 50%);
 }
 div.installed_sha1 a:hover {
     text-decoration: underline;

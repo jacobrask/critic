@@ -33,9 +33,9 @@ tr.line td.value {
 
 tr.line.self td.user,
 tr.line.self td.value {
-    border-bottom: 1px solid #222;
-    border-top: 1px solid #222;
-    background-color: #eec
+    border-bottom: 1px solid hsl(0, 0%, 13%);
+    border-top: 1px solid hsl(0, 0%, 13%);
+    background-color: hsl(60, 50%, 87%)
 }
 
 tr.space td {

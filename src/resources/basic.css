@@ -17,11 +17,11 @@
 */
 
 body {
-    color: #222;
+    color: hsl(0, 0%, 13%);
 }
 
 h1.noscript {
-    color: red;
+    color: hsl(0, 100%, 50%);
     text-align: center
 }
 
@@ -31,7 +31,7 @@ div.main > table {
 
 div.shortcuts {
     margin-top: 10px;
-    border-top: 2px solid #998;
+    border-top: 2px solid hsl(60, 8%, 57%);
     text-align: right;
     padding-top: 10px;
     padding-right: 1em
@@ -39,11 +39,11 @@ div.shortcuts {
 
 div.shortcuts a.shortcut {
     text-decoration: none;
-    color: #222
+    color: hsl(0, 0%, 13%)
 }
 
 table.pageheader {
-    border-bottom: 2px solid #998;
+    border-bottom: 2px solid hsl(60, 8%, 57%);
 }
 
 table.pageheader td.left {
@@ -57,17 +57,17 @@ table.pageheader td.left b {
 
 table.pageheader td.left b.opera {
     font-size: 40px;
-    color: #d32226;
+    color: hsl(359, 72%, 48%);
     cursor: pointer
 }
 
 table.pageheader td.left b.opera.development {
-    color: #222
+    color: hsl(0, 0%, 13%)
 }
 
 table.pageheader td.left b.critic {
     font-size: 50px;
-    color: #666666;
+    color: hsl(0, 0%, 40%);
     cursor: pointer
 }
 
@@ -78,7 +78,7 @@ table.pageheader td.left span.link {
 
 table.pageheader td.left span.link a {
     text-decoration: none;
-    color: #222
+    color: hsl(0, 0%, 13%)
 }
 
 table.pageheader td.right {
@@ -97,11 +97,11 @@ table.pageheader td.right div span.buttonscope-global > :first-child {
 
 table.pagefooter {
     margin-top: 10px;
-    border-top: 2px solid #998;
+    border-top: 2px solid hsl(60, 8%, 57%);
 }
 
 table.pagefooter td.left {
-    color: #666666;
+    color: hsl(0, 0%, 40%);
     padding-top: 10px
 }
 
@@ -121,8 +121,8 @@ table.paleyellow {
     margin-top: 1.5em;
     margin-bottom: 2em;
     padding: 1em 1em 1.5em 1em;
-    background: #ffffe6;
-    border: 1px solid #cca;
+    background: hsl(60, 100%, 95%);
+    border: 1px solid hsl(60, 25%, 73%);
     border-radius: 4px;
 }
 
@@ -131,7 +131,7 @@ table.paleyellow > tbody > tr > td {
 }
 
 table.paleyellow > * > tr > td.h1 {
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 table.paleyellow > * > tr > td.h1 > h1 {
@@ -151,7 +151,7 @@ table.paleyellow > * > tr > td.h1 > h1 > span.right {
 }
 
 table.paleyellow > tbody > tr > td.h2 {
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 table.paleyellow > tbody > tr > td.h2 > h2 {
@@ -197,7 +197,7 @@ table.paleyellow > tbody > tr.item > td.value > div.buttons button {
 table.paleyellow > tbody > tr.help > td {
     font-style: italic;
     text-align: right;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 table.paleyellow > tbody > tr.spacer > td {
@@ -209,7 +209,7 @@ table.paleyellow > tbody > tr.separator > td {
 }
 
 table.paleyellow > tbody > tr.separator > td > div {
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 table.paleyellow > tbody > tr.centered > td {
@@ -231,7 +231,7 @@ table.paleyellow > tbody > tr.html > td {
     }
 }
 
-.ui-dialog { box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5), 0 7px 25px rgba(0, 0, 0, 0.5) }
+.ui-dialog { box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.5), 0 7px 25px hsla(0, 0%, 0%, 0.5) }
 
 table.pageheader td.left > ul {
   display: inline-block;
@@ -247,7 +247,7 @@ table.pageheader td.left > ul > li {
 
 table.pageheader td.left > ul > li > a {
   text-decoration: none;
-  color: #222
+  color: hsl(0, 0%, 13%)
 }
 
 table.pageheader td.left > ul > li:before {
@@ -264,8 +264,8 @@ table.pageheader td.left > ul > li:first-child:before {
 
 .error-dialog code, .message-dialog code {
     display: inline-block;
-    border: 1px solid #cca;
-    background-color: #fff;
+    border: 1px solid hsl(60, 25%, 73%);
+    background-color: hsl(0, 0%, 100%);
     padding: 2px 4px
 }
 
@@ -277,10 +277,10 @@ table.pageheader td.left > ul > li:first-child:before {
 
 .notification {
     border-radius: 5px;
-    border: 2px solid #8a8;
+    border: 2px solid hsl(120, 17%, 60%);
     margin: 10px auto;
     padding: 5px 2em;
-    background-color: #dfd;
+    background-color: hsl(120, 100%, 93%);
     text-align: left
 }
 
@@ -302,7 +302,7 @@ table.searchresults td {
     font-family: monospace;
     padding-top: 3px;
     padding-bottom: 3px;
-    background-color: #fff
+    background-color: hsl(0, 0%, 100%)
 }
 
 div.searchdialog .help {
@@ -329,11 +329,11 @@ textarea {
     margin: 0;
     box-sizing: border-box;
     padding: .3rem;
-    background: #fff;
+    background: hsl(0, 0%, 100%);
     opacity: .95;
-    border: 1px solid #efefcf;
-    border-top-color: #e5e6b3;
-    border-left-color: #e5e6b3;
+    border: 1px solid hsl(60, 50%, 87%);
+    border-top-color: hsl(61, 50%, 80%);
+    border-left-color: hsl(61, 50%, 80%);
     border-radius: 2px;
     font-size: inherit;
 }
@@ -350,10 +350,10 @@ input[type="url"]:focus,
 textarea:focus {
     outline: none;
     opacity: 1;
-    border-color: #ddb;
-    border-top-color: #cca;
-    border-left-color: #cca;
-    box-shadow: 0 0 1px 1px #fff;
+    border-color: hsl(60, 33%, 80%);
+    border-top-color: hsl(60, 25%, 73%);
+    border-left-color: hsl(60, 25%, 73%);
+    box-shadow: 0 0 1px 1px hsl(0, 0%, 100%);
 }
 
 select {
@@ -367,9 +367,9 @@ select:disabled {
 
 .callout {
     padding: 0.75rem;
-    background: #fffff4;
-    border: 1px solid #ddb;
-    border-bottom-color: #cca;
-    border-right-color: #cca;
+    background: hsl(60, 100%, 98%);
+    border: 1px solid hsl(60, 33%, 80%);
+    border-bottom-color: hsl(60, 25%, 73%);
+    border-right-color: hsl(60, 25%, 73%);
     border-radius: 4px;
 }

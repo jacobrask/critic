@@ -24,8 +24,8 @@ div.main table.edit {
     table-layout: fixed;
     margin-top: 1em;
     padding: 1em;
-    background: #ffffe6;
-    border: 1px solid #cca;
+    background: hsl(60, 100%, 95%);
+    border: 1px solid hsl(60, 25%, 73%);
     border-radius: 4px;
 }
 
@@ -35,7 +35,7 @@ div.main table.edit td {
 
 div.main table.edit td.h1 {
     text-align: left;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 div.main table.edit td.h1 h1 {
@@ -59,7 +59,7 @@ div.main table.edit tr.select td.value {
 div.main table.edit tr.help td.help {
     font-style: italic;
     text-align: right;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 div.main table.edit tr.value td.value {

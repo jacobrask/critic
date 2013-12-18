@@ -27,7 +27,7 @@ table.repositories tr.repository td {
 }
 
 table.repositories tr.repository:hover {
-    background-color: #eed;
+    background-color: hsl(60, 33%, 90%);
     cursor: pointer
 }
 
@@ -46,7 +46,7 @@ table.repositories .upstream {
 }
 
 table.repositories > tbody > tr.headings > th {
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }
 
 table.repositories .details {
@@ -72,7 +72,7 @@ table.trackedbranches {
 }
 
 table.trackedbranches th {
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid hsl(0, 0%, 13%);
     font-family: serif
 }
 
@@ -82,7 +82,7 @@ table.trackedbranches tr.branch td {
 }
 
 table.trackedbranches tr.branch:hover {
-    background-color: #eed;
+    background-color: hsl(60, 33%, 90%);
     cursor: pointer
 }
 
@@ -135,36 +135,36 @@ div.trackedbranchlog .output {
 div.trackedbranchlog .output pre {
     font-family: monospace;
     white-space: pre;
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     margin: 0;
-    border: 1px solid #888;
+    border: 1px solid hsl(0, 0%, 53%);
     padding: 3px;
 }
 
-div#addtrackedbranch table {
+divhsl(180, 43%, 77%)trackedbranch table {
     width: 100%
 }
 
-div#addtrackedbranch td {
+divhsl(180, 43%, 77%)trackedbranch td {
     white-space: nowrap
 }
 
-div#addtrackedbranch td.key {
+divhsl(180, 43%, 77%)trackedbranch td.key {
     font-weight: bold
 }
 
-div#addtrackedbranch td.value {
+divhsl(180, 43%, 77%)trackedbranch td.value {
     font-family: monospace
 }
 
-div#addtrackedbranch td.note {
+divhsl(180, 43%, 77%)trackedbranch td.note {
     font-family: serif;
     font-style: italic;
     white-space: normal;
     padding-bottom: 0.5em
 }
 
-div#addtrackedbranch input {
+divhsl(180, 43%, 77%)trackedbranch input {
     font-family: monospace;
     width: 100%
 }

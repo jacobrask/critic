@@ -35,34 +35,34 @@ td.line b { font-weight: normal }
 /* Comments. */
 td.line b.com {
     font-style: italic;
-    color: darkblue
+    color: hsl(240, 100%, 27%);
 }
 
 /* Preprocessing directives. */
 td.line b.pp {
-    color: maroon
+    color: hsl(0, 100%, 25%);
 }
 
 /* Keywords and operators. */
 td.line b.kw,
 td.line b.op {
     font-weight: bold;
-    color: #222
+    color: hsl(0, 0%, 13%);
 }
 
 /* Identifiers. */
 td.line b.id {
-    color: #222
+    color: hsl(0, 0%, 13%);
 }
 
 /* String and character literals. */
 td.line b.str,
 td.line b.ch {
-    color: blue
+    color: hsl(240, 100%, 50%);
 }
 
 /* Numeric literals. */
 td.line b.fp,
 td.line b.int {
-    color: green
+    color: hsl(120, 100%, 25%);
 }

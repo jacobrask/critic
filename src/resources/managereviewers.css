@@ -77,5 +77,5 @@ div.main table.manage tr td.right {
 div.main table.manage tr td.help {
     font-style: italic;
     text-align: right;
-    border-bottom: 1px solid #cca
+    border-bottom: 1px solid hsl(60, 25%, 73%)
 }

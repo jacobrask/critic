@@ -30,14 +30,14 @@ div.main table td.line {
 
 div.main table td.h1 h1 > a {
     text-decoration: none;
-    color: #222
+    color: hsl(0, 0%, 13%)
 }
 div.main table td.h1 h1 > a.root {
     font-size: 80%
 }
 div.main table td.h1 h1 > a:hover {
     text-decoration: underline;
-    color: #222
+    color: hsl(0, 0%, 13%)
 }
 div.main table td.h1 h1 span {
     padding-left: 3px;
@@ -66,18 +66,18 @@ table.file col.line {
 }
 
 table.file > tbody.spacer > tr > td {
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
     text-align: center;
-    border-left: 1px solid #888;
-    border-right: 1px solid #888
+    border-left: 1px solid hsl(0, 0%, 53%);
+    border-right: 1px solid hsl(0, 0%, 53%)
 }
 
 table.file > tbody.spacer.bottom > tr > td {
-    border-bottom: 1px solid #888
+    border-bottom: 1px solid hsl(0, 0%, 53%)
 }
 
 table.file > tbody.spacer.top > tr > td {
-    border-top: 1px solid #888
+    border-top: 1px solid hsl(0, 0%, 53%)
 }
 
 table.file > tbody.spacer > tr > td {
@@ -95,22 +95,22 @@ table.file > tbody.spacer > tr.context > td {
 }
 
 table.file > tbody.spacer > tr.expand > td > select {
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
     border: 0
 }
 
 table.file > tbody.lines > tr > td.edge,
 table.file > tbody.lines > tr > td.middle,
 table.file > tbody.lines > tr > td.linenr {
-    background-color: #eee
+    background-color: hsl(0, 0%, 93%)
 }
 
 table.file > tbody.lines > tr > td.edge:first-child {
-    border-left: 1px solid #888
+    border-left: 1px solid hsl(0, 0%, 53%)
 }
 
 table.file > tbody.lines > tr > td.edge:last-child {
-    border-right: 1px solid #888
+    border-right: 1px solid hsl(0, 0%, 53%)
 }
 
 table.file > tbody.lines > tr > td.linenr.old {
@@ -124,11 +124,11 @@ table.file > tbody.lines > tr > td.linenr.new {
 }
 
 table.file > tbody.lines > tr > td.line {
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
     text-align: left;
     font-family: monospace;
-    border-left: 1px solid #888;
-    border-right: 1px solid #888;
+    border-left: 1px solid hsl(0, 0%, 53%);
+    border-right: 1px solid hsl(0, 0%, 53%);
     white-space: pre-wrap;
     overflow: hidden;
     padding-left: 3px
@@ -136,17 +136,17 @@ table.file > tbody.lines > tr > td.line {
 
 table.file > tbody.lines > tr > td.comment {
     white-space: pre-wrap;
-    border-left: 1px solid #888;
-    border-right: 1px solid #888
+    border-left: 1px solid hsl(0, 0%, 53%);
+    border-right: 1px solid hsl(0, 0%, 53%)
 }
 
 table.file > tbody.lines > tr:first-child > td.line {
-    border-top: 1px solid #888;
+    border-top: 1px solid hsl(0, 0%, 53%);
     padding-top: 3px
 }
 
 table.file > tbody.lines > tr:last-child > td.line {
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid hsl(0, 0%, 53%);
     padding-bottom: 3px
 }
 
@@ -154,40 +154,40 @@ table.file > tbody.lines > tr.context:hover > td.line,
 table.file > tbody.lines > tr.context.markold > td.line.old,
 table.file > tbody.lines > tr.context.marknew > td.line.new
 {
-    background-color: #eee
+    background-color: hsl(0, 0%, 93%)
 }
 
 table.file > tbody.lines > tr > td.line.highlight {
-    background-color: #dfd
+    background-color: hsl(120, 100%, 93%)
 }
 table.file > tbody.lines > tr:hover > td.line.highlight {
-    background-color: #cec
+    background-color: hsl(120, 50%, 87%)
 }
 
-td.line.highlight b.t { color: #aca }
+td.line.highlight b.t { color: hsl(120, 25%, 73%) }
 
 
 table.file > tbody.lines > tr.commented > td.line.commented {
-    background-color: #eef
+    background-color: hsl(240, 100%, 97%)
 }
 table.file > tbody.lines > tr.commented:hover > td.line.commented {
-    background-color: #dde
+    background-color: hsl(240, 33%, 90%)
 }
 
 table.file > tbody.lines > tr.commenthead > td.commenthead {
     font-family: sans-serif;
-    background-color: #ccf;
+    background-color: hsl(240, 100%, 90%);
     font-weight: bold;
-    border-top: 1px solid #99b;
-    border-bottom: 1px solid #99b;
+    border-top: 1px solid hsl(240, 20%, 67%);
+    border-bottom: 1px solid hsl(240, 20%, 67%);
     text-align: center
 }
 
 table.file > tbody.lines > tr.commentchain > td.commentchain,
 table.file > tbody.lines > tr.commentchain > td.comment {
     font-family: sans-serif;
-    background-color: #ccf;
-    border-bottom: 1px solid #99b;
+    background-color: hsl(240, 100%, 90%);
+    border-bottom: 1px solid hsl(240, 20%, 67%);
     padding-left: 3px;
     padding-right: 3px;
 }
@@ -199,12 +199,12 @@ table.file > tbody.lines > tr.commentchain > td.comment > div {
 table.file > tbody.lines > tr.commentchain > td.comment > div.comment.draft > span.time:after {
     content: " (draft)";
     font-weight: bold;
-    color: #f00
+    color: hsl(0, 100%, 50%)
 }
 
 table.file > tbody.lines > tr.commentchain > td.comment > div.warning {
     font-weight: bold;
-    color: #f00
+    color: hsl(0, 100%, 50%)
 }
 
 table.file > tbody.lines > tr.commentchain > td > div > span.type {
@@ -217,20 +217,20 @@ table.file > tbody.lines > tr.commentchain > td > div > span.author {
 
 table.file > tbody.lines > tr.commentchain > td > div > span.draft {
     font-weight: bold;
-    color: #f00
+    color: hsl(0, 100%, 50%)
 }
 
 table.file > tbody.lines > tr.commentchain > td.comment > div > div.text {
     font-family: monospace;
-    background-color: #ddf;
-    border: 1px solid #99b;
+    background-color: hsl(240, 100%, 93%);
+    border: 1px solid hsl(240, 20%, 67%);
     margin-top: 3px;
     padding: 5px;
     white-space: pre-wrap
 }
 
 table.file > tbody.lines > tr.commentchain > td.comment > div > div.text > textarea {
-    background-color: #ddf;
+    background-color: hsl(240, 100%, 93%);
     border: 0;
     width: 100%
 }
@@ -241,11 +241,11 @@ table.file > tbody.lines > tr.commentchain > td.comment > div.buttons {
 }
 
 table.file > tbody.content > tr > td {
-    background-color: #eee
+    background-color: hsl(0, 0%, 93%)
 }
 
 table.file > tbody.deleted > tr > td {
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
     text-align: center
 }
 
@@ -254,7 +254,7 @@ table.file > tbody.deleted > tr > td > h2 {
 }
 
 table.file > tbody.binary > tr > td {
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
     text-align: center
 }
 
@@ -277,24 +277,24 @@ table.commit-info span.tag {
 pre.commit-msg { padding: 0.5em 1em  }
 
 b.tab:before { content: "\2192" }
-b.tab { color: #ccc }
+b.tab { color: hsl(0, 0%, 80%) }
 
 tr.modified b.tab {
-    color: #cca
+    color: hsl(60, 25%, 73%)
 }
 
 tr.replaced > td.old b.tab,
 tr.deleted > td.old b.tab {
-    color: #caa
+    color: hsl(0, 25%, 73%)
 }
 
 tr.replaced > td.new b.tab,
 tr.inserted > td.new b.tab {
-    color: #aca
+    color: hsl(120, 25%, 73%)
 }
 
 input.approve {
-    background-color: #eec;
+    background-color: hsl(60, 50%, 87%);
     font-weight: bold
 }
 
@@ -321,7 +321,7 @@ div.parent > h1 {
 
 div.detectmoves select {
     width: 100%;
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     padding: 3px
 }
 
@@ -331,7 +331,7 @@ table.commit-info tr.commit-msg > td {
 }
 
 table.commit-msg tr.line:hover {
-    background-color: #eee
+    background-color: hsl(0, 0%, 93%)
 }
 
 table.commit-msg tr.line td.edge {
