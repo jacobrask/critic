@@ -282,7 +282,7 @@ tr.modified b.t {
 
 tr.replaced > td.old b.t,
 tr.deleted > td.old b.t {
-    color: hsl(0, 25%, 73%)
+    color: hsl(6, 25%, 73%);
 }
 
 tr.replaced > td.new b.t,

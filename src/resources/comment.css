@@ -19,17 +19,17 @@
 div.comment.draft > div.header > span.time:after {
     content: " (draft)";
     font-weight: bold;
-    color: hsl(0, 100%, 50%)
+    color: hsl(6, 85%, 52%);
 }
 
 span.draft {
     font-weight: bold;
-    color: hsl(0, 100%, 50%)
+    color: hsl(6, 85%, 52%);
 }
 
 div.comment > div.warning {
     font-weight: bold;
-    color: hsl(0, 100%, 50%)
+    color: hsl(6, 85%, 52%);
 }
 
 div.comment > div.header {
@@ -90,8 +90,8 @@ div.marker {
 }
 
 div.marker.issue {
-    background-color: hsl(0, 100%, 77%);
-    border-color: hsl(0, 38%, 57%);
+    background-color: hsl(6, 80%, 77%);
+    border-color: hsl(6, 38%, 57%);
     z-index: 2
 }
 

@@ -34,4 +34,4 @@ div.main table.changes tr.reviewers td.reviewers { font-weight: bold; text-align
 div.main table.changes tr.reviewers td.willreview { text-align: center }
 div.main table.changes tr.reviewers td.files { font-family: monospace; text-align: left }
 div.main table.changes tr.reviewers td.files span.file { white-space: pre }
-div.main table.changes tr.reviewers td.no-one { text-align: right; color: hsl(0, 100%, 50%); font-weight: bold }
+div.main table.changes tr.reviewers td.no-one { text-align: right; color: hsl(6, 85%, 52%); font-weight: bold }

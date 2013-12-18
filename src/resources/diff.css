@@ -59,11 +59,11 @@ tr.line.context:hover    > td.line {
    slightly darker red when hovered. */
 tr.line.deleted  > td.line.old,
 tr.line.replaced > td.line.old {
-    background-color: hsl(0, 100%, 93%)
+    background-color: hsl(6, 80%, 93%)
 }
 tr.line.deleted:hover  > td.line.old,
 tr.line.replaced:hover > td.line.old {
-    background-color: hsl(0, 50%, 87%)
+    background-color: hsl(6, 50%, 87%)
 }
 
 /* Green background color on the left side of inserted or replaced lines; and
@@ -127,11 +127,11 @@ tr.line i {
    darker still when hovered): */
 tr.line          td.old i.r,
 tr.line.modified        i.d {
-    background-color: hsl(0, 100%, 93%)
+    background-color: hsl(6, 80%, 93%)
 }
 tr.line:hover          td.old i.r,
 tr.line.modified:hover        i.d {
-    background-color: hsl(0, 50%, 87%)
+    background-color: hsl(6, 50%, 87%)
 }
 tr.line          td.new i.r,
 tr.line.modified        i.i {
@@ -145,10 +145,10 @@ tr.line.modified:hover        i.i {
 /* On line with white-space changes, render deleted white-space in red (the line
    will otherwise be rendered as a context line.) */
 tr.line.whitespace i.d {
-    background-color: hsl(0, 100%, 93%)
+    background-color: hsl(6, 80%, 93%)
 }
 tr.line.whitespace:hover i.d {
-    background-color: hsl(0, 50%, 87%)
+    background-color: hsl(6, 50%, 87%)
 }
 
 /* On line with white-space changes, render inserted white-space in green (the

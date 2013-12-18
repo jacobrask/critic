@@ -35,7 +35,7 @@ table tr.item td.title {
 table tr.item td.status {
     text-align: right;
     font-weight: bold;
-    color: hsl(0, 100%, 50%);
+    color: hsl(6, 85%, 52%);
     width: 15%
 }
 

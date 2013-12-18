@@ -199,12 +199,12 @@ table.file > tbody.lines > tr.commentchain > td.comment > div {
 table.file > tbody.lines > tr.commentchain > td.comment > div.comment.draft > span.time:after {
     content: " (draft)";
     font-weight: bold;
-    color: hsl(0, 100%, 50%)
+    color: hsl(6, 85%, 52%);
 }
 
 table.file > tbody.lines > tr.commentchain > td.comment > div.warning {
     font-weight: bold;
-    color: hsl(0, 100%, 50%)
+    color: hsl(6, 85%, 52%);
 }
 
 table.file > tbody.lines > tr.commentchain > td > div > span.type {
@@ -217,7 +217,7 @@ table.file > tbody.lines > tr.commentchain > td > div > span.author {
 
 table.file > tbody.lines > tr.commentchain > td > div > span.draft {
     font-weight: bold;
-    color: hsl(0, 100%, 50%)
+    color: hsl(6, 85%, 52%);
 }
 
 table.file > tbody.lines > tr.commentchain > td.comment > div > div.text {
@@ -285,7 +285,7 @@ tr.modified b.tab {
 
 tr.replaced > td.old b.tab,
 tr.deleted > td.old b.tab {
-    color: hsl(0, 25%, 73%)
+    color: hsl(6, 25%, 73%)
 }
 
 tr.replaced > td.new b.tab,

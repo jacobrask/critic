@@ -21,7 +21,7 @@ body {
 }
 
 h1.noscript {
-    color: hsl(0, 100%, 50%);
+    color: hsl(6, 85%, 52%);
     text-align: center
 }
 
@@ -57,7 +57,7 @@ table.pageheader td.left b {
 
 table.pageheader td.left b.opera {
     font-size: 40px;
-    color: hsl(359, 72%, 48%);
+    color: hsl(6, 72%, 48%);
     cursor: pointer
 }
 

@@ -37,7 +37,7 @@ tr.item > td.value > div.description {
 
 tr.item > td.value > div.description.broken > a {
     font-weight: bold;
-    color: hsl(0, 100%, 50%);
+    color: hsl(6, 85%, 52%);
     text-decoration: none
 }
 
@@ -67,5 +67,5 @@ table.roles > tbody > tr > td > ul {
 
 table.roles span.inactive {
     font-weight: bold;
-    color: hsl(0, 100%, 50%);
+    color: hsl(6, 85%, 52%);
 }

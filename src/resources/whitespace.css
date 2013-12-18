@@ -17,7 +17,7 @@
 */
 
 tr.line td > i.tailws, tr.line.inserted td i.tailws {
-    background: hsl(0, 100%, 50%) !important;
+    background: hsl(6, 80%, 50%) !important;
 }
 
 tr.line td i.cr {
@@ -35,12 +35,12 @@ tr.line td > i.tailws > b.t {
 }
 
 tr.line i.i i.tailws {
-    outline: 2px solid hsl(0, 100%, 50%);
+    outline: 2px solid hsl(6, 80%, 60%);
 }
 
 tr.line.inserted > td.line.new b.t.ill,
 tr.line.replaced > td.line.new b.t.ill,
 tr.line.modified > td.line b.t.ill {
-    background-color: hsl(0, 100%, 50%);
+    background-color: hsl(6, 80%, 50%);
     color: hsl(0, 0%, 100%);
 }

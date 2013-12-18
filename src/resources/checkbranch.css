@@ -68,17 +68,17 @@ div.main table.branchstatus tbody.reviewed tr.commit td.sha1 div {
     background-color: hsl(120, 100%, 50%)
 }
 div.main table.branchstatus tbody.pending tr.commit td.sha1 div {
-    background-color: hsl(0, 100%, 50%)
+    background-color: hsl(6, 85%, 52%)
 }
 div.main table.branchstatus tbody.note tr.commit td.sha1 div {
     background-color: hsl(60, 100%, 50%)
 }
 div.main table.branchstatus tbody.unknown tr.commit td.sha1 div {
-    background-color: hsl(0, 100%, 50%)
+    background-color: hsl(6, 85%, 52%)
 }
 
 div.main table.branchstatus tbody.unknown tr.commit.own td.summary a {
-    color: hsl(0, 100%, 50%);
+    color: hsl(6, 85%, 52%);
     font-weight: bold
 }
 
@@ -148,7 +148,7 @@ div.main table.branchstatus tbody tr:hover td.edit a.edit {
     color: hsl(0, 0%, 13%)
 }
 div.main table.branchstatus tbody.unknown tr.commit.own td.edit a.edit {
-    color: hsl(0, 100%, 50%);
+    color: hsl(6, 85%, 52%);
     font-weight: bold
 }
 div.main table.branchstatus tbody tr td.edit a.edit:hover {
@@ -186,7 +186,7 @@ div.comment > p > a {
 
 div.comment > div.warning {
     font-weight: bold;
-    color: hsl(0, 100%, 50%);
+    color: hsl(6, 85%, 52%);
 }
 
 div.comment > div.header {
@@ -239,7 +239,7 @@ div.legend span {
 }
 
 div.legend span.red {
-    background-color: hsl(0, 100%, 50%);
+    background-color: hsl(6, 85%, 52%);
 }
 div.legend span.yellow {
     background-color: hsl(60, 100%, 50%);

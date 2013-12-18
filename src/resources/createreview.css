@@ -50,7 +50,7 @@ div.main table.filters tr.reviewers td { padding-top: 0.5em }
 div.main table.filters tr.reviewers td.reviewers { font-weight: bold; text-align: right; width: 30% }
 div.main table.filters tr.reviewers td.files { font-family: monospace; text-align: left; width: 70% }
 div.main table.filters tr.reviewers td.files span.file { white-space: pre }
-div.main table.filters tr.reviewers td.no-one { text-align: right; color: hsl(0, 100%, 50%); font-weight: bold }
+div.main table.filters tr.reviewers td.no-one { text-align: right; color: hsl(6, 85%, 52%); font-weight: bold }
 
 div.main table.filters tr.watchers td.spacer { padding-top: 0; border-bottom: 1px solid hsl(60, 25%, 73%) }
 div.main table.filters tr.watchers td.heading { padding-top: 0.5em; text-align: right; font-weight: bold }
