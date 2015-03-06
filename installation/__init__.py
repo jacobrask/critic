@@ -36,6 +36,7 @@ import prereqs
 import system
 import paths
 import files
+import frontend
 import database
 import smtp
 import config
@@ -52,6 +53,7 @@ modules = [prereqs,
            system,
            paths,
            files,
+           frontend,
            database,
            extensions,
            config,
