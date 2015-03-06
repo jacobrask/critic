@@ -1,4 +1,31 @@
-# Critic web frontend
+# Getting started
+
+In addition to the regular Critic install/upgrade workflow you can also work
+on the frontend with a faster development cycle using a local web server.
+
+First run `make`, enter the `static/` directory, and run for example
+`python -m SimpleHTTPServer` or the Node.js `spaserver`.
+
+To automatically build whenever a source file changes, run `make watch`. This
+means that you can update a file and then immediately reload the page and see
+the changes.
+
+Install the testing dependencies using `npm install -d`.
+
+
+## Testing
+
+The application is tested using [Jest](https://facebook.github.io/jest/).
+Test coverage is not required to be 100% for views, but other parts of the
+application should be well-tested.
+
+Tests can be run with `make test`. To specify a subset of tests, run
+`make test TESTS=MyTest` where MyTest is a regular expression matching file
+names.
+
+
+
+# Application
 
 The major parts of the Critic frontend are the **Actions**, the **Dispatcher**,
 the **Stores** and the **Views**. All data in the Critic frontend flow between

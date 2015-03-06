@@ -28,6 +28,18 @@ watch:
 .PHONY: watch
 
 
+test:
+	@./node_modules/.bin/jest $(TESTS)
+
+.PHONY: test
+
+
+test-watch:
+	@fswatch -o src -e \.sw.$ | xargs -n1 -I{} make test
+
+.PHONY: test-watch
+
+
 static:
 	@mkdir -p $@
 
@@ -62,3 +74,4 @@ static/fonts: $(FONTS)
 	$(info building $(@) ...)
 	@mkdir -p $@
 	@cp -n $^ $@/
+
