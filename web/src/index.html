@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Critic</title>
+
+  <style>
+
+    /*
+     * Import "Source Sans Pro" font family by Paul D. Hunt.
+     * SIL Open Font License, 1.1
+     * https://www.google.com/fonts/specimen/Source+Sans+Pro
+     */
+
+    @font-face {
+      font-family: "Source Sans Pro";
+      font-style: normal;
+      font-weight: 300;
+      src:
+        local("Source Sans Pro Light"),
+        local("SourceSansPro-Light"),
+        url(/fonts/SourceSansPro-Light.woff) format("woff");
+
+    }
+    @font-face {
+      font-family: "Source Sans Pro";
+      font-style: italic;
+      font-weight: 300;
+      src:
+        local("Source Sans Pro Light Italic"),
+        local("SourceSansPro-LightIt"),
+        url(/fonts/SourceSansPro-LightIt.woff) format("woff");
+    }
+
+    @font-face {
+      font-family: "Source Sans Pro";
+      font-style: normal;
+      font-weight: 400;
+      src:
+        local("Source Sans Pro"),
+        local("SourceSansPro-Regular"),
+        url(/fonts/SourceSansPro-Regular.woff) format("woff");
+    }
+    @font-face {
+      font-family: "Source Sans Pro";
+      font-style: italic;
+      font-weight: 400;
+      src:
+        local("Source Sans Pro Italic"),
+        local("SourceSansPro-It"),
+        url(/fonts/SourceSansPro-It.woff) format("woff");
+    }
+
+    @font-face {
+      font-family: "Source Sans Pro";
+      font-style: normal;
+      font-weight: 600;
+      src:
+        local("Source Sans Pro Semibold"),
+        local("SourceSansPro-Semibold"),
+        url(/fonts/SourceSansPro-Semibold.woff) format("woff");
+    }
+    @font-face {
+      font-family: "Source Sans Pro";
+      font-style: italic;
+      font-weight: 600;
+      src:
+        local("Source Sans Pro Semibold Italic"),
+        local("SourceSansPro-SemiboldIt"),
+        url(/fonts/SourceSansPro-SemiboldIt.woff) format("woff");
+    }
+
+
+    /*
+     * Import "Source Code Pro" font family by Paul D. Hunt.
+     * SIL Open Font License, 1.1
+     * https://www.google.com/fonts/specimen/Source+Code+Pro
+     */
+
+    @font-face {
+      font-family: "Source Code Pro";
+      font-style: normal;
+      font-weight: 400;
+      src:
+        local("Source Code Pro"),
+        local("SourceCodePro-Regular"),
+        url(/fonts/SourceCodePro-Regular.woff) format("woff");
+    }
+    @font-face {
+      font-family: "Source Code Pro";
+      font-style: normal;
+      font-weight: 600;
+      src:
+        local("Source Code Pro Semibold"),
+        local("SourceCodePro-Semibold"),
+        url(/fonts/SourceCodePro-Semibold.woff) format("woff");
+    }
+
+
+    /**
+     * Resets default styles and adds some basic shared styles.
+     * Other styles are defined per JavaScript view.
+     */
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    html * {
+      -moz-box-sizing: inherit;
+      box-sizing: inherit;
+    }
+
+    body {
+      background: hsl(45, 19%, 91%);
+      color: hsl(0, 0%, 25%);
+      font-family: "Source Sans Pro", sans-serif;
+      line-height: 1;
+      word-wrap: break-word;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    code, kbd, pre, samp, var {
+      font-family: "Source Code Pro", monospace;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: medium;
+      font-weight: 400;
+    }
+
+    b, dt, strong, th {
+      font-weight: 600;
+    }
+
+    button, input, textarea {
+      border: 1px solid;
+      font: inherit;
+    }
+
+    button {
+      background: transparent;
+      cursor: pointer;
+      outline: 0;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+
+    /**
+     * Basic top bar styles. Defined here to get some content immediately on
+     * the screen before any external JavaScript or CSS resources have been
+     * loaded. Advanced styles for dropdowns etc will be defined elsewhere.
+     */
+
+    .TopBar {
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.1);
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      height: 64px;
+      padding: 0 16px;
+    }
+
+    .TopBar-Logo {
+      color: hsl(8, 70%, 55%);
+      font-size: x-large;
+      font-weight: 600;
+      padding: 16px;
+    }
+
+    .TopBar-SiteNav {
+      -ms-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+    }
+    .TopBar-SiteNav a {
+      padding: 16px;
+    }
+    .TopBar-Logo:hover,
+    .TopBar-SiteNav a:hover {
+      color: hsl(170, 54%, 36%);
+    }
+  </style>
+
+  <link rel="stylesheet" href="/critic.css">
+
+</head>
+<body>
+
+  <!-- Entire div will be replaced by the main React component. -->
+  <div id="app">
+    <!--
+    Pre-render TopBar so that it's displayed immediately without wating for CSS
+    or JavaScript. In case of a JavaScript error, this means you can always
+    navigate back to the start page.
+    -->
+    <header class="TopBar">
+      <a href="/" class="TopBar-Logo">Critic</a>
+      <nav class="TopBar-SiteNav">
+        <a href="/">Dashboard</a>
+      </nav>
+    </header>
+  </div>
+
+  <script>
+    Config = (window.Config || {});
+    Critic = (window.Critic || {});
+  </script>
+
+  <!-- Includes dependency handling tools and polyfills (browser globals) -->
+  <script src="/tools.js"></script>
+
+  <!-- Application including dependencies and views -->
+  <script src="/critic.js"></script>
+
+  <!-- Initialize and render the application -->
+  <script>
+    require("./init")(document.getElementById("app"));
+  </script>
+
+</body>
+</html>

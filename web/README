@@ -1,0 +1,117 @@
+# Critic web frontend
+
+The major parts of the Critic frontend are the **Actions**, the **Dispatcher**,
+the **Stores** and the **Views**. All data in the Critic frontend flow between
+these in a single direction, in a cycle.
+
+
+        ╔════════════╗      ┌──────────┐
+    ┌─> ║  Actions   ║ <──> │ Services │
+    │   ╚═════╤══════╝      └──────────┘
+    │         v
+    │   ╔════════════╗
+    │   ║ Dispatcher ║
+    │   ╚═════╤══════╝
+    │         v
+    │   ╔════════════╗
+    │   ║   Stores   ║
+    │   ╚═════╤══════╝
+    │         v
+    │   ╔════════════╗
+    │   ║   Views    ║
+    │   ╚════════════╝
+    └─────────┘
+
+
+The architecture is heavily inspired by
+[**Flux**](http://facebook.github.io/flux/docs/overview.html#content),
+and most tutorials and articles on Flux should also apply to the core
+principles of the Critic frontend.
+
+
+## Example
+
+ 1. A user navigates to a Critic URL, such as `/dashboard`.
+
+ 2. The path is mapped to the matching handler, which in this case is the
+    Dashboard view.
+
+ 3. The Dashboard view triggers an fetch **action** for any data needed to
+    render itself and its sub-views.
+
+ 4. The action sends a network request, and on completion sends a message
+    through the global **Dispatcher** that there is new data available.
+
+ 6. The Review Store listened to the Dispatcher, and adds these new reviews
+    that entered the system into its internal store, emitting a change event.
+
+ 8. Any listening views (such as the Dashboard) is updated with the new data
+    available from the store.
+
+ 9. Because the view state changed, the Dashboard is re-rendered together with
+    all of its sub-views.
+
+
+
+# Core concepts in detail
+
+## Dispatcher
+
+The dispatcher is the central hub that manages all data flow in the
+application. Stores register a callback, and when the dispatcher responds
+to an action *all registered callbacks* are sent the data payload provided
+by the action.
+
+
+## Stores
+
+A store is a singleton object responsible for managing the state and logic
+related to a specific domain in the application (e.g. `RepositoryStore`).
+
+As mentioned above, a store registers itself with the dispatcher and provides
+it with a callback. This callback receives the action's data payload as a
+parameter. The store decides if and how to handle the data it received.
+Nothing outside a store has any insight into how it manages the data for its
+domain, and has no direct access to mutate the data.
+
+After the store is updated it broadcasts a change event. Views may query the
+new state and re-render.
+
+
+## Views
+
+The user interface in Critic is rendered using the
+**[React](http://facebook.github.io/react/)** rendering library, and Views are
+*React components*.
+
+At the very top of the nested view hierarchy on a page, there will be a view
+that fetches the data needed to render itself and its sub-views. This view, or
+views governing significant sections of the page, can then listen to and get
+data from any stores they are interested in.
+
+To make the application easy to reason about, most views should be "pure"
+(referentially transparent), simply being rendered with properties passed down
+from their parent views.
+
+
+## Actions
+
+While views access data directly from stores, the data never flows in the other
+direction (views never mutate data directly.) Instead views trigger actions,
+which are basically helper methods that takes some data and makes it suitable
+for consumption by the Dispatcher.
+
+For example, clicking a button to watch a review could dispatch a "watch
+review" action. The action would be handled by both the Server API service to
+perform the database update, and by a store that optimistically updates itself.
+
+
+## Services
+
+A service interacts with a system outside of the client side application. The
+The only service currently in Critic is the Server API service, communicating
+with the REST API. Other services like Web Sockets, or external API providers
+can easily be imagined.
+
+All I/O will happen through services and if they are mocked the entire frontend
+can be tested in isolation.
