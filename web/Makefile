@@ -40,6 +40,12 @@ test-watch:
 .PHONY: test-watch
 
 
+lint:
+	@./node_modules/.bin/eslint .
+
+.PHONY: lint
+
+
 static:
 	@mkdir -p $@
 

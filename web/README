@@ -10,7 +10,27 @@ To automatically build whenever a source file changes, run `make watch`. This
 means that you can update a file and then immediately reload the page and see
 the changes.
 
-Install the testing dependencies using `npm install -d`.
+Install the testing and linting dependencies using `npm install -d`.
+
+
+## Coding standards
+
+A number of best practices are enforced through [eslint](http://eslint.org).
+Some basic rules to follow:
+
+ * keep function [complexity](http://jscomplexity.org/complexity) and number
+   of parameters low
+ * use function [expressions and not declarations](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/)
+ * use `===` except when comparing with null
+ * use strict mode
+ * use 2 character indentation, consistent spacing and line length < 80
+ * use double quotes
+
+Additional [rules](http://eslint.org/docs/rules/) are specified in `.eslintrc`.
+
+All APIs exposed (exported) by modules should be documented using
+[jsdoc](http://usejsdoc.org/). If suitable, internal methods can also
+be documented.
 
 
 ## Testing

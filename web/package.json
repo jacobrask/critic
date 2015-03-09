@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "jest-cli": "~0.4"
+    "eslint": "^0.16.1",
+    "jest-cli": "^0.4"
   },
   "jest": {
     "setupEnvScriptFile": "<rootDir>/jest-environment.js",
