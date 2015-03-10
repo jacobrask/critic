@@ -6,6 +6,7 @@ var Router = require("./deps/react-router");
 // Components are usually wrapped in createFactory, but in this case it
 // happens when handling a route in `init.js`.
 var App = require("./views/App");
+var Branch = require("./views/Branch/RouteHandler");
 var Dashboard = require("./views/Dashboard/RouteHandler");
 var Review = require("./views/Review/RouteHandler");
 
@@ -30,6 +31,12 @@ var routes = (
     Redirect({
         from: "/",
         to: "dashboard"
+    }),
+
+    Route({
+        name: "branch",
+        handler: Branch,
+        path: ":repoName/branch/*"
     }),
 
     Route({
