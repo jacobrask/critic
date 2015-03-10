@@ -6,6 +6,7 @@ var Router = require("./deps/react-router");
 // Components are usually wrapped in createFactory, but in this case it
 // happens when handling a route in `init.js`.
 var App = require("./views/App");
+var Dashboard = require("./views/Dashboard/RouteHandler");
 
 var Redirect = React.createFactory(Router.Redirect);
 var Route = React.createFactory(Router.Route);
@@ -22,7 +23,20 @@ var routes = (
       name: "app",
       handler: App,
       path: "/"
-  })
+    },
+
+    // We could make this redirect configurable by the administrator.
+    Redirect({
+        from: "/",
+        to: "dashboard"
+    }),
+
+    Route({
+        name: "dashboard",
+        handler: Dashboard,
+        path: "dashboard"
+    })
+   )
 );
 
 

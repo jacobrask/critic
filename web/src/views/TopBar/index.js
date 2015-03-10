@@ -1,8 +1,10 @@
 "use strict";
 
 var React = require("../../deps/react");
-var DOM = React.DOM;
+var Router = require("../../deps/react-router");
 
+var DOM = React.DOM;
+var Link = React.createFactory(Router.Link);
 var SiteNav = React.createFactory(require("./SiteNav"));
 
 
@@ -14,7 +16,7 @@ var TopBar = React.createClass({
 
   render: function() {
     return DOM.header({ className: "TopBar" },
-      DOM.span({ className: "TopBar-Logo" }, "Critic"),
+      Link({ to: "dashboard", className: "TopBar-Logo" }, "Critic"),
       SiteNav()
     );
   }
