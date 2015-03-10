@@ -1,0 +1,265 @@
+{
+  "reviews": [
+    {
+      "state": "closed", 
+      "watchers": [
+        7
+      ], 
+      "reviewers": [
+        4, 
+        5
+      ], 
+      "description": null, 
+      "repository": 1, 
+      "branch": 70, 
+      "owners": [
+        1
+      ], 
+      "partitions": [
+        {
+          "commits": [], 
+          "rebase": 26
+        }, 
+        {
+          "commits": [
+            1293
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 42, 
+      "summary": "Set more sensible permissions on temporary file"
+    }, 
+    {
+      "state": "closed", 
+      "watchers": [
+        7
+      ], 
+      "reviewers": [
+        4, 
+        5
+      ], 
+      "description": null, 
+      "repository": 1, 
+      "branch": 71, 
+      "owners": [
+        1
+      ], 
+      "partitions": [
+        {
+          "commits": [], 
+          "rebase": 27
+        }, 
+        {
+          "commits": [
+            1308
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 43, 
+      "summary": "Fix installation failure if PostgreSQL doesn't speak English"
+    }, 
+    {
+      "state": "closed", 
+      "watchers": [
+        7
+      ], 
+      "reviewers": [
+        1, 
+        4
+      ], 
+      "description": null, 
+      "repository": 1, 
+      "branch": 79, 
+      "owners": [
+        4
+      ], 
+      "partitions": [
+        {
+          "commits": [
+            1319
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 45, 
+      "summary": "Make header menu items always be links"
+    }, 
+    {
+      "state": "closed", 
+      "watchers": [
+        7
+      ], 
+      "reviewers": [
+        1, 
+        4
+      ], 
+      "description": null, 
+      "repository": 1, 
+      "branch": 81, 
+      "owners": [
+        4
+      ], 
+      "partitions": [
+        {
+          "commits": [
+            1323, 
+            1321
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 46, 
+      "summary": "Clean .pyc files owned by root from source tree after install"
+    }, 
+    {
+      "state": "closed", 
+      "watchers": [
+        7
+      ], 
+      "reviewers": [
+        1, 
+        4
+      ], 
+      "description": null, 
+      "repository": 1, 
+      "branch": 83, 
+      "owners": [
+        4
+      ], 
+      "partitions": [
+        {
+          "commits": [
+            1324
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 47, 
+      "summary": "Close \"Add Reviewer\" / \"Add Watcher\" dialogs on ENTER keypress"
+    }, 
+    {
+      "state": "closed", 
+      "watchers": [
+        7
+      ], 
+      "reviewers": [
+        1, 
+        4
+      ], 
+      "description": "* I could create some sort of shared.js to avoid code duplication, raise issue if you think it's needed.\n\n* I tried a lot to avoid the quirk commit but I couldn't find a cleaner solution unfortunately. I pushed some debug code I used for this:\nhttp://critic.whyi.org/critic/422d5ae0c516bfa727a8f2283f7f791116fd65f0\n...but I have largely given up finding a cleaner solution, at least for now.", 
+      "repository": 1, 
+      "branch": 86, 
+      "owners": [
+        4
+      ], 
+      "partitions": [
+        {
+          "commits": [
+            1325, 
+            1326, 
+            1327
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 48, 
+      "summary": "Fix height of \"Submit Changes\"/\"Create Comment\" textareas so they look OK in chromium"
+    }, 
+    {
+      "state": "closed", 
+      "watchers": [
+        7
+      ], 
+      "reviewers": [
+        1, 
+        4, 
+        5, 
+        9
+      ], 
+      "description": "Some updates for the README, to avoid the need of emailing Jens to get the magic commands needed to get a fully working Critic installation.", 
+      "repository": 1, 
+      "branch": 88, 
+      "owners": [
+        9
+      ], 
+      "partitions": [
+        {
+          "commits": [], 
+          "rebase": 31
+        }, 
+        {
+          "commits": [], 
+          "rebase": 30
+        }, 
+        {
+          "commits": [
+            1354, 
+            1348, 
+            1344
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 49, 
+      "summary": "README: Expand on steps needed after the initial installation"
+    }, 
+    {
+      "state": "closed", 
+      "watchers": [
+        7
+      ], 
+      "reviewers": [
+        4, 
+        5
+      ], 
+      "description": null, 
+      "repository": 1, 
+      "branch": 89, 
+      "owners": [
+        1
+      ], 
+      "partitions": [
+        {
+          "commits": [
+            1355
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 50, 
+      "summary": "Fix crash when user has unread news items"
+    }, 
+    {
+      "state": "closed", 
+      "watchers": [
+        7
+      ], 
+      "reviewers": [
+        4, 
+        5
+      ], 
+      "description": null, 
+      "repository": 1, 
+      "branch": 90, 
+      "owners": [
+        1
+      ], 
+      "partitions": [
+        {
+          "commits": [], 
+          "rebase": 52
+        }, 
+        {
+          "commits": [
+            1372
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 51, 
+      "summary": "Fix previousreachable.rebase column's foreign key constraint"
+    }
+  ]
+}

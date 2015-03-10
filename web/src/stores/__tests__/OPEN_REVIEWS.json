@@ -1,0 +1,199 @@
+{
+  "reviews": [
+    {
+      "state": "open", 
+      "watchers": [
+        6
+      ], 
+      "reviewers": [
+        1, 
+        4, 
+        5, 
+        7, 
+        8, 
+        19
+      ], 
+      "description": "Work on addressing https://github.com/jensl/critic/issues/27.", 
+      "repository": 1, 
+      "branch": 18, 
+      "owners": [
+        1
+      ], 
+      "partitions": [
+        {
+          "commits": [
+            2516
+          ], 
+          "rebase": 68
+        }, 
+        {
+          "commits": [], 
+          "rebase": 67
+        }, 
+        {
+          "commits": [
+            1112, 
+            1092, 
+            1091, 
+            1090, 
+            1088, 
+            1089
+          ], 
+          "rebase": 17
+        }, 
+        {
+          "commits": [
+            970, 
+            969, 
+            966, 
+            967, 
+            968, 
+            166
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 11, 
+      "summary": "Improve UI responsiveness when commenting code"
+    }, 
+    {
+      "state": "open", 
+      "watchers": [], 
+      "reviewers": [
+        1, 
+        4, 
+        5, 
+        7, 
+        19
+      ], 
+      "description": "Based on r/8 but a slightly more all-inclusive approach\n\n* OAuth authentication against github\n* Pull requests create reviews\n* Closing pull requests closes reviews\n* Pushing to github causes review to update", 
+      "repository": 1, 
+      "branch": 106, 
+      "owners": [
+        11
+      ], 
+      "partitions": [
+        {
+          "commits": [], 
+          "rebase": 159
+        }, 
+        {
+          "commits": [
+            2280, 
+            2279, 
+            2278, 
+            1923, 
+            1922, 
+            1921, 
+            1920, 
+            1747, 
+            1748, 
+            1745, 
+            1746, 
+            1741, 
+            1742, 
+            1743, 
+            1584, 
+            1563, 
+            1561, 
+            1562, 
+            1553, 
+            1554, 
+            1555, 
+            1556, 
+            1557, 
+            1551, 
+            1552
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 59, 
+      "summary": "Enable github integration"
+    }, 
+    {
+      "state": "open", 
+      "watchers": [], 
+      "reviewers": [
+        4, 
+        7, 
+        16, 
+        19
+      ], 
+      "description": null, 
+      "repository": 1, 
+      "branch": 335, 
+      "owners": [
+        1
+      ], 
+      "partitions": [
+        {
+          "commits": [], 
+          "rebase": 412
+        }, 
+        {
+          "commits": [], 
+          "rebase": 411
+        }, 
+        {
+          "commits": [
+            8521
+          ], 
+          "rebase": 368
+        }, 
+        {
+          "commits": [], 
+          "rebase": 309
+        }, 
+        {
+          "commits": [], 
+          "rebase": 308
+        }, 
+        {
+          "commits": [
+            4758, 
+            4729
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 168, 
+      "summary": "Add utility script for creating new VirtualBox instances"
+    }, 
+    {
+      "state": "open", 
+      "watchers": [
+        4
+      ], 
+      "reviewers": [
+        18
+      ], 
+      "description": "Also various minor additions and preparations for it.", 
+      "repository": 2, 
+      "branch": 365, 
+      "owners": [
+        1
+      ], 
+      "partitions": [
+        {
+          "commits": [
+            5183, 
+            5182, 
+            5180, 
+            5181, 
+            5173, 
+            5174, 
+            5175, 
+            5176, 
+            5177, 
+            5178, 
+            5179
+          ], 
+          "rebase": null
+        }
+      ], 
+      "id": 186, 
+      "summary": "Add libcdio{,_cdda,_paranoia} binding"
+    }
+  ]
+}

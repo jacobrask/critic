@@ -1,40 +1,33 @@
 "use strict";
 
+jest.dontMock("../../Dispatcher");
 jest.dontMock("../BranchStore");
+
+var BRANCHES = require("./BRANCHES").branches;
 
 
 describe("BranchStore", function() {
 
-  var MOCK_BRANCHES = [
-    {
-      id: 2,
-      name: "r/bird",
-      repository: 2
-    }, {
-      id: 99,
-      name: "def",
-      repository: 1
-    }
-  ];
-
-
-  var Dispatcher, add, BranchStore;
+  var Dispatcher, BranchStore;
   beforeEach(function() {
     Dispatcher = require("../../Dispatcher");
-    // Hijack the callback added in BranchStore
-    Dispatcher.register = function(callback) {
-      add = callback.bind(null, "RECEIVE_BRANCHES");
-    };
     BranchStore = require("../BranchStore");
   });
 
+  var add = function(branches) {
+    Dispatcher.dispatch("RECEIVE_BRANCHES", {
+      branches: branches
+    });
+  };
 
   it("can be accessed by id", function() {
-    add({ branches: MOCK_BRANCHES });
-    expect(BranchStore.getById(10))
+    expect(BranchStore.getById(BRANCHES[1].id))
       .toBeUndefined();
-    expect(BranchStore.getById(99))
-      .toEqual(MOCK_BRANCHES[1]);
+    add(BRANCHES);
+    expect(BranchStore.getById(BRANCHES[1].id))
+      .toEqual(BRANCHES[1]);
+    expect(BranchStore.getById(Number.MAX_SAFE_INTEGER))
+      .toBeUndefined();
   });
 
   it("throws on invalid id", function() {
@@ -49,13 +42,13 @@ describe("BranchStore", function() {
   });
 
   it("can be accessed by name", function() {
-    add({ branches: MOCK_BRANCHES });
-    expect(BranchStore.getByName("no_such_branch", 2))
+    add(BRANCHES);
+    expect(BranchStore.getByName(BRANCHES[2].name, BRANCHES[2].repository))
+      .toEqual(BRANCHES[2]);
+    expect(BranchStore.getByName(BRANCHES[2].name, BRANCHES[2].repository + 1))
       .toBeUndefined();
-    expect(BranchStore.getByName("r/bird", 1))
+    expect(BranchStore.getByName("no_such_branch", Number.MAX_SAFE_INTEGER))
       .toBeUndefined();
-    expect(BranchStore.getByName("r/bird", 2))
-      .toEqual(MOCK_BRANCHES[0]);
   });
 
   it("throws on invalid name", function() {

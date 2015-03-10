@@ -1,45 +1,34 @@
 "use strict";
 
+jest.dontMock("../../Dispatcher");
 jest.dontMock("../ReviewStore");
+
+var OPEN_REVIEWS = require("./OPEN_REVIEWS").reviews;
+var CLOSED_REVIEWS = require("./CLOSED_REVIEWS").reviews;
 
 
 describe("ReviewStore", function() {
 
-  var MOCK_REVIEWS = [
-    {
-      id: 2,
-      state: "open"
-    }, {
-      id: 4,
-      state: "open"
-    }, {
-      id: 97,
-      state: "dropped"
-    }, {
-      id: 99,
-      state: "closed"
-    }
-  ];
-
-  var add, ReviewStore;
+  var Dispatcher, ReviewStore;
   beforeEach(function() {
-    var Dispatcher = require("../../Dispatcher");
-    // Hijack the callback added in ReviewStore
-    Dispatcher.register = function(callback) {
-      add = callback.bind(null, "RECEIVE_REVIEWS");
-    };
+    Dispatcher = require("../../Dispatcher");
     ReviewStore = require("../ReviewStore");
   });
 
+  var add = function(reviews) {
+    Dispatcher.dispatch("RECEIVE_REVIEWS", {
+      reviews: reviews
+    });
+  };
 
   it("can be accessed by id", function() {
     expect(ReviewStore.getById(10))
       .toBeUndefined();
-    expect(ReviewStore.getById(2))
+    expect(ReviewStore.getById(OPEN_REVIEWS[0].id))
       .toBeUndefined();
-    add({ reviews: MOCK_REVIEWS });
-    expect(ReviewStore.getById(2))
-      .toEqual(MOCK_REVIEWS[0]);
+    add(OPEN_REVIEWS);
+    expect(ReviewStore.getById(OPEN_REVIEWS[0].id))
+      .toEqual(OPEN_REVIEWS[0]);
   });
 
   it("throws on invalid id", function() {
@@ -55,19 +44,22 @@ describe("ReviewStore", function() {
 
   it("can return all reviews", function() {
     expect(ReviewStore.getAll().length).toBe(0);
-    add({ reviews: MOCK_REVIEWS });
+    add(OPEN_REVIEWS);
     expect(ReviewStore.getAll())
-      .toEqual(MOCK_REVIEWS);
+      .toEqual(OPEN_REVIEWS);
   });
 
   it("can return reviews filtered by state", function() {
-    expect(ReviewStore.getAllByState("open").length)
-      .toBe(0);
-    add({ reviews: MOCK_REVIEWS });
     expect(ReviewStore.getAllByState("open"))
-      .toEqual(MOCK_REVIEWS.slice(0, 2));
+      .toEqual([]);
+    add(OPEN_REVIEWS);
+    expect(ReviewStore.getAllByState("open"))
+      .toEqual(OPEN_REVIEWS);
     expect(ReviewStore.getAllByState("closed"))
-      .toEqual([ MOCK_REVIEWS[3] ]);
+      .toEqual([]);
+    add(CLOSED_REVIEWS);
+    expect(ReviewStore.getAllByState("closed"))
+      .toEqual(CLOSED_REVIEWS);
   });
 
   it("throws on invalid state", function() {
