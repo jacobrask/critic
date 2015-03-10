@@ -1,0 +1,46 @@
+.ReviewMain {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  margin: 36px;
+}
+
+.ReviewMain-Header {
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 16px;
+}
+.ReviewMain-Header-Id {
+  background: hsl(45, 21%, 69%);
+  color: hsl(0, 0%, 100%);
+  font-size: x-large;
+  line-height: 1.2;
+  margin-right: 16px;
+  padding: 0.3em 0.6em;
+}
+
+.ReviewMain-Header-Heading {
+  font-size: xx-large;
+}
+
+/* Should be factored out to a generic "Content" (non-UI) component */
+.ReviewMain-Description {
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+.ReviewMain-Description p, ul {
+  margin-bottom: 8px;
+}
+.ReviewMain-Description li {
+  margin-left: 2em;
+}
+.ReviewMain-Description a {
+  color: hsl(170, 54%, 36%);
+}
+.ReviewMain-Description a:hover {
+  text-decoration: underline;
+}

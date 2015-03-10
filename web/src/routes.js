@@ -7,6 +7,7 @@ var Router = require("./deps/react-router");
 // happens when handling a route in `init.js`.
 var App = require("./views/App");
 var Dashboard = require("./views/Dashboard/RouteHandler");
+var Review = require("./views/Review/RouteHandler");
 
 var Redirect = React.createFactory(Router.Redirect);
 var Route = React.createFactory(Router.Route);
@@ -35,8 +36,14 @@ var routes = (
         name: "dashboard",
         handler: Dashboard,
         path: "dashboard"
+    }),
+
+    Route({
+        name: "review",
+        handler: Review,
+        path: "r/:reviewId"
     })
-   )
+  )
 );
 
 

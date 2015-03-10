@@ -1,8 +1,10 @@
 "use strict";
 
 var React = require("../../deps/react");
+var Router = require("../../deps/react-router");
 
 var DOM = React.DOM;
+var Link = React.createFactory(Router.Link);
 
 var PureRenderMixin = React.addons.PureRenderMixin;
 
@@ -25,7 +27,9 @@ var Review = React.createClass({
     var review = this.props.review;
 
     return DOM.li({ className: "DashboardReview" },
-      DOM.div({
+      Link({
+          to: "review",
+          params: { reviewId: review.id },
           className: "DashboardReview-Review"
         },
         DOM.span({ className: "DashboardReview-Id" }, "r/" + review.id),

@@ -1,0 +1,64 @@
+.ReviewCommit {
+  border-bottom: 1px solid hsl(45, 35%, 92%);
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.ReviewCommit-Main {
+  border-right: 1px solid hsl(45, 35%, 92%);
+  padding: 8px;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.ReviewCommit-Stats {
+  padding: 16px;
+  text-align: center;
+  font-size: 75%;
+}
+
+@media (max-width: 960px) {
+  .ReviewCommit-Stats {
+    display: none;
+  }
+}
+
+.ReviewCommit-SHA1 {
+  color: hsl(0, 0%, 50%);
+  display: inline-block;
+  font-weight: 600;
+}
+
+
+.ReviewCommit-Summary {
+  display: block;
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 8px 8px 0;
+}
+.ReviewCommit-Summary:hover {
+  color: hsl(170, 54%, 36%);
+}
+
+.ReviewCommit-Meta {
+  color: hsl(0, 0%, 50%);
+  font-size: small;
+  font-weight: 100;
+  margin-top: 4px;
+  padding: 0 8px 8px;
+}
+
+.ReviewCommit-Meta-Author {
+  color: hsl(0, 0%, 25%);
+  font-weight: 400;
+}
+
+.ReviewCommit-Followup {
+  font-size: small;
+  font-style: italic;
+  font-weight: 100;
+  margin-top: 4px;
+  padding: 0px 8px;
+}
