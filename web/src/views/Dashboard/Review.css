@@ -61,3 +61,6 @@
   text-align: right;
   word-break: break-word;
 }
+.DashboardReview-Branch:hover {
+  color: hsl(170, 54%, 36%);
+}

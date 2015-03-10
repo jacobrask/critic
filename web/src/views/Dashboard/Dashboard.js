@@ -36,7 +36,10 @@ var Dashboard = React.createClass({
   request: function() {
     return ReviewActions.fetchAll(
       { state: this.props.reviewStates },
-      [ constants.ReviewIncludes.BRANCHES ]
+      [
+        constants.ReviewIncludes.BRANCHES,
+        constants.ReviewIncludes.REPOSITORIES
+      ]
     );
   },
 

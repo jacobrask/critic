@@ -19,7 +19,8 @@ var Review = React.createClass({
 
   propTypes: {
     branchName: React.PropTypes.string,
-    review: React.PropTypes.object
+    repoName: React.PropTypes.string,
+    review: React.PropTypes.object,
   },
 
 
@@ -35,7 +36,16 @@ var Review = React.createClass({
         DOM.span({ className: "DashboardReview-Id" }, "r/" + review.id),
         DOM.span({ className: "DashboardReview-Summary" }, review.summary)
       ),
-      DOM.samp({ className: "DashboardReview-Branch" }, this.props.branchName)
+      Link({
+          className: "DashboardReview-Branch",
+          to: "branch",
+          params: {
+            repoName: this.props.repoName,
+            splat: this.props.branchName,
+          }
+        },
+        DOM.samp(null, this.props.branchName)
+      )
     );
   }
 

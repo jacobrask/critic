@@ -21,12 +21,14 @@ var ReviewList = React.createClass({
   propTypes: {
     branchNames: React.PropTypes.array.isRequired,
     label: React.PropTypes.string.isRequired,
+    repoNames: React.PropTypes.array.isRequired,
     reviews: React.PropTypes.array.isRequired
   },
 
 
   render: function() {
     var branchNames = this.props.branchNames;
+    var repoNames = this.props.repoNames;
 
     // Reviews are returned from the server sorted by ID ascending.
     // We sort rather than just reverse it to be sure.
@@ -36,6 +38,7 @@ var ReviewList = React.createClass({
       return Review({
         branchName: branchNames[review.branch],
         key: review.id,
+        repoName: repoNames[review.repository],
         review: review
       });
     });

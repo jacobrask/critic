@@ -4,6 +4,7 @@ var BranchStore = require("../../stores/BranchStore");
 var constants = require("../../constants");
 var createStoreMixin = require("../mixins/createStoreMixin");
 var React = require("../../deps/react");
+var RepositoryStore = require("../../stores/RepositoryStore");
 var ReviewStore = require("../../stores/ReviewStore");
 
 var DOM = React.DOM;
@@ -20,7 +21,7 @@ var ReviewLists = React.createClass({
   displayName: "ReviewLists",
 
   mixins: [
-    createStoreMixin(BranchStore, ReviewStore),
+    createStoreMixin(BranchStore, RepositoryStore, ReviewStore),
     PureRenderMixin
   ],
 
@@ -49,8 +50,16 @@ var ReviewLists = React.createClass({
       return acc;
     }, []);
 
+    // Maps review ids to corresponding repository names for easy access.
+    var repoNames = allReviews.reduce(function(acc, review) {
+      var repo = RepositoryStore.getById(review.repository);
+      if (repo != null) acc[review.repository] = repo.name;
+      return acc;
+    }, []);
+
     return {
       branchNames: branchNames,
+      repoNames: repoNames,
       reviews: reviews
     };
   },
@@ -63,6 +72,7 @@ var ReviewLists = React.createClass({
       open: "Open reviews"
     };
     var branchNames = this.state.branchNames;
+    var repoNames = this.state.repoNames;
     var reviews = this.state.reviews;
     var lists = Object.keys(reviews).reduce(function(all, state) {
       if (reviews[state] && reviews[state].length > 0) {
@@ -70,6 +80,7 @@ var ReviewLists = React.createClass({
           branchNames: branchNames,
           key: state,
           label: labels[state],
+          repoNames: repoNames,
           reviews: reviews[state]
         }));
       }
