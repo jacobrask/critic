@@ -62,7 +62,7 @@ var getRebase = function(id) {
  */
 PartitionStore.get = function(reviewId) {
   var review = ReviewStore.getById(reviewId);
-  if (review == null) return null;
+  if (review == null) return;
 
   var partitions = [];
   for (var i = 0, commits, partition, rebase;
@@ -70,10 +70,10 @@ PartitionStore.get = function(reviewId) {
       i++) {
     partition = review.partitions[i];
     commits = CommitStore.getByIds(partition.commits);
-    if (commits == null) return null;
+    if (commits == null) return;
     if (partition.rebase) {
       rebase = partition.rebase && getRebase(partition.rebase);
-      if (rebase == null) return null;
+      if (rebase == null) return;
     } else {
       rebase = null;
     }

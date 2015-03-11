@@ -1,37 +1,33 @@
 "use strict";
 
+jest.dontMock("../../Dispatcher");
 jest.dontMock("../UserStore");
+
+var USERS = require("./USERS").users;
 
 
 describe("UserStore", function() {
 
-  var MOCK_USERS = [
-    {
-      id: 2,
-      name: "Jane Doe"
-    }, {
-      id: 99,
-      name: "Jeff"
-    }
-  ];
-
-
-  var add, UserStore;
+  var Dispatcher, UserStore;
   beforeEach(function() {
-    var Dispatcher = require("../../Dispatcher");
-    // Hijack the callback added in UserStore
-    Dispatcher.register = function(callback) {
-      add = callback.bind(null, "RECEIVE_USERS");
-    };
+    Dispatcher = require("../../Dispatcher");
     UserStore = require("../UserStore");
   });
 
+  var add = function(users) {
+    Dispatcher.dispatch("RECEIVE_USERS", {
+      users: users
+    });
+  };
+
   it("can be accessed by id", function() {
-    add({ users: MOCK_USERS });
-    expect(UserStore.getById(10))
+    expect(UserStore.getById(USERS[1].id))
       .toBeUndefined();
-    expect(UserStore.getById(99))
-      .toEqual(MOCK_USERS[1]);
+    add(USERS);
+    expect(UserStore.getById(USERS[1].id))
+      .toEqual(USERS[1]);
+    expect(UserStore.getById(Number.MAX_SAFE_INTEGER))
+      .toBeUndefined();
   });
 
   it("throws on invalid id", function() {

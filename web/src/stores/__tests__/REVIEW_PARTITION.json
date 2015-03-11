@@ -1,0 +1,1287 @@
+{
+  "description": null, 
+  "repository": 1, 
+  "reviewers": [
+    1, 
+    4, 
+    7, 
+    16
+  ], 
+  "summary": "New JavaScript based frontend", 
+  "linked": {
+    "rebases": [
+      {
+        "old_upstream": 10655, 
+        "creator": 19, 
+        "review": 303, 
+        "old_head": 11029, 
+        "equivalent_merge": 11299, 
+        "replayed_rebase": null, 
+        "new_head": 11273, 
+        "type": "move", 
+        "id": 568, 
+        "new_upstream": 11227
+      }, 
+      {
+        "old_upstream": 10107, 
+        "creator": 19, 
+        "review": 303, 
+        "old_head": 10676, 
+        "equivalent_merge": null, 
+        "replayed_rebase": 10705, 
+        "new_head": 10680, 
+        "type": "move", 
+        "id": 537, 
+        "new_upstream": 10655
+      }, 
+      {
+        "old_head": 10680, 
+        "creator": 19, 
+        "review": 303, 
+        "new_head": 10706, 
+        "type": "history-rewrite", 
+        "id": 538
+      }
+    ], 
+    "commits": [
+      {
+        "committer": {
+          "timestamp": 1410391260.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "68c3f831799cc5f8c7fc213a561d2c6ef9c54ed0", 
+        "author": {
+          "timestamp": 1410388553.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add simple Node.js/CommonJS inspired dependency manager", 
+        "parents": [
+          10253
+        ], 
+        "message": "Add simple Node.js/CommonJS inspired dependency manager\n\nAllows for better organization and namespacing.\n", 
+        "id": 10325
+      }, 
+      {
+        "committer": {
+          "timestamp": 1411514730.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "449fd9680ca16e31bb2561485f3efa5fd55a0de8", 
+        "author": {
+          "timestamp": 1410627959.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] Use a third party router which supports query parameters and hashbangs", 
+        "parents": [
+          10586
+        ], 
+        "message": "fixup! Add Router, and use it\n\nUse a third party router which supports query parameters and hashbangs\nHashbang (#!) URLs will be used during testing, and as a fallback for\nolder browsers.\n", 
+        "id": 10585
+      }, 
+      {
+        "committer": {
+          "timestamp": 1411636089.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "485fef00c3defc69c0f91e8e7df5f6e71c4cd557", 
+        "author": {
+          "timestamp": 1411569728.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Dashboard design update", 
+        "parents": [
+          10584
+        ], 
+        "message": "Dashboard design update\n\nAlso use a the full browser viewport width, no max-width or centering.\nThis gives us greater flexibility, and the possibility to add a sidebar\nto pages with things such as review info, news and actions.\n\nWe will control individual elements to make sure they are not\nuncomfortably wide when the viewport grows big.\n", 
+        "id": 10583
+      }, 
+      {
+        "committer": {
+          "timestamp": 1420155112.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "9c370b5537a4267a1d44f357bcc1b2521434d8b4", 
+        "author": {
+          "timestamp": 1420152965.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] Add note about EventTarget difference", 
+        "parents": [
+          11357
+        ], 
+        "message": "fixup! Use CSS, run web on /dev, rename components, etc...\n\nAdd note about EventTarget difference\n", 
+        "id": 11356
+      }, 
+      {
+        "committer": {
+          "timestamp": 1416305569.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "ff6d68d4808b395d5c4a153d03b2e01c80fbae12", 
+        "author": {
+          "timestamp": 1415219282.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Intercept linked resources from API", 
+        "parents": [
+          11023
+        ], 
+        "message": "Intercept linked resources from API\n", 
+        "id": 11022
+      }, 
+      {
+        "committer": {
+          "timestamp": 1410254714.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "c5cdc8ca97a3a4ff375b510fe2f7c6fb37cf01c3", 
+        "author": {
+          "timestamp": 1410195482.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] Better documentation", 
+        "parents": [
+          10255
+        ], 
+        "message": "fixup! Add Router, and use it\n\nBetter documentation\n", 
+        "id": 10254
+      }, 
+      {
+        "committer": {
+          "timestamp": 1414448662.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "526aca1547c3327c395b040b7f06b7ae75daa9f7", 
+        "author": {
+          "timestamp": 1413681371.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Remove components not supported by the JSON API, and use new React syntax", 
+        "parents": [
+          10900
+        ], 
+        "message": "Remove components not supported by the JSON API, and use new React syntax\n\nUse the React.DOM helpers instead of JSX. This removes the need of a JSX\ncompilation step, improves tooling support, and is one less technology\nto care about.\n\nTo avoid converting components that are not yet supported by the API,\nthey are removed and will be re-added as they can be implemented to use\nreal data.\n", 
+        "id": 10899
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409763911.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "52b45f592156f93b6f9ed851302cb24a09238e76", 
+        "author": {
+          "timestamp": 1409759981.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Compile JSX in the browser instead of with webpack", 
+        "parents": [
+          10136
+        ], 
+        "message": "Compile JSX in the browser instead of with webpack\n\nThis isn't good for performance, but there seems to be a Python\nlibrary that we can use later:\n\nhttps://github.com/reactjs/react-python\n", 
+        "id": 10135
+      }, 
+      {
+        "committer": {
+          "timestamp": 1415193506.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "92a910955da7a6628694df3a9f9ae047703f83c4", 
+        "author": {
+          "timestamp": 1415028818.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Update deps: React (0.12 final), React Mini Router (1.0.0), Fetch", 
+        "parents": [
+          11027
+        ], 
+        "message": "Update deps: React (0.12 final), React Mini Router (1.0.0), Fetch\n", 
+        "id": 11026
+      }, 
+      {
+        "committer": {
+          "timestamp": 1419770568.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "0cc256b9bec909bdfdfbe6622887991e2e65d877", 
+        "author": {
+          "timestamp": 1419680515.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add upgrade path to installation", 
+        "parents": [
+          11302
+        ], 
+        "message": "Add upgrade path to installation\n", 
+        "id": 11301
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409750215.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "01c7c8e7e3c7e88e6ade1421e4449a0037d34804", 
+        "author": {
+          "timestamp": 1409703354.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add frontend testing tools", 
+        "parents": [
+          10134
+        ], 
+        "message": "Add frontend testing tools\n\nUse mostly default Karma settings for now. By default runs test in\nheadless Phantom.js.\n", 
+        "id": 10133
+      }, 
+      {
+        "committer": {
+          "timestamp": 1414448662.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "8f76f20209b321879820c9d382ee86d2bcf184d0", 
+        "author": {
+          "timestamp": 1413654940.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] ", 
+        "parents": [
+          10901
+        ], 
+        "message": "fixup! Add base of new JavaScript frontend\n", 
+        "id": 10900
+      }, 
+      {
+        "committer": {
+          "timestamp": 1411635230.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "cd2df0b21858222e0ff25243ab02ffa9cf24b8ca", 
+        "author": {
+          "timestamp": 1410568969.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] Add User Store and update some APIs", 
+        "parents": [
+          10585
+        ], 
+        "message": "fixup! Add data store and actions for reviews\n\nAdd User Store and update some APIs\n", 
+        "id": 10584
+      }, 
+      {
+        "committer": {
+          "timestamp": 1420416018.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "e7a40f0e3349e9117ce9434bc8c867ca1f353cd1", 
+        "author": {
+          "timestamp": 1420146566.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add branch info to commit log, and repo store for more review info", 
+        "parents": [
+          11355
+        ], 
+        "message": "Add branch info to commit log, and repo store for more review info\n", 
+        "id": 11392
+      }, 
+      {
+        "committer": {
+          "timestamp": 1420416018.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "b8a17b4c02920ef7f22f40a67ce9a38bee415fd1", 
+        "author": {
+          "timestamp": 1420415849.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] ", 
+        "parents": [
+          11392
+        ], 
+        "message": "fixup! Use CSS, run web on /dev, rename components, etc...\n", 
+        "id": 11391
+      }, 
+      {
+        "committer": {
+          "timestamp": 1416317951.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "9af8c65510ed643a3c586743b1de635108b5e282", 
+        "author": {
+          "timestamp": 1416317951.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] ", 
+        "parents": [
+          11019
+        ], 
+        "message": "fixup! Use a Dispatcher between Actions and Stores\n", 
+        "id": 11029
+      }, 
+      {
+        "committer": {
+          "timestamp": 1410103628.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "9a3e5f740faf223c393efba537dab2b0a4f01852", 
+        "author": {
+          "timestamp": 1410103628.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add Router, and use it", 
+        "parents": [
+          10241
+        ], 
+        "message": "Add Router, and use it\n", 
+        "id": 10240
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409862953.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "e94ae7cb7679320e6884e03ec055525432eda160", 
+        "author": {
+          "timestamp": 1409821325.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add linter and lint settings", 
+        "parents": [
+          10208
+        ], 
+        "message": "Add linter and lint settings\n", 
+        "id": 10207
+      }, 
+      {
+        "committer": {
+          "timestamp": 1414448663.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "9d947130e9188d58c50a5d884c9ef3a5c790c9e6", 
+        "author": {
+          "timestamp": 1414448258.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Move the web frontend to the repository root", 
+        "parents": [
+          10897
+        ], 
+        "message": "Move the web frontend to the repository root\n\nThere is not really any neccessary coupling between the backend and the\nfrontend, as they only communicate through the REST API. This move makes\nit clearer that this relationship is a good thing that we should\nmaintain.\n\nWe also don't need the frontend sources to be copied to /usr/share by\nthe installation script,\n", 
+        "id": 10896
+      }, 
+      {
+        "committer": {
+          "timestamp": 1415178656.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "e3a10b88d7c8cec3e42cb130d7b6309f4b73c5cb", 
+        "author": {
+          "timestamp": 1414453236.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] Fix typos and errors in tests", 
+        "parents": [
+          10894
+        ], 
+        "message": "fixup! Reorganize Stores and Actions, only keeping what's supported by the API\n\nFix typos and errors in tests\n", 
+        "id": 11028
+      }, 
+      {
+        "committer": {
+          "timestamp": 1419770541.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "1a903a8258f0dc3c88f76f82b43c13fb62491078", 
+        "author": {
+          "timestamp": 1416496373.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Use CSS, run web on /dev, rename components, etc...", 
+        "parents": [
+          11273
+        ], 
+        "message": "Use CSS, run web on /dev, rename components, etc...\n", 
+        "id": 11302
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409750433.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "b2e1d69accbb570a6eb8bcb9ff358cccecc1cec3", 
+        "author": {
+          "timestamp": 1409737224.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add TopBar component", 
+        "parents": [
+          10132
+        ], 
+        "message": "Add TopBar component\n", 
+        "id": 10131
+      }, 
+      {
+        "committer": {
+          "timestamp": 1410564926.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "d65fd15c018cc735ac7e86de6c9ef55d1f67c492", 
+        "author": {
+          "timestamp": 1410564926.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] Add Make target to start a static web server", 
+        "parents": [
+          10325
+        ], 
+        "message": "fixup! Compile JSX in the browser instead of with webpack\n\nAdd Make target to start a static web server\n", 
+        "id": 10586
+      }, 
+      {
+        "committer": {
+          "timestamp": 1410091706.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "eda768355b7c97913570d72129bd9a8c620c1ff7", 
+        "author": {
+          "timestamp": 1410091706.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] Use minified and concatenated dependencies", 
+        "parents": [
+          10207
+        ], 
+        "message": "fixup! Compile JSX in the browser instead of with webpack\n\nUse minified and concatenated dependencies\n", 
+        "id": 10241
+      }, 
+      {
+        "committer": {
+          "timestamp": 1420155112.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "421923049c76807bc1ecee15a34349cedaa3d43c", 
+        "author": {
+          "timestamp": 1420153204.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] ", 
+        "parents": [
+          11356
+        ], 
+        "message": "fixup! Add CommitActions, CommitStore and Server API for commits\n", 
+        "id": 11355
+      }, 
+      {
+        "committer": {
+          "timestamp": 1410129130.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "51b7a660ce092e298fe33e80fe390820fc281487", 
+        "author": {
+          "timestamp": 1410129130.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Use box components as wrapper", 
+        "parents": [
+          10240
+        ], 
+        "message": "Use box components as wrapper\n", 
+        "id": 10255
+      }, 
+      {
+        "committer": {
+          "timestamp": 1411636095.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "090c27f63a2ac39bbd396f7859a926e55e02641a", 
+        "author": {
+          "timestamp": 1411635865.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Make dependencies more like CommonJS modules", 
+        "parents": [
+          10583
+        ], 
+        "message": "Make dependencies more like CommonJS modules\n", 
+        "id": 10582
+      }, 
+      {
+        "committer": {
+          "timestamp": 1415193506.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "dc473965ab40b2a3d45828ef178ad16fb5d72dda", 
+        "author": {
+          "timestamp": 1415142214.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Patch Fetch, adding CommonJS module definition and license", 
+        "parents": [
+          11026
+        ], 
+        "message": "Patch Fetch, adding CommonJS module definition and license\n", 
+        "id": 11025
+      }, 
+      {
+        "committer": {
+          "timestamp": 1416305569.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "37e347b7235946e1e8a5fac95f9e3cf11acf57fc", 
+        "author": {
+          "timestamp": 1415868035.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add CommitActions, CommitStore and Server API for commits", 
+        "parents": [
+          11021
+        ], 
+        "message": "Add CommitActions, CommitStore and Server API for commits\n", 
+        "id": 11020
+      }, 
+      {
+        "committer": {
+          "timestamp": 1414448663.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "3f5882e8bb93550760c69e40d51796f1925a11e4", 
+        "author": {
+          "timestamp": 1414416741.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add install script to wrap, concat and copy JavaScript files", 
+        "parents": [
+          10896
+        ], 
+        "message": "Add install script to wrap, concat and copy JavaScript files\n\nNo upgrade script yet, contributions appreciated\n", 
+        "id": 10895
+      }, 
+      {
+        "committer": {
+          "timestamp": 1414447220.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "557167202a4187e857a2d68c07aed226a767de0e", 
+        "author": {
+          "timestamp": 1413642613.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Update React to 0.12 (RC)", 
+        "parents": [
+          10706
+        ], 
+        "message": "Update React to 0.12 (RC)\n", 
+        "id": 10901
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409750420.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "ff756e1dc10322f31c7851b9b54e3cbc10b369ff", 
+        "author": {
+          "timestamp": 1409707565.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add app skeleton and base rendering component", 
+        "parents": [
+          10133
+        ], 
+        "message": "Add app skeleton and base rendering component\n", 
+        "id": 10132
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409862930.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "74cfcae8168fbe895200341f10c50ae6245d383d", 
+        "author": {
+          "timestamp": 1409793815.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add a ReviewInfo component, and summaries and progress to Commits", 
+        "parents": [
+          10209
+        ], 
+        "message": "Add a ReviewInfo component, and summaries and progress to Commits\n", 
+        "id": 10208
+      }, 
+      {
+        "committer": {
+          "timestamp": 1414448663.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "267e223546f75fd0e6a5141f2e8de65ca6567620", 
+        "author": {
+          "timestamp": 1414416801.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Display the new frontend in /dev", 
+        "parents": [
+          10895
+        ], 
+        "message": "Display the new frontend in /dev\n\nIf we'd put it in / there would be no way to create test data etc.\n\nWe use a catchall redirect to always route to index.html, where the\npaths are then handled with the JavaScript router.\n\nWe'll probably want to handle this on an application level rather than\nin Apache later, but this works good enough for now.\n", 
+        "id": 10894
+      }, 
+      {
+        "committer": {
+          "timestamp": 1412774882.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "3005442a9c77dbbbcbff3244bee3e3b1dbaa6189", 
+        "author": {
+          "timestamp": 1412349482.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Define styles in view components, instead of in external style sheets", 
+        "parents": [
+          10678
+        ], 
+        "message": "Define styles in view components, instead of in external style sheets\n\n(This is up for discussion, and is an experiment to see if it will\nbe less or more complex than external CSS files in this case)\n\nAll styles for a component will be defined in the same file as the\ncomponent itself, and will have no relation to other components in the\nCSS cascade. Sharing of styles will be done through regular JavaScript\nobjects and mixins.\n\nWhen writing complex applications with web technologies, there are a\ncouple of important goals/issues with the CSS:\n\n 1) Maintain a limited set of colors, paddings, etc to keep the styles\n    consistent across the site.\n 2) DRY; both for consistency, convenience and maintainability.\n 3) Make it easy to find and update the styles of a component.\n 4) Reduce the risk of regressions in other unrelated parts of the app\n    when updating a style.\n 5) Simplify vendor prefixing.\n\nMost commonly, developers use CSS preprocessors such as Less or Sass,\nbut they require a processing step using Node or Ruby, and developers\nneed to learn one more syntax.\n", 
+        "id": 10677
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409750443.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "a3a628b7715ef583934ac573a90b7ae4a6c9c9a1", 
+        "author": {
+          "timestamp": 1409738982.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add Review component skeleton", 
+        "parents": [
+          10131
+        ], 
+        "message": "Add Review component skeleton\n", 
+        "id": 10130
+      }, 
+      {
+        "committer": {
+          "timestamp": 1412774469.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "e599d0b719a1b4ebe40f003675af13d6dbc99571", 
+        "author": {
+          "timestamp": 1411682576.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] ", 
+        "parents": [
+          10582
+        ], 
+        "message": "fixup! Make dependencies more like CommonJS modules\n", 
+        "id": 10679
+      }, 
+      {
+        "committer": {
+          "timestamp": 1415193506.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "bf4a40c5384ed992b2a18e7d2ed44a47fcb85d6b", 
+        "author": {
+          "timestamp": 1414572687.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] ", 
+        "parents": [
+          11028
+        ], 
+        "message": "fixup! Update paths to be relative to ./src and prepare for install script\n", 
+        "id": 11027
+      }, 
+      {
+        "committer": {
+          "timestamp": 1420155104.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "e8296671b802b7b9e379462f2da4e17b96974959", 
+        "author": {
+          "timestamp": 1420151436.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Spelling", 
+        "parents": [
+          11301
+        ], 
+        "message": "Spelling\n", 
+        "id": 11357
+      }, 
+      {
+        "committer": {
+          "timestamp": 1412775030.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "cea27fed8687cd96469692091bcb601e4f6fe370", 
+        "author": {
+          "timestamp": 1412433681.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Rewrite and reorganize", 
+        "parents": [
+          10677
+        ], 
+        "message": "Rewrite and reorganize\n\n * Use Jest for testing\n * Better documentation\n * Rewrite Dashboard and Top bar\n * Remove old Review code, will re-add as it's re-written\n * Put test data in API responses instead of injecting directly\n", 
+        "id": 10676
+      }, 
+      {
+        "committer": {
+          "timestamp": 1415193506.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "98ae91d12a501efb743c311acbc78773252f277a", 
+        "author": {
+          "timestamp": 1415025736.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Move App component to separate module", 
+        "parents": [
+          11025
+        ], 
+        "message": "Move App component to separate module\n", 
+        "id": 11024
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409862699.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "772c19c3f073680ac6843973ca90409427e1ffbb", 
+        "author": {
+          "timestamp": 1409792162.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] Handle dependencies, restructure and enable testing", 
+        "parents": [
+          10135
+        ], 
+        "message": "fixup! Compile JSX in the browser instead of with webpack\n\nHandle dependencies, restructure and enable testing\n", 
+        "id": 10209
+      }, 
+      {
+        "committer": {
+          "timestamp": 1410300905.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "3cbfec3df7fca44f3336743ed2d9010c8ad0f6e6", 
+        "author": {
+          "timestamp": 1410300905.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add data store and actions for reviews", 
+        "parents": [
+          10254
+        ], 
+        "message": "Add data store and actions for reviews\n\nA view invokes an action that fetches some new review data. The review\ndata is added to a store, and the component is re-rendered.\nSee README for details.\n", 
+        "id": 10253
+      }, 
+      {
+        "committer": {
+          "timestamp": 1416305569.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "5f57721bb07afef423cc1e2d183f4b694f31092e", 
+        "author": {
+          "timestamp": 1416303935.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add Review page and components", 
+        "parents": [
+          11020
+        ], 
+        "message": "Add Review page and components\n", 
+        "id": 11019
+      }, 
+      {
+        "committer": {
+          "timestamp": 1414448663.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "9edfcbdee5b687b7156177476d2a6fd2ec14107c", 
+        "author": {
+          "timestamp": 1414369936.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Update paths to be relative to ./src and prepare for install script", 
+        "parents": [
+          10898
+        ], 
+        "message": "Update paths to be relative to ./src and prepare for install script\n", 
+        "id": 10897
+      }, 
+      {
+        "committer": {
+          "timestamp": 1416305569.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "f1ed66481fb26bed802f62d79b8eef6a29b6b3f7", 
+        "author": {
+          "timestamp": 1415700649.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Remove unused utils", 
+        "parents": [
+          11022
+        ], 
+        "message": "Remove unused utils\n", 
+        "id": 11021
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409756370.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "2ebd7d0af2f77e94e7d382016c55312ed515f195", 
+        "author": {
+          "timestamp": 1409752771.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add skeleton for a Commit Log component", 
+        "parents": [
+          10130
+        ], 
+        "message": "Add skeleton for a Commit Log component\n", 
+        "id": 10136
+      }, 
+      {
+        "committer": {
+          "timestamp": 1416305569.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "3dfdc66c36253fba24e96a4653d16845072d05ce", 
+        "author": {
+          "timestamp": 1414538316.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Use a Dispatcher between Actions and Stores", 
+        "parents": [
+          11024
+        ], 
+        "message": "Use a Dispatcher between Actions and Stores\n\nThe dispatcher is the central hub that manages all data flow in the\napplication. Stores and services will register a callback, and when the\ndispatcher responds to an action all callbacks are sent the data\npayload provided by the action.\n\nDifferent parts of the application will not have any knowledge of each\nother, and adding new stores and services (for extensions, for instance)\nis just a matter of adding a callback to the dispatcher.\n\nIt is also very useful for debugging - a simple console.log in the\nDispatcher lets us track all data flowing through the entire client.\n", 
+        "id": 11023
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409749789.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "d3e8b538ac1f85617462a2167a0aff6b88ac9b04", 
+        "author": {
+          "timestamp": 1409695880.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Setup frontend development environment", 
+        "parents": [
+          10107
+        ], 
+        "message": "Setup frontend development environment\n\nThe following commits are intentionally small, to work as an\nintroductionary step-by-step guide to the new frontend.\n", 
+        "id": 10134
+      }, 
+      {
+        "committer": {
+          "timestamp": 1412774476.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "fe01526b490e58ac0304874d36a622440067e6b2", 
+        "author": {
+          "timestamp": 1411693771.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Prefer EcmaScript 6 shim and own utility methods over underscore", 
+        "parents": [
+          10679
+        ], 
+        "message": "Prefer EcmaScript 6 shim and own utility methods over underscore\n", 
+        "id": 10678
+      }, 
+      {
+        "committer": {
+          "timestamp": 1414448663.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "cf98f1b59dc4c5018d1eb7bfe96998ce30231cb0", 
+        "author": {
+          "timestamp": 1413842716.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Reorganize Stores and Actions, only keeping what's supported by the API", 
+        "parents": [
+          10899
+        ], 
+        "message": "Reorganize Stores and Actions, only keeping what's supported by the API\n", 
+        "id": 10898
+      }, 
+      {
+        "committer": {
+          "timestamp": 1412547593.0, 
+          "name": "Rafa\u0142 Ch\u0142odnicki", 
+          "email": "rchl2k@gmail.com"
+        }, 
+        "sha1": "88b46a93a3d2f4163633193273944c17626f0568", 
+        "author": {
+          "timestamp": 1412445437.0, 
+          "name": "Rafal Chlodnicki", 
+          "email": "rchlodnicki@opera.com"
+        }, 
+        "summary": "Mark comment read when specifying silent operation for Batch.finish()", 
+        "parents": [
+          10528
+        ], 
+        "message": "Mark comment read when specifying silent operation for Batch.finish()\n\nWhen completing a Batch in a 'silent' mode (FinishData.silent == true),\nin addition to not sending mails, also don't make added comments show\nup as unread. Reasoning is that reviews with unread comments are\nspecially marked on the Dashboard page and if the changes were not\nimportant enough to bother user with emails then he should also not\nbe bothered in there.\n", 
+        "id": 10655
+      }, 
+      {
+        "committer": {
+          "timestamp": 1419770491.0, 
+          "name": "Critic System", 
+          "email": "critic@critic-review.org"
+        }, 
+        "sha1": "fc497dc3e41bbc88cc1a3ae2783a8e37acfcef8c", 
+        "author": {
+          "timestamp": 1419770491.0, 
+          "name": "Critic System", 
+          "email": "critic@critic-review.org"
+        }, 
+        "summary": "Merge commit 'b59915071d5078953f127b1a36ccdc36e1724c05' into r/javascript_frontend", 
+        "parents": [
+          11029, 
+          11227
+        ], 
+        "message": "Merge commit 'b59915071d5078953f127b1a36ccdc36e1724c05' into r/javascript_frontend\n\nThis commit was generated automatically by Critic as an equivalent merge\nto the rebase of the commits\n\n  88b46a93a3d2f4163633193273944c17626f0568..9af8c65510ed643a3c586743b1de635108b5e282\n\nonto the commit 'b59915071d5078953f127b1a36ccdc36e1724c05'.", 
+        "id": 11299
+      }, 
+      {
+        "committer": {
+          "timestamp": 1412775233.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "55c1b0bc0b7c4567e70fd55902228a46b3c22e9a", 
+        "author": {
+          "timestamp": 1412433681.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Rewrite and reorganize", 
+        "parents": [
+          10681
+        ], 
+        "message": "Rewrite and reorganize\n\n * Use Jest for testing\n * Better documentation\n * Rewrite Dashboard and Top bar\n * Remove old Review code, will re-add as it's re-written\n * Put test data in API responses instead of injecting directly\n", 
+        "id": 10680
+      }, 
+      {
+        "committer": {
+          "timestamp": 1419770490.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "ad1ec0bf615a1a993b7ef65ee73587d041f18fb4", 
+        "author": {
+          "timestamp": 1416317951.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "[fixup] ", 
+        "parents": [
+          11274
+        ], 
+        "message": "fixup! Use a Dispatcher between Actions and Stores\n", 
+        "id": 11273
+      }, 
+      {
+        "committer": {
+          "timestamp": 1418908480.0, 
+          "name": "Jens Widell", 
+          "email": "jl@critic-review.org"
+        }, 
+        "sha1": "b59915071d5078953f127b1a36ccdc36e1724c05", 
+        "author": {
+          "timestamp": 1418301763.0, 
+          "name": "Jens Widell", 
+          "email": "jl@opera.com"
+        }, 
+        "summary": "Improve unit test running", 
+        "parents": [
+          11198
+        ], 
+        "message": "Improve unit test running\n\nCall all unit tests using \"python -m run_unittest\" where 'run_unittest.py'\nis a simple utility script that calls unit test functions, optionally via\nthe coverage mechanism.  This gives us coverage measuring for all unit\ntests without needing to implement it in every unit test (some but not all\nexisting tests did this.)\n\nAlso check that running test X in a module's unit test outputs \"X: ok\",\nand add 'print \"X: ok\"' at the end of each test function.  This simple\nmechanism verifies that the test function was actually called, and that\nit actually ran to completion.  Simple typos and copy-paste errors could\notherwise lead to parts of unit tests being silently dead code.\n\nAlso refactor the unit test running code in the testing framework to\nshare more code between the different instance types.\n", 
+        "id": 11227
+      }, 
+      {
+        "committer": {
+          "timestamp": 1412775234.0, 
+          "name": "Critic System", 
+          "email": "critic@critic-review.org"
+        }, 
+        "sha1": "747d8ab7385927d3d6ee1667b9dd60d6ebcd103e", 
+        "author": {
+          "timestamp": 1412775234.0, 
+          "name": "Critic System", 
+          "email": "critic@critic-review.org"
+        }, 
+        "summary": "Rebased r/javascript_frontend onto commit '88b46a93a3d2f4163633193273944c17626f0568'", 
+        "parents": [
+          10655
+        ], 
+        "message": "Rebased r/javascript_frontend onto commit '88b46a93a3d2f4163633193273944c17626f0568'\n\nThis commit was generated automatically by Critic to \"replay\" the\nrebase of the commits\n\n  b6ecbb6cffb4c20cf48307b48da3e003d8ff505d..cea27fed8687cd96469692091bcb601e4f6fe370\n\nonto the commit '88b46a93a3d2f4163633193273944c17626f0568'.\n", 
+        "id": 10705
+      }, 
+      {
+        "committer": {
+          "timestamp": 1412777502.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "sha1": "0857c847cedcb058d7cded4387f267cc2a08b7c9", 
+        "author": {
+          "timestamp": 1412777448.0, 
+          "name": "Jacob Rask", 
+          "email": "jacob@jacobrask.net"
+        }, 
+        "summary": "Add Dashboard component", 
+        "parents": [
+          10707
+        ], 
+        "message": "Add Dashboard component\n\nCurrently capable of displaying all open reviews in the system.\n", 
+        "id": 10706
+      }, 
+      {
+        "committer": {
+          "timestamp": 1409748052.0, 
+          "name": "Jens Widell", 
+          "email": "jl@critic-review.org"
+        }, 
+        "sha1": "b6ecbb6cffb4c20cf48307b48da3e003d8ff505d", 
+        "author": {
+          "timestamp": 1395054611.0, 
+          "name": "Jens Lindstrom", 
+          "email": "jl@opera.com"
+        }, 
+        "summary": "Add installation/quickstart.py script", 
+        "parents": [
+          10108
+        ], 
+        "message": "Add installation/quickstart.py script\n\nAllows a regular (non-privileged) user to start a Critic instance.\nUses the built-in Python modules wsgiref.simple_server instead of\nApache/mod_wsgi and sqlite3 instead of PostgreSQL.  Still depends on\nhaving the non-standard Python modules requests, passlib and pygments\ninstalled (but those could presumably be installed using \"pip install\"\nin a virtualenv.)\n", 
+        "id": 10107
+      }
+    ], 
+    "users": [
+      {
+        "status": "current", 
+        "email": "philip@foolip.org", 
+        "fullname": "Philip J\u00e4genstedt", 
+        "id": 16, 
+        "name": "foolip"
+      }, 
+      {
+        "status": "current", 
+        "email": "jl@critic-review.org", 
+        "fullname": "Jens Widell", 
+        "id": 1, 
+        "name": "jl"
+      }, 
+      {
+        "status": "current", 
+        "email": "jacob@jacobrask.net", 
+        "fullname": "Jacob Rask", 
+        "id": 19, 
+        "name": "jacobrask"
+      }, 
+      {
+        "status": "current", 
+        "email": "martin@minimum.se", 
+        "fullname": "Martin Olsson", 
+        "id": 4, 
+        "name": "molsson"
+      }, 
+      {
+        "status": "current", 
+        "email": "felix.ekblom@gmail.com", 
+        "fullname": "Felix Ekblom", 
+        "id": 7, 
+        "name": "felixe"
+      }
+    ]
+  }, 
+  "partitions": [
+    {
+      "commits": [
+        11391, 
+        11392, 
+        11355, 
+        11356, 
+        11357, 
+        11301, 
+        11302
+      ], 
+      "rebase": 568
+    }, 
+    {
+      "commits": [
+        11029, 
+        11019, 
+        11020, 
+        11021, 
+        11022, 
+        11023, 
+        11024, 
+        11025, 
+        11026, 
+        11027, 
+        11028, 
+        10894, 
+        10895, 
+        10896, 
+        10897, 
+        10898, 
+        10899, 
+        10900, 
+        10901
+      ], 
+      "rebase": 538
+    }, 
+    {
+      "commits": [], 
+      "rebase": 537
+    }, 
+    {
+      "commits": [
+        10676, 
+        10677, 
+        10678, 
+        10679, 
+        10582, 
+        10583, 
+        10584, 
+        10585, 
+        10586, 
+        10325, 
+        10253, 
+        10254, 
+        10255, 
+        10240, 
+        10241, 
+        10207, 
+        10208, 
+        10209, 
+        10135, 
+        10136, 
+        10130, 
+        10131, 
+        10132, 
+        10133, 
+        10134
+      ], 
+      "rebase": null
+    }
+  ], 
+  "owners": [
+    19
+  ], 
+  "watchers": [], 
+  "id": 303, 
+  "state": "dropped", 
+  "branch": 622
+}

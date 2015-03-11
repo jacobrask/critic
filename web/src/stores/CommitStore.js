@@ -51,7 +51,7 @@ CommitStore.getByIds = function(commitIds) {
   var matches = [];
   for (var i = 0, match; i < commitIds.length; i++) {
     match = CommitStore.getById(commitIds[i]);
-    if (match == null) return null;
+    if (match == null) return;
     matches.push(match);
   }
   return matches;

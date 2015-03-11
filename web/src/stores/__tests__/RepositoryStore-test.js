@@ -1,41 +1,32 @@
 "use strict";
 
+jest.dontMock("../../Dispatcher");
 jest.dontMock("../RepositoryStore");
 
+var REPOS = require("./REPOSITORIES").repositories;
 
 describe("RepositoryStore", function() {
 
-  var MOCK_REPOS = [
-    {
-      id: 1,
-      name: "critic"
-    }, {
-      id: 2,
-      name: "chosen"
-    }, {
-      id: 55,
-      name: "foo-bar-baz"
-    }
-  ];
-
-  var add, RepositoryStore;
+  var Dispatcher, RepositoryStore;
   beforeEach(function() {
-    var Dispatcher = require("../../Dispatcher");
-    // Hijack the callback added in RepositoryStore
-    Dispatcher.register = function(callback) {
-      add = callback.bind(null, "RECEIVE_REPOSITORIES");
-    };
+    Dispatcher = require("../../Dispatcher");
     RepositoryStore = require("../RepositoryStore");
   });
 
+  var add = function(repositories) {
+    Dispatcher.dispatch("RECEIVE_REPOSITORIES", {
+      repositories: repositories
+    });
+  };
+
   it("can be accessed by id", function() {
-    expect(RepositoryStore.getById(10))
+    expect(RepositoryStore.getById(REPOS[1].id))
       .toBeUndefined();
-    expect(RepositoryStore.getById(2))
+    add(REPOS);
+    expect(RepositoryStore.getById(REPOS[1].id))
+      .toEqual(REPOS[1]);
+    expect(RepositoryStore.getById(Number.MAX_SAFE_INTEGER))
       .toBeUndefined();
-    add({ repositories: MOCK_REPOS });
-    expect(RepositoryStore.getById(1))
-      .toEqual(MOCK_REPOS[0]);
   });
 
   it("throws on invalid id", function() {
@@ -50,13 +41,13 @@ describe("RepositoryStore", function() {
   });
 
   it("can be accessed by short-name", function() {
-    expect(RepositoryStore.getByName("critic"))
+    expect(RepositoryStore.getByName(REPOS[0].name))
       .toBeUndefined();
-    add({ repositories: MOCK_REPOS });
-    expect(RepositoryStore.getByName("critic"))
-      .toEqual(MOCK_REPOS[0]);
-    expect(RepositoryStore.getByName("chosen"))
-      .toEqual(MOCK_REPOS[1]);
+    add(REPOS);
+    expect(RepositoryStore.getByName(REPOS[2].name))
+      .toEqual(REPOS[2]);
+    expect(RepositoryStore.getByName("aldfjklajdflkjasdlkfj33flasdjbjk"))
+      .toBeUndefined();
   });
 
   it("throws on invalid short-name", function() {

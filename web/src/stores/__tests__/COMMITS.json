@@ -1,0 +1,251 @@
+{
+  "commits": [
+    {
+      "committer": {
+        "timestamp": 1369006449.0, 
+        "name": "Rafal Chlodnicki", 
+        "email": "rchlodnicki@opera.com"
+      }, 
+      "sha1": "62a9ec80987aa28c67c0bfc815a3a7d3dd2c2c24", 
+      "author": {
+        "timestamp": 1356093325.0, 
+        "name": "Rafal Chlodnicki", 
+        "email": "rchlodnicki@opera.com"
+      }, 
+      "summary": "Change to a more appropriate resize cursor.", 
+      "parents": [
+        2663
+      ], 
+      "message": "Change to a more appropriate resize cursor.\n\nPrevious didn't work properly on Mac (and non-Opera browser's too probably).\n", 
+      "id": 2684
+    },
+    {
+      "committer": {
+        "timestamp": 1353769238.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "sha1": "c48f859a50f13e163b0932b289bf5eec428ed778", 
+      "author": {
+        "timestamp": 1353766584.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "summary": "If there is just one repository, always use it as defaultRepository", 
+      "parents": [
+        962
+      ], 
+      "message": "If there is just one repository, always use it as defaultRepository\n\nBeyond making \"branches\" and filter part of \"home\" pages more convenient to\nuse for newly setup single repository Critic instances, this also makes\nbehavior consistent with what \"Config\" displays for such an instance.\nAlthough the user had no preference recorded for a newly installed\ninstance, the \"Config\" page was populating the defaultRepository dropdown\nwith a single item representing the only existing repository so for the\nuser it looked like they had the \"Config\" properly setup. Just hitting\n\"Save\" without changing anything did indeed set the only repository as\ndefaultRepository, but such a click should not be necessary ofc.\n", 
+      "id": 974
+    },
+    {
+      "committer": {
+        "timestamp": 1357647577.0, 
+        "name": "Jens Lindstrom", 
+        "email": "jl@opera.com"
+      }, 
+      "sha1": "aefd1ee5e7bac20cc86d1c599bac1bf8226d3027", 
+      "author": {
+        "timestamp": 1357647465.0, 
+        "name": "Jens Lindstrom", 
+        "email": "jl@opera.com"
+      }, 
+      "summary": "[fixup] Improve handling of delayed mail delivery", 
+      "parents": [
+        995
+      ], 
+      "message": "fixup! Avoid generating emails about failure to deliver emails\n\nImprove handling of delayed mail delivery\n\nIf a mail is delivered more than 60 seconds after it was put in the\noutbox, a warning is logged.  (Historically, such delays have been a\nsymptom of the \"sender\" failing to wake up the mail delivery process\nafter placing mail in the outbox; so the warning has been meaningful.)\n\nHowever, delayed delivery also happens when the mail server stops\naccepting connections or mails for a while.  Sending one mail to the\nsystem administrator(s) per warning (and thus per delayed mail) isn't\nvery helpful.  Instead, log a single warning indicating that some\nmail were delayed, including the total number of delayed mails, how\nlong the most delayed mail was delayed, and what mail that was.  This\nshould be enough information to figure out what's wrong (if anything.)\n", 
+      "id": 1076
+    }, 
+    {
+      "committer": {
+        "timestamp": 1353945786.0, 
+        "name": "Jens Lindstrom", 
+        "email": "jl@opera.com"
+      }, 
+      "sha1": "955ac7ee03604a76ffa7c43745f49e33cc09763c", 
+      "author": {
+        "timestamp": 1353945786.0, 
+        "name": "Jens Lindstrom", 
+        "email": "jl@opera.com"
+      }, 
+      "summary": "Avoid generating emails about failure to deliver emails", 
+      "parents": [
+        991
+      ], 
+      "message": "Avoid generating emails about failure to deliver emails\n\nBy default, all warnings or errors logged by a background service is\ndelivered by email to the system administrator(s).  This included errors\nlogged by the mail delivery service.  But errors logged by it are\ntypically about inability to deliver email in the first place, so it\nmakes little sense to send further emails about it.\n\nWhat's worse, attempting to send emails about mail delivery problems can\nlead to exponential amounts of emails being generated as long as mail\ndelivery is broken.\n\nWith these changes, a single email is sent to the system administrator(s)\nafter an (unrelated) email has been successfully delivered, if any errors\nor warnings have been logged, urging the system administrator(s) to check\nthe logs.  This email is also delivered directly rather than going\nthrough the normal outbox mechanism, thus avoiding treating this as any\nother email that in turn can trigger normal error handling.\n", 
+      "id": 995
+    },
+    {
+      "committer": {
+        "timestamp": 1361208895.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "sha1": "2378b43732e9c9d34acb72884a5037a0e8bcdeb5", 
+      "author": {
+        "timestamp": 1361207861.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "summary": "Add \"OperaCritic-Repository\" to Critic e-mails", 
+      "parents": [
+        1130
+      ], 
+      "message": "Add \"OperaCritic-Repository\" to Critic e-mails\n", 
+      "id": 1135
+    },
+    {
+      "committer": {
+        "timestamp": 1354226228.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "sha1": "df535e00ba78e2e43f0fe8d20a60f131a962952f", 
+      "author": {
+        "timestamp": 1354226228.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "summary": "Delete log/tree.py", 
+      "parents": [
+        1028
+      ], 
+      "message": "Delete log/tree.py\n", 
+      "id": 1027
+    }, 
+    {
+      "committer": {
+        "timestamp": 1354225933.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "sha1": "ad11a373bdd3e837e7d7eb5ba83f9d9225a30e95", 
+      "author": {
+        "timestamp": 1354053930.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "summary": "[fixup] Revert 0c5e19f38041cd0acba263b1dab6c6f5386397d6", 
+      "parents": [
+        1007
+      ], 
+      "message": "fixup! Drop unused function (another definition a few lines below)\n\nRevert 0c5e19f38041cd0acba263b1dab6c6f5386397d6\n", 
+      "id": 1028
+    }, 
+    {
+      "committer": {
+        "timestamp": 1354134006.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "sha1": "0fa19266ae9351dba629a68962e70582079c202e", 
+      "author": {
+        "timestamp": 1354051191.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "summary": "Remove various assigned-but-not-used variables", 
+      "parents": [
+        1008
+      ], 
+      "message": "Remove various assigned-but-not-used variables\n", 
+      "id": 1007
+    }, 
+    {
+      "committer": {
+        "timestamp": 1354133975.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "sha1": "1d5a6c5f27ccaf28cad4fa9e6a2c1c698daf6056", 
+      "author": {
+        "timestamp": 1354054426.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "summary": "Drop unused function linkToCommit() in review/html.py", 
+      "parents": [
+        1009
+      ], 
+      "message": "Drop unused function linkToCommit() in review/html.py\n", 
+      "id": 1008
+    }, 
+    {
+      "committer": {
+        "timestamp": 1354053957.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "sha1": "0c5e19f38041cd0acba263b1dab6c6f5386397d6", 
+      "author": {
+        "timestamp": 1354053930.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "summary": "Drop unused function (another definition a few lines below)", 
+      "parents": [
+        1010
+      ], 
+      "message": "Drop unused function (another definition a few lines below)\n", 
+      "id": 1009
+    }, 
+    {
+      "committer": {
+        "timestamp": 1354053582.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "sha1": "e301939849f4592d3520570f9ae0dc4c6e05578f", 
+      "author": {
+        "timestamp": 1354053560.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "summary": "Don't fetch it if it's not going to be used", 
+      "parents": [
+        1011
+      ], 
+      "message": "Don't fetch it if it's not going to be used\n", 
+      "id": 1010
+    }, 
+    {
+      "committer": {
+        "timestamp": 1354052869.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "sha1": "ea0beb6888f73c946195386c8ff85e503ced6669", 
+      "author": {
+        "timestamp": 1354051619.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "summary": "Use _global_ variable site_enabled", 
+      "parents": [
+        1012
+      ], 
+      "message": "Use _global_ variable site_enabled\n", 
+      "id": 1011
+    }, 
+    {
+      "committer": {
+        "timestamp": 1354051020.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "sha1": "930ec565e9d646b88584fe3cd3f6000de560b857", 
+      "author": {
+        "timestamp": 1354051020.0, 
+        "name": "Martin Olsson", 
+        "email": "martin@minimum.se"
+      }, 
+      "summary": "Remove redundant import", 
+      "parents": [
+        991
+      ], 
+      "message": "Remove redundant import\n", 
+      "id": 1012
+    }
+  ]
+}

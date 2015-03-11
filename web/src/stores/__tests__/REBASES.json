@@ -1,0 +1,244 @@
+{
+  "rebases": [
+    {
+      "old_head": 10237, 
+      "creator": 1, 
+      "review": 197, 
+      "new_head": 10596, 
+      "type": "history-rewrite", 
+      "id": 533
+    }, 
+    {
+      "old_upstream": 10481, 
+      "creator": 1, 
+      "review": 313, 
+      "old_head": 10509, 
+      "equivalent_merge": 10529, 
+      "replayed_rebase": null, 
+      "new_head": 10528, 
+      "type": "move", 
+      "id": 532, 
+      "new_upstream": 10526
+    }, 
+    {
+      "old_upstream": 10452, 
+      "creator": 1, 
+      "review": 311, 
+      "old_head": 10478, 
+      "equivalent_merge": null, 
+      "replayed_rebase": 10527, 
+      "new_head": 10526, 
+      "type": "move", 
+      "id": 531, 
+      "new_upstream": 10481
+    }, 
+    {
+      "old_head": 10508, 
+      "creator": 1, 
+      "review": 313, 
+      "new_head": 10509, 
+      "type": "history-rewrite", 
+      "id": 530
+    }, 
+    {
+      "old_head": 10480, 
+      "creator": 1, 
+      "review": 203, 
+      "new_head": 10481, 
+      "type": "history-rewrite", 
+      "id": 529
+    }, 
+    {
+      "old_upstream": 10376, 
+      "creator": 1, 
+      "review": 203, 
+      "old_head": 10435, 
+      "equivalent_merge": 10476, 
+      "replayed_rebase": null, 
+      "new_head": 10452, 
+      "type": "move", 
+      "id": 528, 
+      "new_upstream": 10449
+    }, 
+    {
+      "old_head": 10408, 
+      "creator": 1, 
+      "review": 203, 
+      "new_head": 10435, 
+      "type": "history-rewrite", 
+      "id": 527
+    }, 
+    {
+      "old_upstream": 10261, 
+      "creator": 1, 
+      "review": 203, 
+      "old_head": 10384, 
+      "equivalent_merge": 10432, 
+      "replayed_rebase": null, 
+      "new_head": 10408, 
+      "type": "move", 
+      "id": 526, 
+      "new_upstream": 10376
+    }, 
+    {
+      "old_head": 10323, 
+      "creator": 1, 
+      "review": 203, 
+      "new_head": 10384, 
+      "type": "history-rewrite", 
+      "id": 525
+    }, 
+    {
+      "old_upstream": 10256, 
+      "creator": 1, 
+      "review": 308, 
+      "old_head": 10324, 
+      "equivalent_merge": 10377, 
+      "replayed_rebase": null, 
+      "new_head": 10376, 
+      "type": "move", 
+      "id": 524, 
+      "new_upstream": 10328
+    }, 
+    {
+      "old_upstream": 10011, 
+      "creator": 1, 
+      "review": 272, 
+      "old_head": 10052, 
+      "equivalent_merge": 10338, 
+      "replayed_rebase": null, 
+      "new_head": 10328, 
+      "type": "move", 
+      "id": 523, 
+      "new_upstream": 10261
+    }, 
+    {
+      "old_upstream": 10096, 
+      "creator": 1, 
+      "review": 203, 
+      "old_head": 10296, 
+      "equivalent_merge": 10320, 
+      "replayed_rebase": null, 
+      "new_head": 10267, 
+      "type": "move", 
+      "id": 522, 
+      "new_upstream": 10261
+    }, 
+    {
+      "old_head": 10218, 
+      "creator": 1, 
+      "review": 203, 
+      "new_head": 10296, 
+      "type": "history-rewrite", 
+      "id": 521
+    }, 
+    {
+      "old_upstream": 10213, 
+      "creator": 1, 
+      "review": 276, 
+      "old_head": 10259, 
+      "equivalent_merge": 10264, 
+      "replayed_rebase": null, 
+      "new_head": 10261, 
+      "type": "move", 
+      "id": 520, 
+      "new_upstream": 10256
+    }, 
+    {
+      "old_head": 10258, 
+      "creator": 1, 
+      "review": 276, 
+      "new_head": 10259, 
+      "type": "history-rewrite", 
+      "id": 519
+    }, 
+    {
+      "old_upstream": 10096, 
+      "creator": 1, 
+      "review": 197, 
+      "old_head": 10231, 
+      "equivalent_merge": 10235, 
+      "replayed_rebase": null, 
+      "new_head": 10233, 
+      "type": "move", 
+      "id": 518, 
+      "new_upstream": 10218
+    }, 
+    {
+      "old_head": 10197, 
+      "creator": 1, 
+      "review": 197, 
+      "new_head": 10231, 
+      "type": "history-rewrite", 
+      "id": 517
+    }, 
+    {
+      "old_upstream": 9965, 
+      "creator": 1, 
+      "review": 276, 
+      "old_head": 10225, 
+      "equivalent_merge": 10229, 
+      "replayed_rebase": null, 
+      "new_head": 10227, 
+      "type": "move", 
+      "id": 516, 
+      "new_upstream": 10213
+    }, 
+    {
+      "old_head": 10014, 
+      "creator": 1, 
+      "review": 276, 
+      "new_head": 10225, 
+      "type": "history-rewrite", 
+      "id": 515
+    }, 
+    {
+      "old_upstream": 10096, 
+      "creator": 1, 
+      "review": 305, 
+      "old_head": 10205, 
+      "equivalent_merge": 10214, 
+      "replayed_rebase": null, 
+      "new_head": 10213, 
+      "type": "move", 
+      "id": 512, 
+      "new_upstream": 10210
+    }, 
+    {
+      "old_upstream": 10096, 
+      "creator": 1, 
+      "review": 306, 
+      "old_head": 10206, 
+      "equivalent_merge": 10211, 
+      "replayed_rebase": null, 
+      "new_head": 10210, 
+      "type": "move", 
+      "id": 511, 
+      "new_upstream": 10203
+    }, 
+    {
+      "old_head": 10194, 
+      "creator": 1, 
+      "review": 197, 
+      "new_head": 10195, 
+      "type": "history-rewrite", 
+      "id": 510
+    }, 
+    {
+      "old_head": 10191, 
+      "creator": 1, 
+      "review": 197, 
+      "new_head": 10192, 
+      "type": "history-rewrite", 
+      "id": 509
+    }, 
+    {
+      "old_head": 10164, 
+      "creator": 1, 
+      "review": 203, 
+      "new_head": 10167, 
+      "type": "history-rewrite", 
+      "id": 508
+    }
+  ]
+}

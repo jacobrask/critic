@@ -1,0 +1,144 @@
+{
+  "users": [
+    {
+      "status": "current", 
+      "email": "jl@critic-review.org", 
+      "fullname": "Jens Widell", 
+      "id": 1, 
+      "name": "jl"
+    }, 
+    {
+      "status": "current", 
+      "email": "e.b.white@minimum.se", 
+      "fullname": "Elwyn Brooks White", 
+      "id": 2, 
+      "name": "e.b.white"
+    }, 
+    {
+      "status": "current", 
+      "email": "bratell@lysator.liu.se", 
+      "fullname": "Daniel Bratell", 
+      "id": 3, 
+      "name": "bratell"
+    }, 
+    {
+      "status": "current", 
+      "email": "martin@minimum.se", 
+      "fullname": "Martin Olsson", 
+      "id": 4, 
+      "name": "molsson"
+    }, 
+    {
+      "status": "current", 
+      "email": "alexey@feldgendler.ru", 
+      "fullname": "Alexey Feldgendler", 
+      "id": 5, 
+      "name": "feldgendler"
+    }, 
+    {
+      "status": "current", 
+      "email": "zcorpan@gmail.com", 
+      "fullname": "Simon Pieters", 
+      "id": 6, 
+      "name": "zcorpan"
+    }, 
+    {
+      "status": "current", 
+      "email": "felix.ekblom@gmail.com", 
+      "fullname": "Felix Ekblom", 
+      "id": 7, 
+      "name": "felixe"
+    }, 
+    {
+      "status": "current", 
+      "email": "rchl2k@gmail.com", 
+      "fullname": "Rafa\u0142 Ch\u0142odnicki", 
+      "id": 8, 
+      "name": "rchl"
+    }, 
+    {
+      "status": "current", 
+      "email": "peter@softwolves.pp.se", 
+      "fullname": "Peter Krefting", 
+      "id": 9, 
+      "name": "peter"
+    }, 
+    {
+      "status": "current", 
+      "email": "pcichocki@opera.com", 
+      "fullname": "Pawel Cichocki", 
+      "id": 10, 
+      "name": "pcichocki"
+    }, 
+    {
+      "status": "current", 
+      "email": "james@hoppipolla.co.uk", 
+      "fullname": "James Graham", 
+      "id": 11, 
+      "name": "jgraham"
+    }, 
+    {
+      "status": "current", 
+      "email": "geoffers@gmail.com", 
+      "fullname": "Geoffrey Sneddon", 
+      "id": 12, 
+      "name": "gsnedders"
+    }, 
+    {
+      "status": "current", 
+      "email": "tester@critic-review.org", 
+      "fullname": "Critic Tester", 
+      "id": 13, 
+      "name": "tester"
+    }, 
+    {
+      "status": "current", 
+      "email": "pengfeix@oupeng.com", 
+      "fullname": "Pengfei Xue", 
+      "id": 14, 
+      "name": "pengfeixue"
+    }, 
+    {
+      "status": "current", 
+      "email": "johan@herland.net", 
+      "fullname": "Johan Herland", 
+      "id": 15, 
+      "name": "jherland"
+    }, 
+    {
+      "status": "current", 
+      "email": "philip@foolip.org", 
+      "fullname": "Philip J\u00e4genstedt", 
+      "id": 16, 
+      "name": "foolip"
+    }, 
+    {
+      "status": "current", 
+      "email": "eddy@chaos.org.uk", 
+      "fullname": "Edward Welbourne", 
+      "id": 17, 
+      "name": "eddy"
+    }, 
+    {
+      "status": "current", 
+      "email": "sof@opera.com", 
+      "fullname": "Sigbj\u00f8rn Finne", 
+      "id": 18, 
+      "name": "sof"
+    }, 
+    {
+      "status": "current", 
+      "email": "jacob@jacobrask.net", 
+      "fullname": "Jacob Rask", 
+      "id": 19, 
+      "name": "jacobrask"
+    }, 
+    {
+      "status": "current", 
+      "email": "jpicalau+critic-review@elmandria.com", 
+      "fullname": "Julien Picalausa", 
+      "id": 20, 
+      "name": "jpicalau"
+    }
+  ]
+}

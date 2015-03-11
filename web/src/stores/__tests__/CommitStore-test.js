@@ -1,44 +1,34 @@
 "use strict";
 
+jest.dontMock("../../Dispatcher");
 jest.dontMock("../CommitStore");
 
+var COMMITS = require("./COMMITS").commits;
 
 describe("CommitStore", function() {
 
-  var MOCK_COMMITS = [
-    {
-      id: 1,
-      sha1: "3283b892f000bacda693d305e72b4329f16a2b8f"
-    }, {
-      id: 2,
-      sha1: "d946cefa86d42fc4d6a60d8d5edd7b91b80774e8"
-    }, {
-      id: 3,
-      state: "9498cc4cabf241a6c9a33b603c0df8d634db5116"
-    }, {
-      id: 4,
-      state: "40a56c9dca50baa3c51b7e8dc5d31079b9f6b193"
-    }
-  ];
+  var getIds = function(xs) { return xs.map(function(x) { return x.id; }); };
 
-  var add, CommitStore;
+  var Dispatcher, CommitStore;
   beforeEach(function() {
-    var Dispatcher = require("../../Dispatcher");
-    // Hijack the callback added in CommitStore
-    Dispatcher.register = function(callback) {
-      add = callback.bind(null, "RECEIVE_COMMITS");
-    };
+    Dispatcher = require("../../Dispatcher");
     CommitStore = require("../CommitStore");
   });
 
+  var add = function(commits) {
+    Dispatcher.dispatch("RECEIVE_COMMITS", {
+      commits: commits
+    });
+  };
+
   it("can be accessed by id", function() {
-    expect(CommitStore.getById(10))
+    expect(CommitStore.getById(Number.MAX_SAFE_INTEGER))
       .toBeUndefined();
-    expect(CommitStore.getById(2))
+    expect(CommitStore.getById(COMMITS[0].id))
       .toBeUndefined();
-    add({ commits: MOCK_COMMITS });
-    expect(CommitStore.getById(1))
-      .toEqual(MOCK_COMMITS[0]);
+    add(COMMITS);
+    expect(CommitStore.getById(COMMITS[0].id))
+      .toEqual(COMMITS[0]);
   });
 
   it("throws on invalid id", function() {
@@ -53,31 +43,31 @@ describe("CommitStore", function() {
   });
 
   it("can be accessed by array of ids", function() {
-    expect(CommitStore.getByIds([ 1, 2 ]))
+    expect(CommitStore.getByIds([ COMMITS[0].id, COMMITS[1].id ]))
       .toBeUndefined();
-    expect(CommitStore.getByIds([ 1, 1000 ]))
-      .toBeUndefined();
-    add({ commits: MOCK_COMMITS });
-    expect(CommitStore.getByIds([ 1, 2 ]))
-      .toEqual(MOCK_COMMITS.slice(0, 2));
-    expect(CommitStore.getByIds([ 1, 2, 3, 4 ]))
-      .toEqual(MOCK_COMMITS);
-    expect(CommitStore.getByIds([ 1, 1000 ]))
+    add(COMMITS);
+    expect(CommitStore.getByIds([ COMMITS[0].id ]))
+      .toEqual([ COMMITS[0] ]);
+    expect(CommitStore.getByIds(getIds(COMMITS)))
+      .toEqual(COMMITS);
+  });
+
+  it("returns undefined if any commit is missing in array of ids", function() {
+    add(COMMITS);
+    expect(CommitStore.getByIds([ COMMITS[0].id, Number.MAX_SAFE_INTEGER ]))
       .toBeUndefined();
   });
 
   it("can be accessed by sha-1", function() {
-    expect(CommitStore.getBySHA1("abcd1234"))
+    expect(CommitStore.getBySHA1(COMMITS[0].sha1))
       .toBeUndefined();
-    expect(CommitStore.getBySHA1("3283b892f000bacda693d305e72b4329f16a2b8f"))
-      .toBeUndefined();
-    add({ commits: MOCK_COMMITS });
-    expect(CommitStore.getBySHA1("3283b892f000bacda693d305e72b4329f16a2b8f"))
-      .toEqual(MOCK_COMMITS[0]);
-    expect(CommitStore.getBySHA1("3283b892f000b"))
-      .toEqual(MOCK_COMMITS[0]);
-    expect(CommitStore.getBySHA1("3283b892f"))
-      .toEqual(MOCK_COMMITS[0]);
+    add(COMMITS);
+    expect(CommitStore.getBySHA1(COMMITS[0].sha1))
+      .toEqual(COMMITS[0]);
+    expect(CommitStore.getBySHA1(COMMITS[1].sha1.slice(0, 12)))
+      .toEqual(COMMITS[1]);
+    expect(CommitStore.getBySHA1(COMMITS[2].sha1.slice(0, 8)))
+      .toEqual(COMMITS[2]);
   });
 
   it("throws on invalid sha-1", function() {
@@ -87,7 +77,7 @@ describe("CommitStore", function() {
       .toThrow();
     expect(function() { CommitStore.getBySHA1(""); })
       .toThrow();
-    expect(function() { CommitStore.getBySHA1("abcd"); })
+    expect(function() { CommitStore.getBySHA1(COMMITS[2].sha1.slice(0, 7)); })
       .toThrow();
   });
 
