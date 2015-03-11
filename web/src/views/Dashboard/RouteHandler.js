@@ -12,6 +12,10 @@ var DashboardRouteHandler = React.createClass({
 
   mixins: [ Router.State ],
 
+  propTypes: {
+    defaultStates: React.PropTypes.array,
+  },
+
   getDefaultProps: function() {
     return {
       defaultStates: [ "open" ]
@@ -19,15 +23,11 @@ var DashboardRouteHandler = React.createClass({
   },
 
 
-  getReviewStatesFromQuery: function() {
-    var query = this.getQuery().state;
-    return query ? query.split(",") : this.props.defaultStates;
-  },
-
-
   render: function() {
+    var query = this.getQuery().state;
+    var states = query ? query.split(",") : this.props.defaultStates;
     return Dashboard({
-      reviewStates: this.getReviewStatesFromQuery()
+      reviewStates: states,
     });
   }
 

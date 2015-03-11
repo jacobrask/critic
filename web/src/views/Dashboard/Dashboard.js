@@ -4,10 +4,9 @@ var constants = require("../../constants");
 var React = require("../../deps/react");
 var RequestMixin = require("../mixins/RequestMixin");
 var ReviewActions = require("../../actions/ReviewActions");
+
 var DOM = React.DOM;
 var ReviewLists = React.createFactory(require("./ReviewLists"));
-
-var PureRenderMixin = React.addons.PureRenderMixin;
 
 
 var Dashboard = React.createClass({
@@ -15,7 +14,7 @@ var Dashboard = React.createClass({
   displayName: "Dashboard",
 
   mixins: [
-    PureRenderMixin,
+    React.addons.PureRenderMixin,
     RequestMixin,
   ],
 

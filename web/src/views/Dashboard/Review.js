@@ -6,21 +6,19 @@ var Router = require("../../deps/react-router");
 var DOM = React.DOM;
 var Link = React.createFactory(Router.Link);
 
-var PureRenderMixin = React.addons.PureRenderMixin;
-
 
 var Review = React.createClass({
 
   displayName: "DashboardReview",
 
   mixins: [
-    PureRenderMixin
+    React.addons.PureRenderMixin
   ],
 
   propTypes: {
-    branchName: React.PropTypes.string,
-    repoName: React.PropTypes.string,
-    review: React.PropTypes.object,
+    branchName: React.PropTypes.string.isRequired,
+    repoName: React.PropTypes.string.isRequired,
+    review: React.PropTypes.object.isRequired,
   },
 
 
@@ -29,9 +27,9 @@ var Review = React.createClass({
 
     return DOM.li({ className: "DashboardReview" },
       Link({
-          to: "review",
+          className: "DashboardReview-Review",
           params: { reviewId: review.id },
-          className: "DashboardReview-Review"
+          to: "review",
         },
         DOM.span({ className: "DashboardReview-Id" }, "r/" + review.id),
         DOM.span({ className: "DashboardReview-Summary" }, review.summary)

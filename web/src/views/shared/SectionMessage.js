@@ -4,19 +4,19 @@ var React = require("../../deps/react");
 
 var DOM = React.DOM;
 
-var PureRenderMixin = React.addons.PureRenderMixin;
-
 
 var SectionMessage = React.createClass({
 
+  displayName: "SectionMessage",
+
   mixins: [
-    PureRenderMixin
+    React.addons.PureRenderMixin
   ],
 
 
   render: function() {
     var props = Object.assign({ className: "SectionMessage" }, this.props);
-    return DOM.p(props);
+    return DOM.div(props);
   }
 
 });

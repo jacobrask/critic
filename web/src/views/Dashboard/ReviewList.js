@@ -7,39 +7,32 @@ var Review = React.createFactory(require("./Review"));
 var SectionBox = React.createFactory(require("../shared/SectionBox"));
 var SectionHeader = React.createFactory(require("../shared/SectionHeader"));
 
-var PureRenderMixin = React.addons.PureRenderMixin;
-
 
 var ReviewList = React.createClass({
 
   displayName: "ReviewList",
 
   mixins: [
-    PureRenderMixin
+    React.addons.PureRenderMixin
   ],
 
   propTypes: {
-    branchNames: React.PropTypes.array.isRequired,
+    items: React.PropTypes.array.isRequired,
     label: React.PropTypes.string.isRequired,
-    repoNames: React.PropTypes.array.isRequired,
-    reviews: React.PropTypes.array.isRequired
   },
 
 
   render: function() {
-    var branchNames = this.props.branchNames;
-    var repoNames = this.props.repoNames;
-
     // Reviews are returned from the server sorted by ID ascending.
     // We sort rather than just reverse it to be sure.
-    var reviews = this.props.reviews.sort(function(a, b) {
-      return b.id - a.id;
-    }).map(function(review) {
+    var reviews = this.props.items.sort(function(a, b) {
+      return b.review.id - a.review.id;
+    }).map(function(item) {
       return Review({
-        branchName: branchNames[review.branch],
-        key: review.id,
-        repoName: repoNames[review.repository],
-        review: review
+        branchName: item.branch.name,
+        key: item.review.id,
+        repoName: item.repository.name,
+        review: item.review
       });
     });
 

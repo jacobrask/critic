@@ -10,10 +10,6 @@ var ReviewStore = require("../../stores/ReviewStore");
 var DOM = React.DOM;
 var ReviewList = React.createFactory(require("./ReviewList"));
 var SectionMessage = React.createFactory(require("../shared/SectionMessage"));
-var LoadIndicator = React.createFactory(require("../shared/LoadIndicator"));
-
-var LoadState = constants.LoadState;
-var PureRenderMixin = React.addons.PureRenderMixin;
 
 
 var ReviewLists = React.createClass({
@@ -22,7 +18,7 @@ var ReviewLists = React.createClass({
 
   mixins: [
     createStoreMixin(BranchStore, RepositoryStore, ReviewStore),
-    PureRenderMixin
+    React.addons.PureRenderMixin
   ],
 
   propTypes: {
@@ -32,35 +28,27 @@ var ReviewLists = React.createClass({
 
 
   getStateFromStores: function(nextProps) {
-    var reviews = nextProps.states.reduce(function(acc, state) {
-      var reviewsByState = ReviewStore.getAllByState(state);
-      if (reviewsByState != null) acc[state] = reviewsByState;
-      return acc;
+    if (nextProps.loadState === constants.LoadState.ERROR) {
+      return { error: ReviewStore.getError() };
+    }
+    var itemsByState = nextProps.states.reduce(function(all, state) {
+      var reviews = ReviewStore.getAllByState(state);
+      if (reviews == null) {
+        all[state] = [];
+      } else {
+        all[state] = reviews.map(function(review) {
+          return {
+            branch: BranchStore.getById(review.branch),
+            repository: RepositoryStore.getById(review.repository),
+            review: review,
+          };
+        });
+      }
+      return all;
     }, {});
 
-    var allReviews = Object.keys(reviews).reduce(function(acc, state) {
-      acc = acc.concat(reviews[state]);
-      return acc;
-    }, []);
-
-    // Maps review ids to corresponding branch names for easy access.
-    var branchNames = allReviews.reduce(function(acc, review) {
-      var branch = BranchStore.getById(review.branch);
-      if (branch != null) acc[review.branch] = branch.name;
-      return acc;
-    }, []);
-
-    // Maps review ids to corresponding repository names for easy access.
-    var repoNames = allReviews.reduce(function(acc, review) {
-      var repo = RepositoryStore.getById(review.repository);
-      if (repo != null) acc[review.repository] = repo.name;
-      return acc;
-    }, []);
-
     return {
-      branchNames: branchNames,
-      repoNames: repoNames,
-      reviews: reviews
+      itemsByState: itemsByState
     };
   },
 
@@ -69,19 +57,15 @@ var ReviewLists = React.createClass({
     var labels = {
       closed: "Closed reviews",
       dropped: "Dropped reviews",
-      open: "Open reviews"
+      open: "Open reviews",
     };
-    var branchNames = this.state.branchNames;
-    var repoNames = this.state.repoNames;
-    var reviews = this.state.reviews;
-    var lists = Object.keys(reviews).reduce(function(all, state) {
-      if (reviews[state] && reviews[state].length > 0) {
+    var items = this.state.itemsByState || {};
+    var lists = Object.keys(items).reduce(function(all, state) {
+      if (items[state].length > 0) {
         all.push(ReviewList({
-          branchNames: branchNames,
+          items: items[state],
           key: state,
           label: labels[state],
-          repoNames: repoNames,
-          reviews: reviews[state]
         }));
       }
       return all;
@@ -89,11 +73,16 @@ var ReviewLists = React.createClass({
 
     if (lists.length === 0) {
       switch (this.props.loadState) {
-        case LoadState.LOADING:
-          lists = LoadIndicator();
+        case constants.LoadState.ERROR:
+          lists = SectionMessage(null, "Failed to load reviews ;-(");
           break;
-        case LoadState.COMPLETE:
+        case constants.LoadState.LOADING:
+          lists = SectionMessage(null, "Loading reviews...");
+          break;
+        case constants.LoadState.COMPLETE:
           lists = SectionMessage(null, "No reviews :(");
+          break;
+        default:
           break;
       }
     }

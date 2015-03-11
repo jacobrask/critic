@@ -4,13 +4,13 @@ var React = require("../../deps/react");
 
 var DOM = React.DOM;
 
-var PureRenderMixin = React.addons.PureRenderMixin;
-
 
 var SectionHeader = React.createClass({
 
+  displayName: "SectionHeader",
+
   mixins: [
-    PureRenderMixin
+    React.addons.PureRenderMixin
   ],
 
 
