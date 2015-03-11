@@ -11,7 +11,7 @@ var React = require("../../deps/react");
 var RepositoryStore = require("../../stores/RepositoryStore");
 var RequestMixin = require("../mixins/RequestMixin");
 
-var Commit = React.createFactory(require("../Review/Commit"));
+var Commit = React.createFactory(require("./Commit"));
 var DOM = React.DOM;
 var LoadIndicator = React.createFactory(require("../shared/LoadIndicator"));
 var Origin = React.createFactory(require("../Review/Origin"));
