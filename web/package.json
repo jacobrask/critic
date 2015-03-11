@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "eslint": "^0.16.1",
+    "eslint-plugin-react": "^1.4.1",
     "jest-cli": "^0.4"
   },
   "jest": {

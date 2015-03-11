@@ -11,6 +11,9 @@
     "module": true,
     "require": true,
   },
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "block-scoped-var": [1],
     "camelcase": [1],
@@ -18,6 +21,7 @@
     "comma-spacing": [1, {"before": false, "after": true}],
     "comma-style": [1, "last"],
     "complexity": [1, 6],
+    "consistent-return": [0],
     "curly": [2, "multi-line"],
     "eqeqeq": [2, "allow-null"],
     "func-style": [2, "expression"],
@@ -32,11 +36,16 @@
     "no-nested-ternary": [2],
     "no-throw-literal": [2],
     "quotes": [1, "double"],
+    "react/display-name": 1,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 1,
+    "react/no-multi-comp": 1,
+    "react/prop-types": 1,
     "space-after-keywords": [1],
     "space-before-blocks": [1],
     "space-in-brackets": [1, "always", { "propertyName": false }],
     "space-in-parens": [1, "never"],
     "space-return-throw-case": [1],
-    "valid-jsdoc": [1, { "requireParamDescription": false, "requireReturnDescription": false }]
+    "valid-jsdoc": [1, { "requireParamDescription": false, "requireReturnDescription": false }],
   },
 }
