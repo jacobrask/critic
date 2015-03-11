@@ -1,0 +1,16 @@
+.ReviewOwners {
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+  color: hsl(0, 0%, 40%);
+  font-size: small;
+  font-weight: 300;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.ReviewOwners-User {
+  color: hsl(0, 0%, 20%);
+  display: block;
+  font-size: large;
+  font-weight: 400;
+}

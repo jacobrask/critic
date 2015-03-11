@@ -1,0 +1,9 @@
+.ReviewSidebar {
+  background: hsl(45, 35%, 97%);
+  line-height: 1.5;
+  max-width: 320px;
+  min-width: 240px;
+  padding: 32px 16px;
+  z-index: -1;
+  width: 20%;
+}

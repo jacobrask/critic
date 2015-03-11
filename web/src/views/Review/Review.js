@@ -9,6 +9,7 @@ var ReviewActions = require("../../actions/ReviewActions");
 
 var DOM = React.DOM;
 var Main = React.createFactory(require("./Main"));
+var Sidebar = React.createFactory(require("./Sidebar"));
 
 var PureRenderMixin = React.addons.PureRenderMixin;
 
@@ -53,6 +54,9 @@ var Review = React.createClass({
     return DOM.div({ className: "Review" },
       Main({
         loadState: this.state.loadState,
+        reviewId: this.props.reviewId
+      }),
+      Sidebar({
         reviewId: this.props.reviewId
       })
     );
