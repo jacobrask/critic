@@ -7,6 +7,7 @@ var Router = require("./deps/react-router");
 // happens when handling a route in `init.js`.
 var App = require("./views/App");
 var Branch = require("./views/Branch/RouteHandler");
+var Commit = require("./views/Commit/RouteHandler");
 var Dashboard = require("./views/Dashboard/RouteHandler");
 var Review = require("./views/Review/RouteHandler");
 
@@ -37,6 +38,12 @@ var routes = (
         name: "branch",
         handler: Branch,
         path: ":repoName/branch/*"
+    }),
+
+    Route({
+        name: "commit",
+        handler: Commit,
+        path: ":repoName/commit/:sha1"
     }),
 
     Route({

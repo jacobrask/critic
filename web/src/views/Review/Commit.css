@@ -25,12 +25,10 @@
   }
 }
 
-.ReviewCommit-SHA1 {
+.ReviewCommit .CommitLink {
   color: hsl(0, 0%, 50%);
-  display: inline-block;
   font-weight: 600;
 }
-
 
 .ReviewCommit-Summary {
   display: block;

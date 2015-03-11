@@ -1,8 +1,11 @@
 "use strict";
 
 var React = require("../../deps/react");
+var Router = require("../../deps/react-router");
 
 var DOM = React.DOM;
+var CommitLink = React.createFactory(require("../shared/CommitLink"));
+var Link = React.createFactory(Router.Link);
 
 
 var Commit = React.createClass({
@@ -11,7 +14,7 @@ var Commit = React.createClass({
 
   propTypes: {
     commit: React.PropTypes.object.isRequired,
-    repoName: React.PropTypes.string
+    repoName: React.PropTypes.string.isRequired
   },
 
 
@@ -21,8 +24,13 @@ var Commit = React.createClass({
 
     return DOM.li({ className: "BranchCommit" },
       DOM.div({ className: "BranchCommit-Main" },
-        DOM.div({
+        Link({
             className: "BranchCommit-Summary",
+            to: "commit",
+            params: {
+              repoName: this.props.repoName,
+              sha1: this.props.commit.sha1,
+            }
           },
           this.props.commit.summary
         ),
@@ -35,9 +43,10 @@ var Commit = React.createClass({
         )
       ),
       DOM.div({ className: "BranchCommit-Stats" },
-        DOM.samp({ className: "BranchCommit-SHA1" },
-          this.props.commit.sha1
-        )
+        CommitLink({
+          repoName: this.props.repoName,
+          sha1: this.props.commit.sha1,
+        })
       )
     );
   }

@@ -1,0 +1,4 @@
+.CommitLink:hover {
+  color: hsl(170, 54%, 36%);
+  text-decoration: underline;
+}

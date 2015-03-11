@@ -75,7 +75,7 @@ var Branch = React.createClass({
 
   render: function() {
     var commits;
-    var repoName = this.state.repoName;
+    var repoName = this.props.repoName;
     if (this.state.loadState <= constants.LoadState.LOADING) {
       commits = LoadIndicator();
     } else {

@@ -3,9 +3,11 @@
 var React = require("../../deps/react");
 
 var DOM = React.DOM;
+var CommitLink = React.createFactory(require("../shared/CommitLink"));
 
 
 var RE_FOLLOWUP = /(fixup|squash)!\s+(.*)/;
+
 
 var Commit = React.createClass({
 
@@ -13,7 +15,7 @@ var Commit = React.createClass({
 
   propTypes: {
     commit: React.PropTypes.object.isRequired,
-    repoName: React.PropTypes.string
+    repoName: React.PropTypes.string.isRequired
   },
 
 
@@ -43,9 +45,11 @@ var Commit = React.createClass({
         )
       ),
       DOM.div({ className: "ReviewCommit-Stats" },
-        DOM.samp({ className: "ReviewCommit-SHA1" },
-          this.props.commit.sha1.slice(0, 8)
-        )
+        CommitLink({
+          length: 8,
+          repoName: this.props.repoName,
+          sha1: this.props.commit.sha1,
+        })
       )
     );
   }
