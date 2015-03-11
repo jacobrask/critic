@@ -45,7 +45,7 @@ BranchCommitsStore.getById = function(branchId) {
     throw new TypeError("Invalid branch id");
   }
   var commits = branches[branchId];
-  if (commits == null) return null;
+  if (commits == null) return;
   return CommitStore.getByIds(commits);
 };
 
@@ -61,7 +61,7 @@ BranchCommitsStore.getById = function(branchId) {
 BranchCommitsStore.getByName = function(branchName, repoId) {
   var branch = BranchStore.getByName(branchName, repoId);
   var commits = branches[branch.id];
-  if (commits == null) return null;
+  if (commits == null) return;
   return CommitStore.getByIds(commits);
 };
 

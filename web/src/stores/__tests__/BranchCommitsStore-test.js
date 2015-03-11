@@ -1,48 +1,48 @@
 "use strict";
 
+jest.dontMock("../../Dispatcher");
 jest.dontMock("../BranchCommitsStore");
+jest.dontMock("../CommitStore");
+
+var COMMITS = require("./COMMITS").commits;
+
+// Treat first half as commits for branch 1, and the rest as branch 2
+var COMMITS_1 = COMMITS.slice(0, COMMITS.length / 2);
+var COMMITS_2 = COMMITS.slice(COMMITS.length / 2, COMMITS.length);
 
 
 describe("BranchCommitsStore", function() {
 
-  var MOCK_COMMITS = [
-    {
-      id: 1,
-      sha1: "3283b892f000bacda693d305e72b4329f16a2b8f"
-    }, {
-      id: 2,
-      sha1: "d946cefa86d42fc4d6a60d8d5edd7b91b80774e8"
-    }, {
-      id: 3,
-      state: "9498cc4cabf241a6c9a33b603c0df8d634db5116"
-    }, {
-      id: 4,
-      state: "40a56c9dca50baa3c51b7e8dc5d31079b9f6b193"
-    }
-  ];
-
-  var add, BranchCommitsStore;
+  var Dispatcher, BranchCommitsStore;
   beforeEach(function() {
-    var CommitStore = require("../CommitStore");
-    CommitStore.getByIds.mockReturnValue(MOCK_COMMITS);
-
-    var Dispatcher = require("../../Dispatcher");
-    // Hijack the callback added in BranchCommitsStore
-    Dispatcher.register = function(callback) {
-      add = callback.bind(null, "RECEIVE_BRANCHCOMMITS");
-    };
+    Dispatcher = require("../../Dispatcher");
     BranchCommitsStore = require("../BranchCommitsStore");
   });
 
+  var add = function(commits) {
+    Dispatcher.dispatch("RECEIVE_COMMITS", {
+      commits: COMMITS
+    });
+    Dispatcher.dispatch("RECEIVE_BRANCHCOMMITS", {
+      branch: 1,
+      commits: COMMITS_1.map(function(c) { return c.id; })
+    });
+    Dispatcher.dispatch("RECEIVE_BRANCHCOMMITS", {
+      branch: 2,
+      commits: COMMITS_2.map(function(c) { return c.id; })
+    });
+  };
 
   it("can be accessed by id", function() {
     expect(BranchCommitsStore.getById(1))
-      .toBeNull();
-    add({ branch: 1, commits: MOCK_COMMITS });
-    expect(BranchCommitsStore.getById(10))
-      .toBeNull();
+      .toBeUndefined();
+    add(COMMITS);
     expect(BranchCommitsStore.getById(1))
-      .toEqual(MOCK_COMMITS);
+      .toEqual(COMMITS_1);
+    expect(BranchCommitsStore.getById(2))
+      .toEqual(COMMITS_2);
+    expect(BranchCommitsStore.getById(Number.MAX_SAFE_INTEGER))
+      .toBeUndefined();
   });
 
   it("throws on invalid id", function() {
