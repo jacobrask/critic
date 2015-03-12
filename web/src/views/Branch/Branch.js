@@ -18,9 +18,9 @@ var Origin = React.createFactory(require("../Review/Origin"));
 var SectionBox = React.createFactory(require("../shared/SectionBox"));
 
 
-var Commits = React.createClass({
+var Branch = React.createClass({
 
-  displayName: "Commits",
+  displayName: "Branch",
 
   mixins: [
     createStoreMixin(BranchStore, BranchCommitsStore, RepositoryStore),
@@ -94,8 +94,14 @@ var Commits = React.createClass({
         ]
       ));
     }
-    return DOM.section({ className: "Commits" },
-      DOM.h2({ className: "Commits-Heading" }, this.props.branchName),
+    return DOM.section({ className: "Branch" },
+      DOM.h2({ className: "Branch-Heading" },
+        DOM.span({ className: "Branch-Heading-Repo" },
+          this.props.repoName),
+        DOM.span({ className: "Branch-Heading-Separator" }, "/"),
+        DOM.span({ className: "Branch-Heading-Branch" },
+          this.props.branchName)
+      ),
       SectionBox(null, commits)
     );
   }
@@ -103,4 +109,4 @@ var Commits = React.createClass({
 });
 
 
-module.exports = Commits;
+module.exports = Branch;

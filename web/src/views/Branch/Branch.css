@@ -1,9 +1,21 @@
-.Commits {
+.Branch {
   margin: 36px;
 }
 
-.Commits-Heading {
+.Branch-Heading {
   font-size: xx-large;
   margin-bottom: 16px;
 }
 
+.Branch-Heading-Repo,
+.Branch-Heading-Separator {
+  color: hsl(0, 0%, 60%);
+  font-weight: 100;
+}
+.Branch-Heading-Separator {
+  padding: 0 0.1em;
+}
+.Branch-Heading-Repo:hover {
+  font-weight: 100;
+  color: hsl(170, 54%, 36%);
+}
