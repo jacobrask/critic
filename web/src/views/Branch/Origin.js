@@ -10,7 +10,7 @@ var CommitListEvent = React.createFactory(
 
 var Origin = React.createClass({
 
-  displayName: "ReviewOrigin",
+  displayName: "BranchOrigin",
 
   propTypes: {
     commit: React.PropTypes.object
@@ -21,7 +21,6 @@ var Origin = React.createClass({
     var link = "…";
     if (this.props.commit != null) {
       link = CommitLink({
-        length: 8,
         repoName: this.props.repoName,
         sha1: this.props.commit.sha1,
       });

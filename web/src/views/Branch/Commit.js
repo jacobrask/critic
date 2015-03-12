@@ -3,8 +3,9 @@
 var React = require("../../deps/react");
 var Router = require("../../deps/react-router");
 
-var DOM = React.DOM;
+var CommitByline = React.createFactory(require("../shared/CommitByline"));
 var CommitLink = React.createFactory(require("../shared/CommitLink"));
+var DOM = React.DOM;
 var Link = React.createFactory(Router.Link);
 
 
@@ -20,7 +21,6 @@ var Commit = React.createClass({
 
   render: function() {
     // Timestamp is seconds since epoch, Date takes milliseconds.
-    var date = new Date(this.props.commit.author.timestamp * 1000);
 
     return DOM.li({ className: "BranchCommit" },
       DOM.div({ className: "BranchCommit-Main" },
@@ -34,13 +34,9 @@ var Commit = React.createClass({
           },
           this.props.commit.summary
         ),
-        DOM.p({ className: "BranchCommit-Meta" },
-          "by ",
-          DOM.b({ className: "BranchCommit-Meta-Author" },
-            this.props.commit.author.name
-          ),
-          " at ", DOM.time(null, date.toLocaleString())
-        )
+        CommitByline({
+          user: this.props.commit.author
+        })
       ),
       DOM.div({ className: "BranchCommit-Stats" },
         CommitLink({

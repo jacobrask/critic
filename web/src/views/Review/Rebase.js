@@ -1,6 +1,11 @@
 "use strict";
 
 var React = require("../../deps/react");
+
+var CommitLink = React.createFactory(require("../shared/CommitLink"));
+var CommitListEvent = React.createFactory(
+  require("../shared/CommitListEvent")
+);
 var DOM = React.DOM;
 
 
@@ -9,25 +14,28 @@ var Rebase = React.createClass({
   displayName: "ReviewRebase",
 
   propTypes: {
-    rebase: React.PropTypes.object.isRequired
+    rebase: React.PropTypes.object.isRequired,
+    repoName: React.PropTypes.string.isRequired,
   },
 
 
   render: function() {
-    var rebase = this.props.rebase;
     var msg;
-    if (rebase.type === "move") {
-      var sha1 = rebase.upstream.sha1.slice(0, 8);
+    if (this.props.rebase.type === "move") {
       msg = DOM.span(null,
         "Branch rebased onto ",
-        DOM.samp({ className: "ReviewRebase-Upstream" }, sha1)
+        CommitLink({
+            length: 8,
+            repoName: this.props.repoName,
+            sha1: this.props.rebase.upstream.sha1,
+        })
       );
     } else {
       msg = DOM.span(null, "History rewritten");
     }
-    return DOM.div({ className: "ReviewRebase" },
+    return CommitListEvent(null,
       msg,
-      " by ", rebase.creator.fullname
+      " by ", this.props.rebase.creator.fullname
     );
   }
 

@@ -25,13 +25,6 @@
   }
 }
 
-.BranchCommit-SHA1 {
-  color: hsl(0, 0%, 50%);
-  display: inline-block;
-  font-weight: 600;
-}
-
-
 .BranchCommit-Summary {
   display: block;
   font-weight: 600;
@@ -40,17 +33,4 @@
 }
 .BranchCommit-Summary:hover {
   color: hsl(170, 54%, 36%);
-}
-
-.BranchCommit-Meta {
-  color: hsl(0, 0%, 50%);
-  font-size: small;
-  font-weight: 100;
-  margin-top: 4px;
-  padding: 0 8px 8px;
-}
-
-.BranchCommit-Meta-Author {
-  color: hsl(0, 0%, 25%);
-  font-weight: 400;
 }

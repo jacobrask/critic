@@ -137,6 +137,7 @@ var CommitLog = React.createClass({
           all.push(Rebase({
               key: partition.rebase.id,
               rebase: partition.rebase,
+              repoName: this.state.repoName,
           }));
         }
         return all;
@@ -144,6 +145,7 @@ var CommitLog = React.createClass({
       log.push(Origin({
           commit: this.state.origin,
           key: "origin",
+          repoName: this.state.repoName,
       }));
     }
 

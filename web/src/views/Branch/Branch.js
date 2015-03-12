@@ -14,7 +14,7 @@ var RequestMixin = require("../mixins/RequestMixin");
 var Commit = React.createFactory(require("./Commit"));
 var DOM = React.DOM;
 var LoadIndicator = React.createFactory(require("../shared/LoadIndicator"));
-var Origin = React.createFactory(require("../Review/Origin"));
+var Origin = React.createFactory(require("./Origin"));
 var SectionBox = React.createFactory(require("../shared/SectionBox"));
 
 
@@ -88,8 +88,9 @@ var Branch = React.createClass({
           });
         }).concat([
           Origin({
+            commit: this.state.origin,
             key: "origin",
-            commit: this.state.origin
+            repoName: repoName
           })
         ]
       ));
