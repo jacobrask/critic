@@ -1,9 +1,5 @@
 "use strict";
 
-jest.dontMock("../../Dispatcher");
-jest.dontMock("../BranchCommitsStore");
-jest.dontMock("../CommitStore");
-
 var COMMITS = require("./COMMITS").commits;
 
 // Treat first half as commits for branch 1, and the rest as branch 2

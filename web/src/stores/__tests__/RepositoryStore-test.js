@@ -1,8 +1,5 @@
 "use strict";
 
-jest.dontMock("../../Dispatcher");
-jest.dontMock("../RepositoryStore");
-
 var REPOS = require("./REPOSITORIES").repositories;
 
 describe("RepositoryStore", function() {

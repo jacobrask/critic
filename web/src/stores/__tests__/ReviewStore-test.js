@@ -1,8 +1,5 @@
 "use strict";
 
-jest.dontMock("../../Dispatcher");
-jest.dontMock("../ReviewStore");
-
 var OPEN_REVIEWS = require("./OPEN_REVIEWS").reviews;
 var CLOSED_REVIEWS = require("./CLOSED_REVIEWS").reviews;
 

@@ -1,11 +1,5 @@
 "use strict";
 
-jest.dontMock("../../Dispatcher");
-jest.dontMock("../CommitStore");
-jest.dontMock("../PartitionStore");
-jest.dontMock("../ReviewStore");
-jest.dontMock("../UserStore");
-
 var REVIEW = require("./REVIEW_PARTITION");
 var COMMITS = REVIEW.linked.commits;
 var REBASES = REVIEW.linked.rebases;

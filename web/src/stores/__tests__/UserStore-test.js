@@ -1,8 +1,5 @@
 "use strict";
 
-jest.dontMock("../../Dispatcher");
-jest.dontMock("../UserStore");
-
 var USERS = require("./USERS").users;
 
 

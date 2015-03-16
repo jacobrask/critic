@@ -1,8 +1,5 @@
 "use strict";
 
-jest.dontMock("../../Dispatcher");
-jest.dontMock("../BranchStore");
-
 var BRANCHES = require("./BRANCHES").branches;
 
 

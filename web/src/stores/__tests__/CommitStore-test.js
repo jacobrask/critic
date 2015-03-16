@@ -1,8 +1,5 @@
 "use strict";
 
-jest.dontMock("../../Dispatcher");
-jest.dontMock("../CommitStore");
-
 var COMMITS = require("./COMMITS").commits;
 
 describe("CommitStore", function() {
