@@ -8,6 +8,12 @@ var ServerAPI = exports;
 
 
 /**
+ * @const
+ */
+var TIMEOUT = 20000;
+
+
+/**
  * Construct a query string of an object of param/values.
  *
  * @param {Object} params - If a value is an array, it will be `join()`ed.
@@ -36,6 +42,13 @@ var exec = function(path) {
   var ACCEPT_HEADER = "application/vnd.api+json";
   var url = Config.API_ROOT + path;
   return new Promise(function(resolve, reject) {
+    // Rejects the promise after `TIMEOUT_LIMIT`, but `fetch` requests are not
+    // abortable. A promise can not be rejected/resolved twice, so there's no
+    // need to clearTimeout.
+    setTimeout(function() {
+      reject(new NetworkError("The request took too long to complete"));
+    }, TIMEOUT);
+
     fetch(url, {
         headers: { "Accept": ACCEPT_HEADER }
       })
