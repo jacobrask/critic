@@ -18,9 +18,12 @@ var callbacks = [];
  * Register a callback to be invoked every time an action is received.
  *
  * @param {function} callback
+ *
+ * @returns {Dispatcher}
  */
 Dispatcher.register = function(callback) {
   callbacks.push(callback);
+  return Dispatcher;
 };
 
 
@@ -29,16 +32,19 @@ Dispatcher.register = function(callback) {
  *
  * @param {string} action
  * @param {Object} payload
+ *
+ * @returns {Dispatcher}
  */
 Dispatcher.dispatch = function(action, payload) {
   if (Config.DEBUG) {
-    if (payload instanceof Error) {
-      console.warn("%s: %O%s", action, payload, payload.stack);
+    if (payload.error instanceof Error) {
+      console.warn("%s: %O%s", action, payload.error, payload.error.stack);
     } else {
-      console.debug(action, payload);
+      console.debug("%s: %O", action, payload);
     }
   }
   callbacks.forEach(function(cb) {
     cb(action, payload);
   });
+  return Dispatcher;
 };

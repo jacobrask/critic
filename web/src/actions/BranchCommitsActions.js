@@ -20,7 +20,7 @@ var getBranchCommits = function(branchId) {
       });
       return resp;
     }).catch(function(err) {
-      Dispatcher.dispatch("RECEIVE_BRANCHCOMMITS_ERROR", err);
+      Dispatcher.dispatch("RECEIVE_BRANCHCOMMITS_ERROR", { error: err });
       throw err;
     });
 };

@@ -15,7 +15,7 @@ var getCommits = function(opts) {
       return resp;
     })
     .catch(function(err) {
-      Dispatcher.dispatch("RECEIVE_COMMITS_ERROR", err);
+      Dispatcher.dispatch("RECEIVE_COMMITS_ERROR", { error: err });
       throw err;
     });
 };

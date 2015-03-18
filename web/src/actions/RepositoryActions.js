@@ -15,7 +15,7 @@ var getRepositories = function(opts) {
       return resp;
     })
     .catch(function(err) {
-      Dispatcher.dispatch("RECEIVE_REPOSITORIES_ERROR", err);
+      Dispatcher.dispatch("RECEIVE_REPOSITORIES_ERROR", { error: err });
       throw err;
     });
 };

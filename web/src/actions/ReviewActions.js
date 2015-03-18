@@ -25,7 +25,7 @@ var getReviews = function(opts) {
       return resp;
     })
     .catch(function(err) {
-      Dispatcher.dispatch("RECEIVE_REVIEWS_ERROR", err);
+      Dispatcher.dispatch("RECEIVE_REVIEWS_ERROR", { error: err });
       throw err;
     });
 };

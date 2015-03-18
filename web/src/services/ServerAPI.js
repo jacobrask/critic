@@ -1,28 +1,10 @@
 "use strict";
 
-var Dispatcher = require("../Dispatcher");
+var APIError = require("../errors/APIError");
+var NetworkError = require("../errors/NetworkError");
 
 
 var ServerAPI = exports;
-
-
-/**
- * Indicates a server-side API error.
- *
- * @constructor
- * @extends Error
- *
- * @param {Object} props
- */
-var APIError = function(props) {
-  Object.assign(this, props);
-  if (typeof Error.captureStackTrace === "function") {
-    Error.captureStackTrace(this, this.constructor);
-  }
-};
-APIError.prototype = Object.create(Error.prototype, {
-  constructor: APIError
-});
 
 
 /**
@@ -37,7 +19,7 @@ var toQueryString = function(params) {
     return !!params[key];
   }).map(function(key) {
     var vals = params[key];
-    if (!Array.isArray(vals)) vals = [vals];
+    if (!Array.isArray(vals)) vals = [ vals ];
     return key + "=" + vals.join();
   }).join("&");
 };
@@ -51,28 +33,27 @@ var toQueryString = function(params) {
  * @return {Promise}
  */
 var exec = function(path) {
+  var ACCEPT_HEADER = "application/vnd.api+json";
+  var url = Config.API_ROOT + path;
   return new Promise(function(resolve, reject) {
-    fetch(Config.API_ROOT + path, {
-        headers: { "Accept": "application/vnd.api+json" }
+    fetch(url, {
+        headers: { "Accept": ACCEPT_HEADER }
       })
       .catch(function(err) {
-        Dispatcher.dispatch("NETWORK_ERROR", err);
-        throw err;
+        throw new NetworkError(err.message);
       })
       .then(function(resp) {
-        if (resp.status < 200 || resp.status >= 300) {
-          return resp.json().then(function(msg) {
-            throw new APIError({
-              status: resp.status,
-              statusText: resp.statusText,
-              url: resp.url,
-              title: msg.error.title,
-              message: msg.error.message
-            });
-          });
-        } else {
-          return resp.json();
+        if (resp.headers.get("Content-Type") !== ACCEPT_HEADER) {
+          throw new APIError("Invalid response type", resp.status);
         }
+        if (resp.status >= 400) {
+          return resp.json().then(function(msg) {
+            throw new APIError(
+              msg.error.title, resp.status, msg.error.message
+            );
+          });
+        }
+        return resp.json();
       })
       .catch(reject)
       .then(resolve);

@@ -22,7 +22,7 @@ var getBranches = function(opts) {
       return resp;
     })
     .catch(function(err) {
-      Dispatcher.dispatch("RECEIVE_BRANCHES_ERROR", err);
+      Dispatcher.dispatch("RECEIVE_BRANCHES_ERROR", { error: err });
       throw err;
     });
 };
