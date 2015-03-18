@@ -3,6 +3,7 @@
 var React = require("../../deps/react");
 var Router = require("../../deps/react-router");
 
+var BranchLink = React.createFactory(require("../shared/BranchLink"));
 var DOM = React.DOM;
 var Link = React.createFactory(Router.Link);
 
@@ -34,16 +35,10 @@ var Review = React.createClass({
         DOM.span({ className: "DashboardReview-Id" }, "r/" + review.id),
         DOM.span({ className: "DashboardReview-Summary" }, review.summary)
       ),
-      Link({
-          className: "DashboardReview-Branch",
-          to: "branch",
-          params: {
-            repoName: this.props.repoName,
-            splat: this.props.branchName,
-          }
-        },
-        DOM.samp(null, this.props.branchName)
-      )
+      BranchLink({
+          repoName: this.props.repoName,
+          branchName: this.props.branchName,
+      })
     );
   }
 

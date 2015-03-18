@@ -51,7 +51,7 @@
   flex: 1;
 }
 
-.DashboardReview-Branch {
+.DashboardReview .BranchLink {
   color: hsl(0, 0%, 40%);
   display: inline-block;
   font-size: 75%;
@@ -60,7 +60,4 @@
   padding: 8px;
   text-align: right;
   word-break: break-word;
-}
-.DashboardReview-Branch:hover {
-  color: hsl(170, 54%, 36%);
 }

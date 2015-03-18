@@ -7,11 +7,10 @@ var createStoreMixin = require("../mixins/createStoreMixin");
 var PartitionStore = require("../../stores/PartitionStore");
 var React = require("../../deps/react");
 var RepositoryStore = require("../../stores/RepositoryStore");
-var Router = require("../../deps/react-router");
 
+var BranchLink = React.createFactory(require("../shared/BranchLink"));
 var Commit = React.createFactory(require("./Commit"));
 var DOM = React.DOM;
-var Link = React.createFactory(Router.Link);
 var Origin = React.createFactory(require("./Origin"));
 var Rebase = React.createFactory(require("./Rebase"));
 
@@ -52,15 +51,10 @@ var LogInfo = React.createFactory(React.createClass({
   render: function() {
     var branchLink;
     if (this.props.repoName != null && this.props.branchName != null) {
-      branchLink = Link({
-          to: "branch",
-          params: {
-            repoName: this.props.repoName,
-            splat: this.props.branchName,
-          }
-        },
-        DOM.samp(null, this.props.branchName)
-      );
+      branchLink = BranchLink({
+          repoName: this.props.repoName,
+          branchName: this.props.branchName,
+      });
     } else {
       branchLink = DOM.samp(null, "…");
     }
