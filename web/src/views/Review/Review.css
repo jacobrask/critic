@@ -1,5 +1,6 @@
 .Review {
-  display: -ms-flex;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex: 1;
+  flex: 1;
 }

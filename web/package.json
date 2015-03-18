@@ -17,6 +17,7 @@
       "<rootDir>/src/constants.js",
       "<rootDir>/src/deps/react.js",
       "<rootDir>/src/Dispatcher.js",
+      "<rootDir>/src/errors/.+.js",
       "<rootDir>/src/stores/.+.js",
       "<rootDir>/src/utils/.+.js"
     ]

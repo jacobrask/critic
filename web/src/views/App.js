@@ -5,6 +5,9 @@ var Router = require("../deps/react-router");
 
 var DOM = React.DOM;
 var RouteHandler = React.createFactory(Router.RouteHandler);
+var NotificationsBar = React.createFactory(
+  require("./notifications/NotificationsBar")
+);
 var TopBar = React.createFactory(require("./TopBar"));
 
 
@@ -22,8 +25,9 @@ var App = React.createClass({
 
 
   render: function() {
-    return DOM.div(null,
+    return DOM.div({ className: "App" },
       TopBar(),
+      NotificationsBar(),
       RouteHandler()
     );
   }

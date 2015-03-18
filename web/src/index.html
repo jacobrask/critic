@@ -159,16 +159,23 @@
 
 
     /**
-     * Basic top bar styles. Defined here to get some content immediately on
-     * the screen before any external JavaScript or CSS resources have been
-     * loaded. Advanced styles for dropdowns etc will be defined elsewhere.
+     * Basic styles defined here to get some content immediately on the screen
+     * before any external JavaScript or CSS resources have been loaded.
      */
 
+    .App {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
     .TopBar {
+      -webkit-align-items: center;
       align-items: center;
       background: #fff;
       box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.1);
-      display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
       height: 64px;
@@ -183,7 +190,6 @@
     }
 
     .TopBar-SiteNav {
-      -ms-box-flex: 1;
       -webkit-flex: 1;
       flex: 1;
     }
@@ -194,6 +200,20 @@
     .TopBar-SiteNav a:hover {
       color: hsl(170, 54%, 36%);
     }
+
+    .GlobalError {
+      -webkit-align-items: center;
+      align-items: center;
+      background: hsl(8, 60%, 65%);
+      border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+      color: hsl(0, 0%, 0%);
+      display: -webkit-flex;
+      display: flex;
+      height: 48px;
+      -webkit-justify-content: center;
+      justify-content: center;
+      padding: 8px;
+    }
   </style>
 
   <link rel="stylesheet" href="/critic.css">
@@ -201,24 +221,44 @@
 </head>
 <body>
 
-  <!-- Entire div will be replaced by the main React component. -->
-  <div id="app">
+  <div id="container">
     <!--
-    Pre-render TopBar so that it's displayed immediately without wating for CSS
-    or JavaScript. In case of a JavaScript error, this means you can always
-    navigate back to the start page.
+      Pre-render some basic components that will be displayed immediately
+      without waiting for CSS or JavaScript. In case of a JavaScript error,
+      this also means that you'll be able to navigate back to the start page.
+
+      This will be replaced by the App view when the application is
+      initialized.
     -->
-    <header class="TopBar">
-      <a href="/" class="TopBar-Logo">Critic</a>
-      <nav class="TopBar-SiteNav">
-        <a href="/">Dashboard</a>
-      </nav>
-    </header>
+    <div class="App">
+      <header class="TopBar">
+        <a href="/" class="TopBar-Logo">Critic</a>
+        <nav class="TopBar-SiteNav">
+          <a href="/">Dashboard</a>
+        </nav>
+      </header>
+      <div class="GlobalNotifications"></div>
+    </div>
   </div>
 
   <script>
     Config = (window.Config || {});
     Critic = (window.Critic || {});
+
+    /**
+     * Catches uncaught application errors.
+     */
+    window.addEventListener("error", function(evt) {
+      var el = document.querySelector(".GlobalNotifications");
+      if (el == null) return;
+      var errMsg = document.createElement("div");
+      errMsg.className = "GlobalError";
+      errMsg.textContent = evt.error.message;
+      var errName = document.createElement("b");
+      errName.textContent = evt.error.name + ": ";
+      errMsg.insertBefore(errName, errMsg.childNodes[0]);
+      el.appendChild(errMsg);
+    });
   </script>
 
   <!-- Includes dependency handling tools and polyfills (browser globals) -->
@@ -229,7 +269,7 @@
 
   <!-- Initialize and render the application -->
   <script>
-    require("./init")(document.getElementById("app"));
+    require("./init")(document.getElementById("container"));
   </script>
 
 </body>

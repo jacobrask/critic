@@ -25,6 +25,12 @@ var reviews = [];
 
 
 /**
+ * The last error received for a request for new reviews.
+ */
+var error = null;
+
+
+/**
  * Get a single review by its numeric id.
  *
  * @param {number} reviewId
@@ -67,6 +73,16 @@ ReviewStore.getAllByState = function(state) {
 };
 
 
+/**
+ * Get the last error message.
+ *
+ * @return {string}
+ */
+ReviewStore.getError = function() {
+  return error.message;
+};
+
+
 // Register callback with the dispatcher, invoked for every dispatch.
 Dispatcher.register(function(type, payload) {
 
@@ -76,6 +92,12 @@ Dispatcher.register(function(type, payload) {
       payload.reviews.forEach(function(review) {
         reviews[review.id] = review;
       });
+      error = null;
+      ReviewStore.didChange();
+      break;
+
+    case "RECEIVE_REVIEWS_ERROR":
+      error = payload.error;
       ReviewStore.didChange();
       break;
 
