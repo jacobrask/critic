@@ -11,15 +11,13 @@ var DOM = React.DOM;
 var Main = React.createFactory(require("./Main"));
 var Sidebar = React.createFactory(require("./Sidebar"));
 
-var PureRenderMixin = React.addons.PureRenderMixin;
-
 
 var Review = React.createClass({
 
   displayName: "Review",
 
   mixins: [
-    PureRenderMixin,
+    React.addons.PureRenderMixin,
     RequestMixin,
   ],
 

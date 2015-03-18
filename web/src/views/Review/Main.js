@@ -1,30 +1,31 @@
 "use strict";
 
+var constants = require("../../constants");
 var createStoreMixin = require("../mixins/createStoreMixin");
 var React = require("../../deps/react");
 var ReviewStore = require("../../stores/ReviewStore");
 
 var CommitLog = React.createFactory(require("./CommitLog"));
 var DOM = React.DOM;
-var LoadIndicator = React.createFactory(require("../shared/LoadIndicator"));
 var SectionBox = React.createFactory(require("../shared/SectionBox"));
+var SectionMessage = React.createFactory(require("../shared/SectionMessage"));
 
-var PureRenderMixin = React.addons.PureRenderMixin;
+var LoadState = constants.LoadState;
 
 
 var ReviewMain = React.createClass({
 
   displayName: "ReviewMain",
 
+  mixins: [
+    createStoreMixin(ReviewStore),
+    React.addons.PureRenderMixin
+  ],
+
   propTypes: {
     loadState: React.PropTypes.number.isRequired,
     reviewId: React.PropTypes.number.isRequired
   },
-
-  mixins: [
-    createStoreMixin(ReviewStore),
-    PureRenderMixin
-  ],
 
 
   getStateFromStores: function(props) {
@@ -39,7 +40,8 @@ var ReviewMain = React.createClass({
     var review = this.state.review;
     if (review == null) {
       return DOM.section({ className: "ReviewMain" },
-        LoadIndicator()
+        this.props.loadState === LoadState.LOADING &&
+          SectionMessage(null, "Loading review...")
       );
     }
 
@@ -62,8 +64,8 @@ var ReviewMain = React.createClass({
       description,
       SectionBox(null,
         CommitLog({
+            loadState: this.props.loadState,
             review: this.state.review,
-            loadState: this.props.loadState
         })
       )
     );

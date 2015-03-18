@@ -12,9 +12,10 @@ var Router = require("../../deps/react-router");
 var Commit = React.createFactory(require("./Commit"));
 var DOM = React.DOM;
 var Link = React.createFactory(Router.Link);
-var LoadIndicator = React.createFactory(require("../shared/LoadIndicator"));
 var Origin = React.createFactory(require("./Origin"));
 var Rebase = React.createFactory(require("./Rebase"));
+
+var LoadState = constants.LoadState;
 
 
 var CommitList = React.createFactory(React.createClass({
@@ -127,8 +128,10 @@ var CommitLog = React.createClass({
     // important that commit data is fresh before displaying it, so wait until
     // first load.
     var log;
-    if (this.props.loadState <= constants.LoadState.LOADING) {
-      log = LoadIndicator();
+    if (this.props.loadState <= LoadState.LOADING) {
+      log = DOM.div({ className: "ReviewCommitLog-Msg" },
+        this.props.loadState === LoadState.LOADING && "Loading commits..."
+      );
     } else {
       log = this.state.partitions.reduce(function(all, partition, idx) {
         all.push(CommitList({
