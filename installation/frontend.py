@@ -17,6 +17,7 @@
 import installation
 import os
 import shutil
+import string
 
 created_dir = []
 created_file = []
@@ -25,10 +26,11 @@ created_file = []
 module_head = "define('./%s', function(require, exports, module) {\n"
 module_foot = "});\n"
 
+
 def concat(sources, target):
-    with open(target, "wb") as outfile:
+    with open(target, "w") as outfile:
         for source in sources:
-            with open(source, "rb") as infile:
+            with open(source, "r") as infile:
                 shutil.copyfileobj(infile, outfile)
 
 def skip(path):
@@ -62,9 +64,9 @@ def install(data):
         target = os.path.join(target_dir, "critic.js")
         modules_source_dir = os.path.join(source_dir, "src")
         sources = get_js(modules_source_dir)
-        with open(target, "wb") as outfile:
+        with open(target, "w") as outfile:
             for source in sources:
-                with open(source, "rb") as infile:
+                with open(source, "r") as infile:
                     relpath = os.path.relpath(source, modules_source_dir)
                     outfile.write(module_head % relpath)
                     shutil.copyfileobj(infile, outfile)
@@ -91,8 +93,12 @@ def install(data):
 
     def process_index():
         target = os.path.join(target_dir, "index.html")
+        source = os.path.join(source_dir, "src/index.html")
+        with open(target, "w") as outfile:
+            with open(source, "r") as infile:
+                tmpl = string.Template(infile.read())
+                outfile.write(tmpl.safe_substitute(WEB_ROOT="/dev/"))
         created_file.append(target)
-        shutil.copyfile(os.path.join(source_dir, "src/index.html"), target)
 
     process_globals()
     process_modules()
@@ -114,9 +120,9 @@ def upgrade(arguments, data):
         target = os.path.join(target_dir, "critic.js")
         modules_source_dir = os.path.join(source_dir, "src")
         sources = get_js(modules_source_dir)
-        with open(target, "wb") as outfile:
+        with open(target, "w") as outfile:
             for source in sources:
-                with open(source, "rb") as infile:
+                with open(source, "r") as infile:
                     relpath = os.path.relpath(source, modules_source_dir)
                     outfile.write(module_head % relpath)
                     shutil.copyfileobj(infile, outfile)
@@ -154,8 +160,11 @@ def upgrade(arguments, data):
 
     def process_index():
         target = os.path.join(target_dir, "index.html")
-        created_file.append(target)
-        shutil.copyfile(os.path.join(source_dir, "src/index.html"), target)
+        source = os.path.join(source_dir, "src/index.html")
+        with open(target, "w") as outfile:
+            with open(source, "r") as infile:
+                tmpl = string.Template(infile.read())
+                outfile.write(tmpl.safe_substitute(WEB_ROOT="/dev/"))
         if not os.path.isfile(target):
             created_file.append(target)
 

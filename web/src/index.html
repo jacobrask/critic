@@ -21,7 +21,7 @@
       src:
         local("Source Sans Pro Light"),
         local("SourceSansPro-Light"),
-        url(/fonts/SourceSansPro-Light.woff) format("woff");
+        url("${WEB_ROOT}fonts/SourceSansPro-Light.woff") format("woff");
 
     }
     @font-face {
@@ -31,7 +31,7 @@
       src:
         local("Source Sans Pro Light Italic"),
         local("SourceSansPro-LightIt"),
-        url(/fonts/SourceSansPro-LightIt.woff) format("woff");
+        url("${WEB_ROOT}fonts/SourceSansPro-LightIt.woff") format("woff");
     }
 
     @font-face {
@@ -41,7 +41,7 @@
       src:
         local("Source Sans Pro"),
         local("SourceSansPro-Regular"),
-        url(/fonts/SourceSansPro-Regular.woff) format("woff");
+        url("${WEB_ROOT}fonts/SourceSansPro-Regular.woff") format("woff");
     }
     @font-face {
       font-family: "Source Sans Pro";
@@ -50,7 +50,7 @@
       src:
         local("Source Sans Pro Italic"),
         local("SourceSansPro-It"),
-        url(/fonts/SourceSansPro-It.woff) format("woff");
+        url("${WEB_ROOT}fonts/SourceSansPro-It.woff") format("woff");
     }
 
     @font-face {
@@ -60,7 +60,7 @@
       src:
         local("Source Sans Pro Semibold"),
         local("SourceSansPro-Semibold"),
-        url(/fonts/SourceSansPro-Semibold.woff) format("woff");
+        url("${WEB_ROOT}fonts/SourceSansPro-Semibold.woff") format("woff");
     }
     @font-face {
       font-family: "Source Sans Pro";
@@ -69,7 +69,7 @@
       src:
         local("Source Sans Pro Semibold Italic"),
         local("SourceSansPro-SemiboldIt"),
-        url(/fonts/SourceSansPro-SemiboldIt.woff) format("woff");
+        url("${WEB_ROOT}fonts/SourceSansPro-SemiboldIt.woff") format("woff");
     }
 
 
@@ -86,7 +86,7 @@
       src:
         local("Source Code Pro"),
         local("SourceCodePro-Regular"),
-        url(/fonts/SourceCodePro-Regular.woff) format("woff");
+        url("${WEB_ROOT}fonts/SourceCodePro-Regular.woff") format("woff");
     }
     @font-face {
       font-family: "Source Code Pro";
@@ -95,7 +95,7 @@
       src:
         local("Source Code Pro Semibold"),
         local("SourceCodePro-Semibold"),
-        url(/fonts/SourceCodePro-Semibold.woff) format("woff");
+        url("${WEB_ROOT}fonts/SourceCodePro-Semibold.woff") format("woff");
     }
 
 
@@ -216,7 +216,7 @@
     }
   </style>
 
-  <link rel="stylesheet" href="/critic.css">
+  <link rel="stylesheet" href="${WEB_ROOT}critic.css">
 
 </head>
 <body>
@@ -232,9 +232,9 @@
     -->
     <div class="App">
       <header class="TopBar">
-        <a href="/" class="TopBar-Logo">Critic</a>
+        <a href="${WEB_ROOT}" class="TopBar-Logo">Critic</a>
         <nav class="TopBar-SiteNav">
-          <a href="/">Dashboard</a>
+          <a href="${WEB_ROOT}">Dashboard</a>
         </nav>
       </header>
       <div class="GlobalNotifications"></div>
@@ -242,8 +242,10 @@
   </div>
 
   <script>
-    Config = (window.Config || {});
     Critic = (window.Critic || {});
+
+    Config = (window.Config || {});
+    Config.WEB_ROOT = "${WEB_ROOT}";
 
     /**
      * Catches uncaught application errors.
@@ -262,10 +264,10 @@
   </script>
 
   <!-- Includes dependency handling tools and polyfills (browser globals) -->
-  <script src="/tools.js"></script>
+  <script src="${WEB_ROOT}tools.js"></script>
 
   <!-- Application including dependencies and views -->
-  <script src="/critic.js"></script>
+  <script src="${WEB_ROOT}critic.js"></script>
 
   <!-- Initialize and render the application -->
   <script>

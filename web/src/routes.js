@@ -25,12 +25,12 @@ var routes = (
   Route({
       name: "app",
       handler: App,
-      path: "/"
+      path: Config.WEB_ROOT
     },
 
     // We could make this redirect configurable by the administrator.
     Redirect({
-        from: "/",
+        from: Config.WEB_ROOT,
         to: "dashboard"
     }),
 

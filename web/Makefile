@@ -52,7 +52,7 @@ static:
 
 static/index.html: src/index.html
 	$(info building $(@) ...)
-	@cp $^ $@
+	sed s/$$\{WEB_ROOT\}/\\//g $^ > $@
 
 
 static/tools.js: $(TOOLS_JS)
