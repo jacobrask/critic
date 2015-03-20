@@ -127,7 +127,7 @@ def upgrade(arguments, data):
     def process_globals():
         target = os.path.join(target_dir, "tools.js")
         sources = get_js(os.path.join(source_dir, "tools"))
-        sources.insert(0, os.path.join(source_dir, "production.js")
+        sources.insert(0, os.path.join(source_dir, "production.js"))
         concat(sources, target)
         if not os.path.isfile(target):
             created_file.append(target)
@@ -145,7 +145,7 @@ def upgrade(arguments, data):
         if not os.path.isdir(target_dir):
             shutil.copytree(source, target)
             created_dir.append(target_dir)
-        else
+        else:
             for filename in os.listdir(source):
                 filepath = os.path.join(source, filename)
                 if (os.path.isfile(filepath)):
